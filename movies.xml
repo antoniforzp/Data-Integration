@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<movies>
+     <movie>
+          <title>Toy Story</title>
+          <cover>//upload.wikimedia.org/wikipedia/en/thumb/1/13/Toy_Story.jpg/220px-Toy_Story.jpg</cover>
+          <year>1995</year>
+          <releaseDate country="USA">Wed Nov 22 00:00:00 GMT 1995</releaseDate>
+          <productionCountries>
+               <country>United States</country>
+          </productionCountries>
+          <director>John Lasseter</director>
+          <cast>
+               <actor>Tom Hanks</actor>
+               <actor>Tim Allen</actor>
+               <actor>Don Rickles</actor>
+               <actor>Jim Varney</actor>
+               <actor>Wallace Shawn</actor>
+               <actor>John Ratzenberger</actor>
+               <actor>Annie Potts</actor>
+               <actor>John Morris</actor>
+               <actor>Erik von Detten</actor>
+          </cast>
+          <duration>81</duration>
+          <distribution>Buena Vista Pictures Distribution</distribution>
+          <languages>
+               <language>English</language>
+          </languages>
+          <music>Randy Newman</music>
+          <boxOffice currency="$">$373.6 million</boxOffice>
+     </movie>
+     <movie>
+          <title>Doctor Dolittle</title>
+          <cover>//upload.wikimedia.org/wikipedia/en/a/a7/Original_movie_poster_for_the_film_Doctor_Dolittle.jpg</cover>
+          <year>1967</year>
+          <releaseDate country="USA">Tue Dec 19 00:00:00 GMT 1967</releaseDate>
+          <productionCountries>
+               <country>United States</country>
+          </productionCountries>
+          <director>Richard Fleischer</director>
+          <cast>
+               <actor>Rex Harrison</actor>
+               <actor>Samantha Eggar</actor>
+               <actor>Anthony Newley</actor>
+               <actor>Richard Attenborough</actor>
+          </cast>
+          <duration>152</duration>
+          <distribution>20th Century Fox</distribution>
+          <languages>
+               <language>English</language>
+          </languages>
+          <music>Leslie Bricusse</music>
+          <boxOffice currency="$">$9 million</boxOffice>
+     </movie>
+</movies>

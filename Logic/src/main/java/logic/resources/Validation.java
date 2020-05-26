@@ -21,7 +21,7 @@ public class Validation {
                 Document docDTD = JDOMFunctions_Validation.validateDTD(xmlFile);
                 if (docDTD == null) {
                     System.out.println("logic.resources.Validation using " + DTDFile + " failed");
-                    return "logic.resources.Validation using " + DTDFile + " failed";
+                    return "Validation using " + DTDFile + " failed";
                 } else {
                     System.out.println("The XML file is correct using " + DTDFile);
                     return "The XML file is correct using " + DTDFile;

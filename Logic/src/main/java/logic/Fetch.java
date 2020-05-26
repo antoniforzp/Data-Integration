@@ -34,7 +34,35 @@ public class Fetch {
 
     public static Movie findMovie(String search) {
         List<String> results = new ArrayList<String>();
-        HttpRequestFunctions.httpRequest1("en.wikipedia.org/wiki/", search, "currentMovie.html");
+
+        HttpRequestFunctions.httpRequestSearch("en.wikipedia.org/w/index.php?cirrusUserTesting=glent_m0&search=", search, "+film&title=Special%3ASearch&go=Go&ns0=1", "currentMovieSearch.html");
+
+        String regexHeader = "search-result-heading.*$";
+        String regexLink = "href=\"[a-zA-Z0-9_/()]+\"";
+        String link = "";
+        Pattern patternHeader = Pattern.compile(regexHeader);
+        Pattern patternLink = Pattern.compile(regexLink);
+
+        try {
+            FileReader reader = new FileReader("currentMovieSearch.html");
+            BufferedReader bufferedReader = new BufferedReader(reader);
+            String line;
+            while ((line = bufferedReader.readLine()) != null) {
+                Matcher matcherHeader = patternHeader.matcher(line);
+                if (matcherHeader.find()) {
+                    line = matcherHeader.group();
+                    break;
+                }
+            }
+            Matcher matcherLink = patternLink.matcher(line);
+            if (matcherLink.find())
+                link = matcherLink.group().substring(6, matcherLink.group().length() - 1);;
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        System.out.println(link);
+        HttpRequestFunctions.httpRequest1("en.wikipedia.org", link, "currentMovie.html");
 
         String regexB = "infobox vevent";
         String regexE = "</tbody>";
@@ -81,10 +109,12 @@ public class Fetch {
 //        System.out.println(findBoxOffice());
 //        System.out.println("");
 
-        return new Movie(findTitle(), findCover(), Integer.parseInt(findProductionYear()),
+        Movie temp = new Movie(findTitle(), findCover(), Integer.parseInt(findProductionYear()),
                 findReleaseUsa(), findCountry(), findDirector(),
                 findCast(), Integer.parseInt(findRuntime()), findDistribution(),
                 findLanguage(), findMusic(), findBoxOffice());
+
+        return temp;
     }
 
     public static String findTitle() {
@@ -168,7 +198,7 @@ public class Fetch {
                     }
                 }
             }
-        } catch (IOException | ParseException e ) {
+        } catch (IOException | ParseException e) {
             e.printStackTrace();
         }
         return null;
