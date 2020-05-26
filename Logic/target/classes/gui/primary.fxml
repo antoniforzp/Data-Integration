@@ -1,59 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.RowConstraints?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.PrimaryController">
-   <left>
-      <VBox alignment="CENTER" prefHeight="600.0" prefWidth="176.0" spacing="30.0" style="-fx-background-color: #fac32d;" BorderPane.alignment="CENTER">
+    <left>
+      <GridPane prefHeight="601.0" prefWidth="143.0" style="-fx-background-color: #4287f5;">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="124.0" minWidth="10.0" prefWidth="111.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
          <children>
-            <Button fx:id="moviesButton" layoutX="33.0" layoutY="410.0" mnemonicParsing="false" onAction="#goMovies" prefHeight="40.0" prefWidth="150.0" text="Movies" />
-            <MenuButton mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="XML" fx:id="xmlDropdown">
-              <items>
-                <MenuItem mnemonicParsing="false" onAction="#goGenerate" text="Generate" />
-                <MenuItem mnemonicParsing="false" text="Edit" />
-                  <MenuItem mnemonicParsing="false" text="Validate" />
-              </items>
-            </MenuButton>
-            <MenuButton fx:id="transformDropdown" layoutX="23.0" layoutY="205.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Transform">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="to XML" />
-                  <MenuItem mnemonicParsing="false" text="to HTML" />
-                  <MenuItem mnemonicParsing="false" text="to TXT" />
-               </items>
-            </MenuButton>
-            <Button fx:id="searchButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Search" />
-            <Button fx:id="exitButton" layoutX="10.0" layoutY="170.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="130.0" text="Exit">
-               <VBox.margin>
-                  <Insets top="30.0" />
-               </VBox.margin>
-            </Button>
+                <MenuButton mnemonicParsing="false" prefHeight="30.0" prefWidth="95.0" text="XML" GridPane.rowIndex="2" fx:id="xmlDropdown">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#goGenerate" text="Generate" />
+                        <MenuItem mnemonicParsing="false" text="Edit nodes" />
+                        <MenuItem mnemonicParsing="false" onAction="#goValidate" text="Validate" />
+                    </items>
+                </MenuButton>
+                <MenuButton fx:id="transformDropdown" mnemonicParsing="false" prefHeight="30.0" prefWidth="95.0" text="Transform" GridPane.rowIndex="3">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#goToXml" text="to XML" />
+                        <MenuItem mnemonicParsing="false" onAction="#goToHtml" text="to HTML" />
+                        <MenuItem mnemonicParsing="false" onAction="#goToTxt" text="to TXT" />
+                  <MenuItem mnemonicParsing="false" onAction="#goToPdf" text="to PDF" />
+                    </items>
+                </MenuButton>
+                <Button fx:id="searchButton" mnemonicParsing="false" onAction="#goXpath" prefHeight="30.0" prefWidth="95.0" text="Search" GridPane.rowIndex="4" />
+                <Button fx:id="exitButton" mnemonicParsing="false" onAction="#exit" prefHeight="30.0" prefWidth="80.0" text="Exit" GridPane.rowIndex="7" />
          </children>
-         <BorderPane.margin>
-            <Insets />
-         </BorderPane.margin>
          <effect>
             <DropShadow />
          </effect>
-      </VBox>
-   </left>
-   <center>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <children>
-            <Pane fx:id="generateView" prefHeight="600.0" prefWidth="625.0">
-               <fx:include source="tabs/generateTab.fxml" />
-            </Pane>
-            <Pane fx:id="moviesView" prefHeight="600.0" prefWidth="625.0">
-               <fx:include source="tabs/moviesTab.fxml" />
-            </Pane>
-         </children>
-      </AnchorPane>
-   </center>
+      </GridPane>
+    </left>
+    <center>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+<!--                xml operations-->
+                <Pane fx:id="generateView" prefHeight="600.0" prefWidth="625.0" visible="false">
+                    <fx:include source="tabs/generateTab.fxml" />
+                </Pane>
+                <Pane fx:id="moviesView" prefHeight="600.0" prefWidth="625.0" visible="false">
+                    <fx:include source="tabs/moviesTab.fxml" />
+                </Pane>
+                <Pane fx:id="validateView" prefHeight="600.0" prefWidth="625.0" visible="false">
+                    <fx:include source="tabs/validateTab.fxml" />
+                </Pane>
+<!--                transforms-->
+                <Pane fx:id="toXmlView" prefHeight="600.0" prefWidth="625.0" visible="false">
+                    <fx:include source="tabs/toXmlView.fxml" />
+                </Pane>
+                <Pane fx:id="toPdfView" prefHeight="600.0" prefWidth="625.0" visible="false">
+                    <fx:include source="tabs/toPdflView.fxml" />
+                </Pane>
+                <Pane fx:id="toTxtView" prefHeight="600.0" prefWidth="625.0" visible="false">
+                    <fx:include source="tabs/toTxtView.fxml" />
+                </Pane>
+                <Pane fx:id="toHtmlView" prefHeight="600.0" prefWidth="625.0" visible="false">
+                    <fx:include source="tabs/toHtmlView.fxml" />
+                </Pane>
+            </children>
+        </AnchorPane>
+    </center>
 </BorderPane>
