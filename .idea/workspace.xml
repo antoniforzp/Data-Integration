@@ -3,16 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="4f417e36-4b11-4b6e-aa7b-1e1a1f5d4e1d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logic/Logic.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logic/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Logic/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logic/target/classes/META-INF/Logic.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gui/jedrekszor/dataintegration/project/primary.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gui/jedrekszor/dataintegration/project/secondary.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/src/main/java/gui/PrimaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/src/main/java/gui/PrimaryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/src/main/java/gui/SecondaryController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/src/main/resources/gui/primary.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/src/main/resources/gui/primary.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/src/main/resources/gui/secondary.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/target/classes/gui/PrimaryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/target/classes/gui/PrimaryController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GUI/target/classes/gui/primary.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/target/classes/gui/primary.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +47,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -78,6 +78,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="jedrekszor.dataintegration.project.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="App" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="gui.App" />
+      <module name="GUI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="gui.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -132,6 +145,7 @@
       <workItem from="1590434929127" duration="297000" />
       <workItem from="1590435248868" duration="1255000" />
       <workItem from="1590474170834" duration="1851000" />
+      <workItem from="1590476210669" duration="3697000" />
     </task>
     <servers />
   </component>
@@ -139,30 +153,34 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590475651554">
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590480593745">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1590475651554" />
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1590480593744" />
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590480262986">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1590480262986" />
     <state x="568" y="57" key="FileChooserDialogImpl" timestamp="1590475979647">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="568" y="57" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1590475979647" />
-    <state width="1323" height="154" key="GridCell.Tab.0.bottom" timestamp="1590476024889">
+    <state width="1323" height="154" key="GridCell.Tab.0.bottom" timestamp="1590480782079">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="154" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590476024889" />
-    <state width="1323" height="154" key="GridCell.Tab.0.center" timestamp="1590476024889">
+    <state width="1323" height="154" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590480782079" />
+    <state width="1323" height="154" key="GridCell.Tab.0.center" timestamp="1590480782079">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="154" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1590476024889" />
-    <state width="1323" height="154" key="GridCell.Tab.0.left" timestamp="1590476024889">
+    <state width="1323" height="154" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1590480782079" />
+    <state width="1323" height="154" key="GridCell.Tab.0.left" timestamp="1590480782078">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="154" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1590476024889" />
-    <state width="1323" height="154" key="GridCell.Tab.0.right" timestamp="1590476024889">
+    <state width="1323" height="154" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1590480782078" />
+    <state width="1323" height="154" key="GridCell.Tab.0.right" timestamp="1590480782079">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="154" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1590476024889" />
+    <state width="1323" height="154" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1590480782079" />
     <state x="213" y="19" key="Maven.ArtifactSearchDialog" timestamp="1590474299379">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
