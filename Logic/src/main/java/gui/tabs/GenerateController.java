@@ -4,6 +4,7 @@ import gui.PrimaryController;
 import javafx.fxml.FXML;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextArea;
+import logic.LoadingTask;
 
 import java.io.*;
 
@@ -36,6 +37,10 @@ public class GenerateController {
     @FXML
     void generate() {
 
+        LoadingTask task = new LoadingTask();
+        new Thread(task).start();
+        progressBar.progressProperty().bind(task.progressProperty());
+        textArea.textProperty().bind(task.valueProperty());
 
         //generate logic function
 

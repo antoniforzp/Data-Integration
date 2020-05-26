@@ -1,7 +1,7 @@
 package logic.resources;
 
 import org.jdom2.Document;
-import java.awt.*;
+
 import java.io.*;
 
 public class XsltTransformations {
@@ -28,11 +28,8 @@ public class XsltTransformations {
 
             String url = output;
             File htmlFile = new File(url);
-            try {
-                Desktop.getDesktop().browse(htmlFile.toURI());
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            //                Desktop.getDesktop().browse(htmlFile.toURI());
+            System.out.println(htmlFile.toURI());
         }
     }
 

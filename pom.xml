@@ -22,7 +22,6 @@
     </build>
     <modules>
         <module>Logic</module>
-        <module>GUI</module>
     </modules>
 
     <dependencies>
