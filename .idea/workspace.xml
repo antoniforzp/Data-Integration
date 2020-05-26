@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f417e36-4b11-4b6e-aa7b-1e1a1f5d4e1d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/src/main/java/gui/PrimaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/src/main/java/gui/PrimaryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/src/main/resources/gui/primary.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/src/main/resources/gui/primary.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/target/classes/gui/PrimaryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/target/classes/gui/PrimaryController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/target/classes/gui/primary.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/target/classes/gui/primary.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logic/src/main/java/logic/Fetch.java" beforeDir="false" afterPath="$PROJECT_DIR$/Logic/src/main/java/logic/Fetch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logic/src/main/java/logic/XMLManipulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/Logic/src/main/java/logic/XMLManipulation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logic/src/main/java/logic/data/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/Logic/src/main/java/logic/data/Movie.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +35,12 @@
         <option name="vmOptionsForImporter" value="-Xmx768m" />
       </MavenImportingSettings>
     </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="952" />
+    <option name="y" value="-8" />
+    <option name="width" value="976" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectId" id="1cQwX7xjucWVGN1L7NHuXMOqfak" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -68,20 +75,7 @@
       <recent name="C:\Users\anton\Desktop\Data Integration\DataIntegrationProject\UI\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.App (1)">
-    <configuration name="App (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="gui.App" />
-      <module name="GUI" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="gui.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="jedrekszor.dataintegration.project.App" />
       <module name="Gui" />
@@ -130,7 +124,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.App (1)" />
         <item itemvalue="Application.App" />
         <item itemvalue="Application.App" />
       </list>
@@ -157,12 +150,12 @@
       <workItem from="1590435248868" duration="1255000" />
       <workItem from="1590474170834" duration="1851000" />
       <workItem from="1590476210669" duration="3697000" />
-      <workItem from="1590494055564" duration="3906000" />
+      <workItem from="1590494172785" duration="3462000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
     <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590480593745">
