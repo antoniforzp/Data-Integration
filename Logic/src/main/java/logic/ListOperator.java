@@ -8,10 +8,14 @@ import java.nio.file.StandardOpenOption;
 
 public class ListOperator {
 
+    private static final String fileName = "list.txt";
+
     static public void addTitle(String title) throws IOException {
 
         StringBuilder strB = new StringBuilder();
-        File file = new File("list.txt");
+        strB.append(title).append("\n");
+
+        File file = new File(fileName);
         BufferedReader br = new BufferedReader(new FileReader(file));
 
         String st;
@@ -19,29 +23,29 @@ public class ListOperator {
             strB.append(st).append("\n");
         }
 
-        
+        BufferedWriter writer = new BufferedWriter(new FileWriter(fileName));
+        writer.write(strB.toString());
+        writer.close();
     }
 
     static public void deleteTitle(int line) throws IOException {
-        File inputFile = new File("list.txt");
-        File tempFile = new File("list_temp.txt");
+        StringBuilder strB = new StringBuilder();
 
-        BufferedReader reader = new BufferedReader(new FileReader(inputFile));
-        BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
+        File file = new File(fileName);
+        BufferedReader br = new BufferedReader(new FileReader(file));
 
-        String currentLine;
         int count = 0;
+        String st;
+        while ((st = br.readLine()) != null) {
 
-        while ((currentLine = reader.readLine()) != null) {
-            count++;
-            if (count == line) {
-                continue;
+            if (count != line) {
+                strB.append(st).append("\n");
             }
-            writer.write(currentLine + System.getProperty("line.separator"));
+            count++;
         }
+
+        BufferedWriter writer = new BufferedWriter(new FileWriter(fileName));
+        writer.write(strB.toString());
         writer.close();
-        reader.close();
-        inputFile.delete();
-        tempFile.renameTo(inputFile);
     }
 }

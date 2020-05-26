@@ -14,7 +14,7 @@
    <left>
       <VBox alignment="CENTER" prefHeight="600.0" prefWidth="176.0" spacing="30.0" style="-fx-background-color: #fac32d;" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="moviesButton" layoutX="33.0" layoutY="410.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Movies" />
+            <Button fx:id="moviesButton" layoutX="33.0" layoutY="410.0" mnemonicParsing="false" onAction="#goMovies" prefHeight="40.0" prefWidth="150.0" text="Movies" />
             <MenuButton mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="XML" fx:id="xmlDropdown">
               <items>
                 <MenuItem mnemonicParsing="false" onAction="#goGenerate" text="Generate" />

@@ -36,10 +36,12 @@ public class PrimaryController {
     @FXML
     void initialize() {
         views.add(generateView);
+        views.add(moviesView);
 
         setUpIcons();
         hideAllTabs();
 
+        moviesView.setVisible(true);
     }
 
     private void setUpIcons() {
@@ -77,7 +79,14 @@ public class PrimaryController {
     }
 
     @FXML
+    void goMovies() {
+        hideAllTabs();
+        moviesView.setVisible(true);
+    }
+
+    @FXML
     void goGenerate() {
+        hideAllTabs();
         generateView.setVisible(true);
     }
 }
