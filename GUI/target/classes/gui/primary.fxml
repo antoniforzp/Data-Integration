@@ -5,6 +5,7 @@
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
@@ -13,9 +14,10 @@
    <left>
       <VBox alignment="CENTER" prefHeight="600.0" prefWidth="176.0" spacing="30.0" style="-fx-background-color: #fac32d;" BorderPane.alignment="CENTER">
          <children>
+            <Button fx:id="moviesButton" layoutX="33.0" layoutY="410.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Movies" />
             <MenuButton mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="XML" fx:id="xmlDropdown">
               <items>
-                <MenuItem mnemonicParsing="false" text="Generate" />
+                <MenuItem mnemonicParsing="false" onAction="#goGenerate" text="Generate" />
                 <MenuItem mnemonicParsing="false" text="Edit" />
                   <MenuItem mnemonicParsing="false" text="Validate" />
               </items>
@@ -43,6 +45,12 @@
       </VBox>
    </left>
    <center>
-      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane fx:id="generateView" prefHeight="600.0" prefWidth="584.0">
+               <fx:include source="tabs/generateTab.fxml"/>
+            </Pane>
+         </children>
+      </AnchorPane>
    </center>
 </BorderPane>

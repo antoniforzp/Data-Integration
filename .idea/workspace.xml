@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f417e36-4b11-4b6e-aa7b-1e1a1f5d4e1d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI/src/main/java/gui/PrimaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/src/main/java/gui/PrimaryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/src/main/java/gui/SecondaryController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI/src/main/resources/gui/primary.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/src/main/resources/gui/primary.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/src/main/resources/gui/secondary.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI/target/classes/gui/PrimaryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/target/classes/gui/PrimaryController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GUI/target/classes/gui/primary.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/target/classes/gui/primary.fxml" afterDir="false" />
     </list>
@@ -24,6 +20,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="module-info" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -71,7 +68,20 @@
       <recent name="C:\Users\anton\Desktop\Data Integration\DataIntegrationProject\UI\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.App (1)">
+    <configuration name="App (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="gui.App" />
+      <module name="GUI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="gui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="jedrekszor.dataintegration.project.App" />
       <module name="Gui" />
@@ -120,6 +130,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.App (1)" />
         <item itemvalue="Application.App" />
         <item itemvalue="Application.App" />
       </list>
@@ -146,6 +157,7 @@
       <workItem from="1590435248868" duration="1255000" />
       <workItem from="1590474170834" duration="1851000" />
       <workItem from="1590476210669" duration="3697000" />
+      <workItem from="1590494055564" duration="3906000" />
     </task>
     <servers />
   </component>
@@ -165,22 +177,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="568" y="57" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1590475979647" />
-    <state width="1323" height="154" key="GridCell.Tab.0.bottom" timestamp="1590480782079">
+    <state width="1323" height="154" key="GridCell.Tab.0.bottom" timestamp="1590497718478">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="154" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590480782079" />
-    <state width="1323" height="154" key="GridCell.Tab.0.center" timestamp="1590480782079">
+    <state width="1323" height="154" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590497718478" />
+    <state width="1323" height="154" key="GridCell.Tab.0.center" timestamp="1590497718477">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="154" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1590480782079" />
-    <state width="1323" height="154" key="GridCell.Tab.0.left" timestamp="1590480782078">
+    <state width="1323" height="154" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1590497718477" />
+    <state width="1323" height="154" key="GridCell.Tab.0.left" timestamp="1590497718477">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="154" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1590480782078" />
-    <state width="1323" height="154" key="GridCell.Tab.0.right" timestamp="1590480782079">
+    <state width="1323" height="154" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1590497718477" />
+    <state width="1323" height="154" key="GridCell.Tab.0.right" timestamp="1590497718477">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="154" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1590480782079" />
+    <state width="1323" height="154" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1590497718477" />
     <state x="213" y="19" key="Maven.ArtifactSearchDialog" timestamp="1590474299379">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -197,5 +209,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="68" y="30" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1590475276585" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1590497106235">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1590497106235" />
   </component>
 </project>
