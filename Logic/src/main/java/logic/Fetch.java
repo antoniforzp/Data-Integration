@@ -7,7 +7,10 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -58,7 +61,6 @@ public class Fetch {
             FileWriter writer = new FileWriter("currentMovieInfobox.html");
             for (String s : results) {
                 writer.write(s + "\n");
-//                System.out.println(s);
             }
             writer.close();
         } catch (IOException e) {
@@ -138,7 +140,7 @@ public class Fetch {
         return null;
     }
 
-    public static String findReleaseUsa() {
+    public static Date findReleaseUsa() {
         String regexSelector = "United States";
         String regex = "\\b\\d{4}-\\d{2}-\\d{2}\\b";
         Pattern patternSelector = Pattern.compile(regexSelector);
@@ -155,18 +157,18 @@ public class Fetch {
             }
             Matcher matcher = pattern.matcher(line);
             if (matcher.find()) {
-                return matcher.group();
+                return new SimpleDateFormat("yyyy-MM-dd").parse(matcher.group());
             } else {
                 reader = new FileReader("currentMovieInfobox.html");
                 bufferedReader = new BufferedReader(reader);
                 while ((line = bufferedReader.readLine()) != null) {
                     matcher = pattern.matcher(line);
                     if (matcher.find()) {
-                        return matcher.group();
+                        return new SimpleDateFormat("yyyy-MM-dd").parse(matcher.group());
                     }
                 }
             }
-        } catch (IOException e) {
+        } catch (IOException | ParseException e ) {
             e.printStackTrace();
         }
         return null;
