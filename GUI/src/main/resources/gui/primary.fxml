@@ -14,7 +14,7 @@
    <left>
       <VBox alignment="CENTER" prefHeight="600.0" prefWidth="176.0" spacing="30.0" style="-fx-background-color: #fac32d;" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="moviesButton" layoutX="33.0" layoutY="410.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Movies" />
+            <Button fx:id="moviesButton" layoutX="33.0" layoutY="410.0" mnemonicParsing="false" onAction="#goMovies" prefHeight="40.0" prefWidth="150.0" text="Movies" />
             <MenuButton mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="XML" fx:id="xmlDropdown">
               <items>
                 <MenuItem mnemonicParsing="false" onAction="#goGenerate" text="Generate" />
@@ -47,10 +47,10 @@
    <center>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Pane fx:id="generateView" prefHeight="600.0" prefWidth="625.0">
+            <Pane fx:id="generateView" prefHeight="600.0" prefWidth="625.0" visible="false">
                <fx:include source="tabs/generateTab.fxml" />
             </Pane>
-            <Pane fx:id="moviesView" prefHeight="600.0" prefWidth="625.0">
+            <Pane fx:id="moviesView" prefHeight="600.0" prefWidth="625.0" visible="false">
                <fx:include source="tabs/moviesTab.fxml" />
             </Pane>
          </children>
