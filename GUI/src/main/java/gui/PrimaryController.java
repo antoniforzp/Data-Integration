@@ -25,6 +25,7 @@ public class PrimaryController {
     //tabs
     public ArrayList<Pane> views = new ArrayList<>();
     public Pane generateView;
+    public Pane moviesView;
 
     public Button moviesButton;
     public MenuButton xmlDropdown;
@@ -38,6 +39,7 @@ public class PrimaryController {
 
         setUpIcons();
         hideAllTabs();
+
     }
 
     private void setUpIcons() {
