@@ -16,9 +16,9 @@ public class Movie {
     private String distribution;
     private List<String> language;
     private String music;
-    private String boxOffice;
+    private int boxOffice;
 
-    public Movie(String title, String cover, int year, Date releaseDate, List<String> country, String director, List<String> cast, int duration, String distribution, List<String> language, String music, String boxOffice) {
+    public Movie(String title, String cover, int year, Date releaseDate, List<String> country, String director, List<String> cast, int duration, String distribution, List<String> language, String music, int boxOffice) {
         this.title = title;
         this.cover = cover;
         this.year = year;
@@ -121,11 +121,11 @@ public class Movie {
         this.music = music;
     }
 
-    public String getBoxOffice() {
+    public int getBoxOffice() {
         return boxOffice;
     }
 
-    public void setBoxOffice(String boxOffice) {
+    public void setBoxOffice(int boxOffice) {
         this.boxOffice = boxOffice;
     }
 }

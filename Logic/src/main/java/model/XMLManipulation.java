@@ -20,7 +20,7 @@ public class XMLManipulation {
 
 
         try {
-            String xp = "//movie[title='" + movie.getTitle() + "']";
+            String xp = "//movie[title=\"" + movie.getTitle() + "\"]";
             XdmValue res = XPathFunctions.executeXpath(xp, "movies.xml");
             if (res == null || res.size() == 0) {
                 Element newMovie = new Element("movie");
@@ -49,7 +49,7 @@ public class XMLManipulation {
                     languages.addContent(language);
                 }
                 Element music = new Element("music").addContent(movie.getMusic());
-                Element boxOffice = new Element("boxOffice").addContent(movie.getBoxOffice());
+                Element boxOffice = new Element("boxOffice").addContent(String.valueOf(movie.getBoxOffice()));
                 Attribute currency = new Attribute("currency", "$");
                 boxOffice.setAttribute(currency);
 
