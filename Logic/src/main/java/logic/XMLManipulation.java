@@ -20,7 +20,7 @@ public class XMLManipulation {
 
 
         try {
-            String xp = "//movie[title='" + movie.getTitle() + "']";
+            String xp = "//movie[title=\"" + movie.getTitle() + "\"]";
             XdmValue res = XPathFunctions.executeXpath(xp, "movies.xml");
             if (res == null || res.size() == 0) {
                 Element newMovie = new Element("movie");

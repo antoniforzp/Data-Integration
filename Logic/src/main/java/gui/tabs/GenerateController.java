@@ -73,15 +73,14 @@ public class GenerateController {
     @FXML
     void generate() {
 
-//        LoadingTask task = new LoadingTask();
-//        new Thread(task).start();
-//        progressBar.progressProperty().bind(task.progressProperty());
-//        textArea.textProperty().bind(task.valueProperty());
+        LoadingTask task = new LoadingTask();
+        new Thread(task).start();
+        progressBar.progressProperty().bind(task.progressProperty());
+        generatedXml.textProperty().bind(task.valueProperty());
 
         //generate logic function
 
-//        progressBar.setProgress(//value);
-        readFile();
+//        readFile();
     }
 
     private void setWrong() {
