@@ -87,8 +87,10 @@ public class XMLManipulationLogic {
         try {
             String xp = "//movie[title=\"" + oldTitle + "\"]";
             XdmValue res = XPathFunctions.executeXpath(xp, "movies.xml");
+            System.out.println(res.size());
             if (res.size() == 1) {
-                System.out.println(res.itemAt(0));
+                System.out.println(res.itemAt(0).getStringValue());
+
 
 //
 //                Element newMovie = new Element("movie");

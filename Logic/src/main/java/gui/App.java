@@ -22,7 +22,7 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         Document doc = XMLJDomFunctions.readDocumentXML("movies.xml");
-        XMLManipulationLogic.editMovie("dupa", null, doc);
+        XMLManipulationLogic.editMovie("Toy Story", null, doc);
         scene = new Scene(loadFXML("primary"));
         stage.setScene(scene);
         stage.show();
