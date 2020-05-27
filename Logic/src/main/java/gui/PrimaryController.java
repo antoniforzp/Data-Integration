@@ -13,21 +13,22 @@ import java.util.ArrayList;
 
 public class PrimaryController {
 
-    private static PrimaryController instance;
-
-    public PrimaryController getInstance() {
-        if (instance == null) {
-            instance = new PrimaryController();
-        }
-        return instance;
-    }
-
     //tabs
-    public ArrayList<Pane> views = new ArrayList<>();
-    public Pane generateView;
+    private final ArrayList<Pane> views = new ArrayList<>();
+
     public Pane moviesView;
 
-    public Button moviesButton;
+    public Pane generateView;
+    public Pane editView;
+    public Pane validateView;
+
+    public Pane toXmlView;
+    public Pane toPdfView;
+    public Pane toTxtView;
+    public Pane toHtmlView;
+
+    public Pane xPathView;
+
     public MenuButton xmlDropdown;
     public MenuButton transformDropdown;
     public Button searchButton;
@@ -35,36 +36,22 @@ public class PrimaryController {
 
     @FXML
     void initialize() {
-        views.add(generateView);
         views.add(moviesView);
 
-        setUpIcons();
+        views.add(generateView);
+        views.add(editView);
+        views.add(validateView);
+
+        views.add(toXmlView);
+        views.add(toPdfView);
+        views.add(toTxtView);
+        views.add(toHtmlView);
+
+        views.add(xPathView);
+
         hideAllTabs();
 
         moviesView.setVisible(true);
-    }
-
-    private void setUpIcons() {
-
-        ImageView xmlIcon = new ImageView(new Image(getClass().getResourceAsStream("img/xml.png")));
-        xmlIcon.setFitHeight(20);
-        xmlIcon.setFitWidth(20);
-        xmlDropdown.setGraphic(xmlIcon);
-
-        ImageView transformIcon = new ImageView(new Image(getClass().getResourceAsStream("img/transform.png")));
-        transformIcon.setFitHeight(20);
-        transformIcon.setFitWidth(20);
-        transformDropdown.setGraphic(transformIcon);
-
-        ImageView searchIcon = new ImageView(new Image(getClass().getResourceAsStream("img/search.png")));
-        searchIcon.setFitHeight(20);
-        searchIcon.setFitWidth(20);
-        searchButton.setGraphic(searchIcon);
-
-        ImageView exitIcon = new ImageView(new Image(getClass().getResourceAsStream("img/exit.png")));
-        exitIcon.setFitHeight(20);
-        exitIcon.setFitWidth(20);
-        exitButton.setGraphic(exitIcon);
     }
 
     private void hideAllTabs() {
@@ -78,16 +65,72 @@ public class PrimaryController {
         alert.show();
     }
 
+
     @FXML
     void goMovies() {
         hideAllTabs();
         moviesView.setVisible(true);
     }
 
+    //xml operations
+
     @FXML
     void goGenerate() {
         hideAllTabs();
         generateView.setVisible(true);
+    }
+
+    @FXML
+    void goEdit() {
+        hideAllTabs();
+        editView.setVisible(true);
+    }
+
+    @FXML
+    void goValidate() {
+        hideAllTabs();
+        validateView.setVisible(true);
+    }
+
+//    to transforms
+
+    @FXML
+    void goToHtml() {
+        hideAllTabs();
+        toHtmlView.setVisible(true);
+    }
+
+    @FXML
+    void goToPdf() {
+        hideAllTabs();
+        toPdfView.setVisible(true);
+    }
+
+    @FXML
+    void goToTxt() {
+        hideAllTabs();
+        toTxtView.setVisible(true);
+    }
+
+    @FXML
+    void goToXml() {
+        hideAllTabs();
+        toXmlView.setVisible(true);
+    }
+
+//    to xpath
+
+    @FXML
+    void goXpath() {
+        hideAllTabs();
+        xPathView.setVisible(true);
+    }
+
+//    exit
+
+    @FXML
+    void exit() {
+        System.exit(0);
     }
 }
 

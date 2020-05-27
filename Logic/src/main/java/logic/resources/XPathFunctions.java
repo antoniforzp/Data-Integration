@@ -5,6 +5,8 @@ package logic.resources;/*
  */
 
 import java.io.File;
+import java.util.LinkedList;
+import java.util.List;
 
 import net.sf.saxon.s9api.DocumentBuilder;
 import net.sf.saxon.s9api.Processor;
@@ -38,13 +40,11 @@ public class XPathFunctions {
         return resultado;
     }
 
-    public static String showResults(XdmValue lista) {
-        StringBuilder texto = new StringBuilder();
-        System.out.println("Results of XPATH:");
+    public static List<String> showResults(XdmValue lista) {
+        List<String> results = new LinkedList<>();
         for (XdmItem item : lista) {
-            texto = texto.append(item.getStringValue()).append("\n");
+            results.add(item.getStringValue());
         }
-        return texto.toString();
+        return results;
     }
-
 }

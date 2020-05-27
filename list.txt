@@ -1,9 +1,15 @@
+<<<<<<< HEAD
 Toy Story
 DR. DOLITTLE
 Pulp Fiction
 Thelma & Louise
 BLADE RUNNER
 Prometheus
+=======
+Doctor Dolittle (1967 film)
+Thelma & Louise
+Prometheus (2012 film)
+>>>>>>> 1a6a46e76d44220967b7a8deb45c83f15f83f61d
 Back to the Future
 Good Will Hunting
 The Talented Mr. Ripley

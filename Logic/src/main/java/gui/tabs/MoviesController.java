@@ -4,6 +4,8 @@ import gui.PrimaryController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 import logic.Fetch;
@@ -16,6 +18,7 @@ public class MoviesController {
 
     public GridPane grid;
     public TextField textField;
+    public Text alert;
 
     private List<String> titles;
 
@@ -25,7 +28,12 @@ public class MoviesController {
 
     @FXML
     void initialize() {
+        resetAlert();
         updateGrid();
+    }
+
+    private void resetAlert(){
+//        alert.setText("");
     }
 
     private void loadTitles(){
@@ -42,7 +50,11 @@ public class MoviesController {
         int count = 0;
         resetGrid();
         for (String title : titles) {
-            grid.addRow(count + 1, new Text(count + 1 + ". "), new Text(title), getButton(count));
+
+            Text titleText = new Text(title);
+            titleText.setWrappingWidth(350);
+
+            grid.addRow(count + 1, new Text(count + 1 + ". "), titleText, getButton(count));
             count++;
         }
         grid.setVgap(10);
@@ -51,10 +63,11 @@ public class MoviesController {
     private Button getButton(int id) {
         Button b = new Button();
 
-        b.setPrefHeight(30);
-        b.setPrefWidth(30);
+        b.setPrefHeight(25);
+        b.setPrefWidth(25);
         b.setId(String.valueOf(id));
-        b.setText("-");
+
+        b.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("img/trash.png"))));
 
         b.setOnAction((e)->{
             Button current = (Button) e.getSource();
@@ -62,19 +75,6 @@ public class MoviesController {
         });
 
         return b;
-    }
-
-    @FXML
-    public void addTitle(){
-
-        try {
-            ListOperator.addTitle(textField.getText());
-        } catch (IOException e) {
-            PrimaryController.displayAlert(e.getMessage());
-            e.printStackTrace();
-        }
-
-        updateGrid();
     }
 
     private void deleteTitle(int index){
@@ -88,4 +88,19 @@ public class MoviesController {
 
         updateGrid();
     }
+
+    @FXML
+    public void addTitle(){
+        resetAlert();
+
+        try {
+            ListOperator.addTitle(textField.getText());
+        } catch (IOException e) {
+            PrimaryController.displayAlert(e.getMessage());
+            e.printStackTrace();
+        }
+
+        updateGrid();
+    }
+
 }
