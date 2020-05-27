@@ -12,12 +12,12 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="625.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.tabs.GenerateController">
    <children>
-      <TextArea fx:id="generatedXml" layoutX="167.0" layoutY="214.0" prefHeight="345.0" prefWidth="431.0" />
-      <ProgressBar fx:id="progressBar" layoutX="226.0" layoutY="569.0" prefHeight="18.0" prefWidth="372.0" progress="0.0" />
-      <Text layoutX="169.0" layoutY="583.0" strokeType="OUTSIDE" strokeWidth="0.0" text="progress:" />
-      <TextArea fx:id="listOfMovies" layoutX="23.0" layoutY="214.0" prefHeight="345.0" prefWidth="130.0" />
+      <TextArea fx:id="generatedXml" layoutX="187.0" layoutY="214.0" prefHeight="345.0" prefWidth="411.0" />
+      <ProgressBar fx:id="progressBar" layoutX="240.0" layoutY="569.0" prefHeight="18.0" prefWidth="358.0" progress="0.0" />
+      <Text layoutX="188.0" layoutY="583.0" strokeType="OUTSIDE" strokeWidth="0.0" text="progress:" />
+      <TextArea fx:id="listOfMovies" layoutX="23.0" layoutY="214.0" prefHeight="345.0" prefWidth="156.0" />
       <Text layoutX="23.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="list of movies:" />
-      <Text layoutX="167.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="generated .xml" />
+      <Text layoutX="187.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="generated .xml" />
       <Text layoutX="165.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="XML">
          <font>
             <Font size="24.0" />
@@ -38,5 +38,6 @@
             <Image url="@img/question.png" />
          </image>
       </ImageView>
+      <Button layoutX="480.0" layoutY="131.0" mnemonicParsing="false" onAction="#cancel" prefHeight="25.0" prefWidth="112.0" text="cancel" />
    </children>
 </AnchorPane>

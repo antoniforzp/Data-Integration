@@ -10,8 +10,8 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import model.Fetch;
 import model.LoadingTask;
+import model.logic.GenerateLogic;
 
-import java.io.*;
 import java.util.List;
 
 public class GenerateController {
@@ -36,44 +36,22 @@ public class GenerateController {
         textField.setText(filename);
     }
 
-    private void readFile() {
-        feedback.setText("");
-
-        StringBuilder strB = new StringBuilder();
-        File file = new File(textField.getText());
-        try {
-            BufferedReader br = new BufferedReader(new FileReader(file));
-            setCorrect();
-
-            String line;
-            while ((line = br.readLine()) != null) {
-                strB.append(line).append("\n");
-            }
-        } catch (IOException e) {
-            setWrong();
-            feedback.setText(e.getMessage());
-            e.printStackTrace();
-        }
-        generatedXml.setText(strB.toString());
-    }
-
-    private void setListOfMovies(){
+    private void setListOfMovies() {
         List<String> movies = Fetch.getAllTitles();
         StringBuilder strB = new StringBuilder();
 
         if (movies != null) {
-            for(String movie : movies){
+            for (String movie : movies) {
                 strB.append(movie).append("\n");
             }
         }
         listOfMovies.setText(strB.toString());
     }
 
-
     @FXML
     void generate() {
 
-        LoadingTask task = new LoadingTask();
+        LoadingTask task = new LoadingTask(textField.getText());
         new Thread(task).start();
         progressBar.progressProperty().bind(task.progressProperty());
         generatedXml.textProperty().bind(task.valueProperty());
@@ -81,17 +59,21 @@ public class GenerateController {
             feedback.setText("XML generated correctly!");
             setCorrect();
         });
-
-        //generate logic function
-
-//        readFile();
     }
 
-    private void setWrong() {
-        feedbackIcon.setImage(new Image(getClass().getResourceAsStream("img/cross.png")));
+    @FXML
+    void cancel() {
+        if(GenerateLogic.cancel()){
+            setWrong();
+            feedback.setText("operation cancelled!");
+        }
     }
 
     private void setCorrect() {
         feedbackIcon.setImage(new Image(getClass().getResourceAsStream("img/tick.png")));
+    }
+
+    private void setWrong() {
+        feedbackIcon.setImage(new Image(getClass().getResourceAsStream("img/cross.png")));
     }
 }
