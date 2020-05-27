@@ -9,8 +9,18 @@ import net.sf.saxon.s9api.XdmValue;
 import org.jdom2.Attribute;
 import org.jdom2.Document;
 import org.jdom2.Element;
+import org.jdom2.output.Format;
+import org.jdom2.output.XMLOutputter;
 
+import java.io.IOException;
+import java.io.StringWriter;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.Iterator;
+import java.util.List;
 
 public class XMLManipulationLogic {
     public static Document addMovie(Movie movie, Document doc) {
@@ -61,6 +71,95 @@ public class XMLManipulationLogic {
             e.printStackTrace();
         }
         return doc;
+    }
+
+    public static Movie getMovieByTitle(String oldTitle, Document doc) {
+        Element root;
+        if (doc == null) {
+            root = new Element("movies");
+            doc = new Document(root);
+        } else {
+            root = doc.getRootElement();
+        }
+
+
+        try {
+            String xp = "//movie[title=\"" + oldTitle + "\"]";
+            XdmValue res = XPathFunctions.executeXpath(xp, "movies.xml");
+            if (res.size() == 1) {
+                Document newDoc = XMLJDomFunctions.readStringToDocument(res.toString());
+                root = newDoc.getRootElement();
+
+                XMLOutputter outp = new XMLOutputter();
+                outp.setFormat(Format.getCompactFormat());
+                StringWriter sw = new StringWriter();
+
+                outp.output(root.getChild("title").getContent(), sw);
+                String title = sw.toString();
+
+                sw = new StringWriter();
+                outp.output(root.getChild("cover").getContent(), sw);
+                String cover = sw.toString();
+
+                sw = new StringWriter();
+                outp.output(root.getChild("year").getContent(), sw);
+                int year = Integer.parseInt(sw.toString());
+
+                sw = new StringWriter();
+                outp.output(root.getChild("releaseDate").getContent(), sw);
+                Date releaseDate = new SimpleDateFormat("E MMM dd HH:mm:ss z yyyy").parse(sw.toString());
+
+                List<Element> elements = root.getChild("productionCountries").getChildren();
+                List<String> countries = new ArrayList<>();
+                for(Element e: elements) {
+                    sw = new StringWriter();
+                    outp.output(e.getContent(), sw);
+                    countries.add(sw.toString());
+                }
+
+                sw = new StringWriter();
+                outp.output(root.getChild("director").getContent(), sw);
+                String director = sw.toString();
+
+                elements = root.getChild("cast").getChildren();
+                List<String> actors = new ArrayList<>();
+                for(Element e: elements) {
+                    sw = new StringWriter();
+                    outp.output(e.getContent(), sw);
+                    actors.add(sw.toString());
+                }
+
+                sw = new StringWriter();
+                outp.output(root.getChild("duration").getContent(), sw);
+                int duration = Integer.parseInt(sw.toString());
+
+                sw = new StringWriter();
+                outp.output(root.getChild("distribution").getContent(), sw);
+                String distribution = sw.toString();
+
+                elements = root.getChild("languages").getChildren();
+                List<String> languages = new ArrayList<>();
+                for(Element e: elements) {
+                    sw = new StringWriter();
+                    outp.output(e.getContent(), sw);
+                    languages.add(sw.toString());
+                }
+
+                sw = new StringWriter();
+                outp.output(root.getChild("music").getContent(), sw);
+                String music = sw.toString();
+
+                sw = new StringWriter();
+                outp.output(root.getChild("boxOffice").getContent(), sw);
+                int boxOffice = Integer.parseInt(sw.toString());
+
+                Movie movie = new Movie(title, cover, year, releaseDate, countries, director, actors, duration, distribution, languages, music, boxOffice);
+                return movie;
+            }
+        } catch (SaxonApiException | IOException | ParseException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
 
