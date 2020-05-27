@@ -1,7 +1,7 @@
-package logic;
+package model;
 
-import logic.data.Movie;
-import logic.resources.XPathFunctions;
+import model.data.Movie;
+import model.resources.XPathFunctions;
 import net.sf.saxon.s9api.SaxonApiException;
 import net.sf.saxon.s9api.XdmValue;
 import org.jdom2.Attribute;

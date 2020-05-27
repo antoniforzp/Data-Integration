@@ -1,9 +1,9 @@
-package logic;
+package model;
 
 import javafx.concurrent.Task;
-import logic.data.Movie;
+import model.data.Movie;
 import org.jdom2.Document;
-import logic.resources.XMLJDomFunctions;
+import model.resources.XMLJDomFunctions;
 
 import java.util.List;
 

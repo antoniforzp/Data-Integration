@@ -7,9 +7,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
-import logic.Fetch;
-import logic.resources.XMLJDomFunctions;
-import logic.resources.XPathFunctions;
+import model.resources.XPathFunctions;
 import net.sf.saxon.s9api.SaxonApiException;
 import net.sf.saxon.s9api.XdmValue;
 

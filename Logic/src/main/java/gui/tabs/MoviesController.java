@@ -8,8 +8,8 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
-import logic.Fetch;
-import logic.ListOperator;
+import model.Fetch;
+import model.ListOperator;
 
 import java.io.IOException;
 import java.util.List;

@@ -1,7 +1,7 @@
-package logic;
+package model;
 
-import logic.data.Movie;
-import logic.resources.HttpRequestFunctions;
+import model.data.Movie;
+import model.resources.HttpRequestFunctions;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

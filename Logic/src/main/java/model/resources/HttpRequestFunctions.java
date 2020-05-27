@@ -1,4 +1,4 @@
-package logic.resources;
+package model.resources;
 
 import java.io.*;
 import java.net.MalformedURLException;

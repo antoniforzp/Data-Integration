@@ -1,17 +1,14 @@
 package gui.tabs;
 
-import gui.PrimaryController;
 import javafx.fxml.FXML;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import logic.Fetch;
-import logic.LoadingTask;
+import model.Fetch;
 
 import java.io.*;
-import java.util.ArrayList;
 import java.util.List;
 
 public class GenerateController {

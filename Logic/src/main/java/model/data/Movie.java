@@ -1,4 +1,4 @@
-package logic.data;
+package model.data;
 
 import java.util.Date;
 import java.util.List;
