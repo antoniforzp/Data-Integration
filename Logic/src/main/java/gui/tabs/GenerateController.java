@@ -50,20 +50,25 @@ public class GenerateController {
 
     @FXML
     void generate() {
+        setIdle();
 
-        LoadingTask task = new LoadingTask(textField.getText());
-        new Thread(task).start();
-        progressBar.progressProperty().bind(task.progressProperty());
-        generatedXml.textProperty().bind(task.valueProperty());
-        task.setOnSucceeded(event -> {
-            feedback.setText("XML generated correctly!");
-            setCorrect();
-        });
+        if (GenerateLogic.generate(textField.getText())) {
+            progressBar.progressProperty().bind(GenerateLogic.getTask().progressProperty());
+            generatedXml.textProperty().bind(GenerateLogic.getTask().valueProperty());
+
+            GenerateLogic.getTask().setOnSucceeded(event -> {
+                feedback.setText("XML generated correctly!");
+                setCorrect();
+            });
+        } else {
+            setWrong();
+            feedback.setText("Wrong file, check the extension!");
+        }
     }
 
     @FXML
     void cancel() {
-        if(GenerateLogic.cancel()){
+        if (GenerateLogic.cancel()) {
             setWrong();
             feedback.setText("operation cancelled!");
         }
@@ -76,4 +81,9 @@ public class GenerateController {
     private void setWrong() {
         feedbackIcon.setImage(new Image(getClass().getResourceAsStream("img/cross.png")));
     }
+
+    private void setIdle() {
+        feedbackIcon.setImage(new Image(getClass().getResourceAsStream("img/question.png")));
+    }
+
 }

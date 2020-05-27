@@ -54,17 +54,18 @@ public class XMLManipulationLogic {
             root = doc.getRootElement();
         }
 
-
         try {
             String xp = "//movie[title=\"" + oldTitle + "\"]";
             XdmValue res = XPathFunctions.executeXpath(xp, "movies.xml");
             System.out.println(res.size());
             if (res.size() == 1) {
                 Document newDoc = XMLJDomFunctions.readStringToDocument(res.toString());
-                Element oldMovie = newDoc.getRootElement();
-
-                if (doc.removeContent(oldMovie)) {
-                    root.addContent(getNewMovieNode(movie));
+                Element oldMovie;
+                if (newDoc != null) {
+                    oldMovie = newDoc.getRootElement();
+                    if (doc.removeContent(oldMovie)) {
+                        root.addContent(getNewMovieNode(movie));
+                    }
                 }
             }
         } catch (SaxonApiException e) {

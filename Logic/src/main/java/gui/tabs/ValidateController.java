@@ -2,8 +2,10 @@ package gui.tabs;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import model.logic.ValidateLogic;
 
 public class ValidateController {
 
@@ -13,13 +15,20 @@ public class ValidateController {
     public ImageView dtdFeedbackIcon;
     public ImageView xsdFeedbackIcon;
 
-    public ImageView dtdFileIcon;
-    public ImageView xsdFileIcon;
+    public TextField xmlPath;
+    public TextField dtdPath;
+    public TextField xsdPath;
+
+    public
 
     @FXML
     void initialize() {
         dtdFeedback.setEditable(false);
         xsdFeedback.setEditable(false);
+
+        xmlPath.setText("movies.xml");
+        dtdPath.setText("dtd jakieś");
+        xsdPath.setText("xsd jakieś");
     }
 
     private void setWrong(ImageView feedbackIcon) {
@@ -33,16 +42,21 @@ public class ValidateController {
     @FXML
     void validateDtd() {
         try {
-
-//            setWrong(dtdFeedbackIcon); -- ustawia ikonkę OK
-//            setCorrect(dtdFeedbackIcon); -- ustawia ikonkę WRONG
-
-            //daj ifa jest -1 0 1
-            if (true) {
-                dtdFeedback.setText("Validation performed correctly");
-                setCorrect(dtdFeedbackIcon);
+            switch (ValidateLogic.validateDTD(xmlPath.getText(), dtdPath.getText())) {
+                case 1:
+                    dtdFeedback.setText("Validation performed correctly");
+                    setCorrect(dtdFeedbackIcon);
+                    break;
+                case -1:
+                    dtdFeedback.setText("Validation failed");
+                    setWrong(dtdFeedbackIcon);
+                    break;
+                case 0: {
+                    dtdFeedback.setText("Something went wrong");
+                    setWrong(dtdFeedbackIcon);
+                    break;
+                }
             }
-
         } catch (Exception e) {
             dtdFeedback.setText(e.getMessage());
             setWrong(dtdFeedbackIcon);
@@ -52,16 +66,24 @@ public class ValidateController {
     @FXML
     void validateXsd() {
         try {
-
-            //daj ifa jest -1 0 1
-            if (true) {
-                xsdFeedback.setText("Validation performed correctly");
-                setCorrect(xsdFeedbackIcon);
+            switch (ValidateLogic.validateXSD(xmlPath.getText(), xsdPath.getText())) {
+                case 1:
+                    dtdFeedback.setText("Validation performed correctly");
+                    setCorrect(xsdFeedbackIcon);
+                    break;
+                case -1:
+                    dtdFeedback.setText("Validation failed");
+                    setWrong(xsdFeedbackIcon);
+                    break;
+                case 0: {
+                    dtdFeedback.setText("Something went wrong");
+                    setWrong(xsdFeedbackIcon);
+                    break;
+                }
             }
-
         } catch (Exception e) {
-            xsdFeedback.setText(e.getMessage());
-            setWrong(xsdFeedbackIcon);
+            dtdFeedback.setText(e.getMessage());
+            setWrong(dtdFeedbackIcon);
         }
     }
 }

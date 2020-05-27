@@ -6,47 +6,61 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="600.0" prefWidth="625.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.tabs.ValidateController">
    <children>
       <Text layoutX="211.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Validate xml file" textAlignment="CENTER" wrappingWidth="203.052734375" />
-      <Text layoutX="143.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DTD">
+      <Text layoutX="156.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DTD">
          <font>
             <Font size="24.0" />
          </font>
       </Text>
-      <TextField layoutX="143.0" layoutY="162.0" prefHeight="25.0" prefWidth="275.0" />
-      <Text layoutX="143.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text=".dtd file path" />
-      <Text layoutX="143.0" layoutY="351.0" strokeType="OUTSIDE" strokeWidth="0.0" text="XSD">
+      <TextField fx:id="dtdPath" layoutX="156.0" layoutY="277.0" prefHeight="25.0" prefWidth="275.0" />
+      <Text layoutX="156.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text=".dtd file path" />
+      <Text layoutX="156.0" layoutY="427.0" strokeType="OUTSIDE" strokeWidth="0.0" text="XSD">
          <font>
             <Font size="24.0" />
          </font>
       </Text>
-      <TextField layoutX="143.0" layoutY="394.0" prefHeight="25.0" prefWidth="275.0" />
-      <Text layoutX="143.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0" text=".xsd file path" />
-      <Button layoutX="439.0" layoutY="162.0" mnemonicParsing="false" onAction="#validateDtd" prefHeight="25.0" prefWidth="112.0" text="validate" />
-      <Button layoutX="439.0" layoutY="394.0" mnemonicParsing="false" onAction="#validateXsd" prefHeight="25.0" prefWidth="112.0" text="validate" />
-      <TextArea fx:id="dtdFeedback" layoutX="144.0" layoutY="218.0" prefHeight="82.0" prefWidth="408.0" />
-      <Text layoutX="143.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="output:" />
-      <TextArea layoutX="144.0" layoutY="453.0" prefHeight="82.0" prefWidth="408.0" fx:id="xsdFeedback" />
-      <Text layoutX="143.0" layoutY="449.0" strokeType="OUTSIDE" strokeWidth="0.0" text="output:" />
-      <ImageView fx:id="dtdFeedbackIcon" fitHeight="40.0" fitWidth="40.0" layoutX="88.0" layoutY="218.0" pickOnBounds="true" preserveRatio="true">
+      <TextField layoutX="156.0" layoutY="470.0" prefHeight="25.0" prefWidth="275.0" fx:id="xsdPath" />
+      <Text layoutX="156.0" layoutY="460.0" strokeType="OUTSIDE" strokeWidth="0.0" text=".xsd file path" />
+      <Button layoutX="452.0" layoutY="277.0" mnemonicParsing="false" onAction="#validateDtd" prefHeight="25.0" prefWidth="112.0" text="validate" />
+      <Button layoutX="452.0" layoutY="470.0" mnemonicParsing="false" onAction="#validateXsd" prefHeight="25.0" prefWidth="112.0" text="validate" />
+      <TextArea fx:id="dtdFeedback" layoutX="157.0" layoutY="327.0" prefHeight="40.0" prefWidth="408.0" />
+      <Text layoutX="156.0" layoutY="323.0" strokeType="OUTSIDE" strokeWidth="0.0" text="output:" />
+      <TextArea layoutX="157.0" layoutY="519.0" prefHeight="40.0" prefWidth="408.0" fx:id="xsdFeedback" />
+      <Text layoutX="156.0" layoutY="515.0" strokeType="OUTSIDE" strokeWidth="0.0" text="output:" />
+      <ImageView fx:id="dtdFeedbackIcon" fitHeight="40.0" fitWidth="40.0" layoutX="101.0" layoutY="327.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@img/question.png" />
          </image></ImageView>
-      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="88.0" layoutY="453.0" pickOnBounds="true" preserveRatio="true" fx:id="xsdFeedbackIcon">
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="101.0" layoutY="519.0" pickOnBounds="true" preserveRatio="true" fx:id="xsdFeedbackIcon">
          <image>
             <Image url="@img/question.png" />
          </image></ImageView>
-      <ImageView fx:id="dtdFileIcon" fitHeight="80.0" fitWidth="80.0" layoutX="48.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="dtdFileIcon" fitHeight="80.0" fitWidth="80.0" layoutX="61.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@img/dtd.png" />
          </image></ImageView>
-      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="48.0" layoutY="312.0" pickOnBounds="true" preserveRatio="true" fx:id="xsdFileIcon">
+      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="61.0" layoutY="388.0" pickOnBounds="true" preserveRatio="true" fx:id="xsdFileIcon">
          <image>
             <Image url="@img/xsd.png" />
          </image></ImageView>
+      <Text layoutX="156.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="XML">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField layoutX="156.0" layoutY="128.0" prefHeight="25.0" prefWidth="408.0" fx:id="xmlPath" />
+      <Text layoutX="156.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text=".xml file path" />
+      <ImageView fx:id="dtdFileIcon1" fitHeight="80.0" fitWidth="80.0" layoutX="61.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/xml.png" />
+         </image>
+      </ImageView>
+      <Line endX="262.0" layoutX="330.0" layoutY="165.0" startX="-282.5" />
    </children>
 </AnchorPane>
