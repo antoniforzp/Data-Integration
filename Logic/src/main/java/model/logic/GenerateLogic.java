@@ -1,5 +1,6 @@
 package model.logic;
 
+import model.FileChecker;
 import model.LoadingTask;
 
 import java.io.File;
@@ -11,7 +12,7 @@ public class GenerateLogic {
 
     public static boolean generate(String filename) {
 
-        if(checkFile(filename)){
+        if(FileChecker.checkFile(filename)){
             task = new LoadingTask(filename);
             new Thread(task).start();
             return true;
@@ -29,14 +30,5 @@ public class GenerateLogic {
 
     public static LoadingTask getTask() {
         return task;
-    }
-
-    private static boolean checkFile(String filename) {
-        if (!Pattern.matches(".*\\.xml", filename)) {
-            return false;
-        } else {
-            new File(filename);
-            return true;
-        }
     }
 }
