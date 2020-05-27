@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.List;
 
 public class Movie {
+
     private String title;
     private String cover;
     private int year;

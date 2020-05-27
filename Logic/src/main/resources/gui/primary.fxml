@@ -45,6 +45,7 @@
                 </MenuButton>
                 <Button fx:id="searchButton" mnemonicParsing="false" onAction="#goXpath" prefHeight="30.0" prefWidth="95.0" text="Search" GridPane.rowIndex="4" />
                 <Button fx:id="exitButton" mnemonicParsing="false" onAction="#exit" prefHeight="30.0" prefWidth="80.0" text="Exit" GridPane.rowIndex="7" />
+            <Button fx:id="searchButton1" mnemonicParsing="false" onAction="#goXpath" prefHeight="30.0" prefWidth="95.0" text="List of movies" GridPane.rowIndex="1" />
          </children>
          <effect>
             <DropShadow />
@@ -69,7 +70,7 @@
                     <fx:include source="tabs/toXmlView.fxml" />
                 </Pane>
                 <Pane fx:id="toPdfView" prefHeight="600.0" prefWidth="625.0" visible="false">
-                    <fx:include source="tabs/toPdflView.fxml" />
+                    <fx:include source="tabs/toPdfView.fxml" />
                 </Pane>
                 <Pane fx:id="toTxtView" prefHeight="600.0" prefWidth="625.0" visible="false">
                     <fx:include source="tabs/toTxtView.fxml" />

@@ -20,11 +20,9 @@ public class XMLManipulation {
 
 
         try {
-            String xp = "//movie/title=" + movie.getTitle();
+            String xp = "//movie[title='" + movie.getTitle() + "']";
             XdmValue res = XPathFunctions.executeXpath(xp, "movies.xml");
-            if (res == null)
-                System.out.println("XML doesn’t exist ");
-            else if (res.size() == 0) {
+            if (res == null || res.size() == 0) {
                 Element newMovie = new Element("movie");
                 Element title = new Element("title").addContent(movie.getTitle());
                 Element cover = new Element("cover").addContent(movie.getCover());
@@ -68,7 +66,7 @@ public class XMLManipulation {
                 newMovie.addContent(music);
                 newMovie.addContent(boxOffice);
 
-                doc.addContent(newMovie);
+                root.addContent(newMovie);
             }
         } catch (SaxonApiException e) {
             e.printStackTrace();

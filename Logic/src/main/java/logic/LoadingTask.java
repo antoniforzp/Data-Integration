@@ -1,6 +1,7 @@
 package logic;
 
 import javafx.concurrent.Task;
+import logic.data.Movie;
 import org.jdom2.Document;
 import logic.resources.XMLJDomFunctions;
 
@@ -14,15 +15,19 @@ public class LoadingTask extends Task {
 
     @Override
     protected Object call() throws Exception {
-        System.out.println("dupa");
         List<String> movies = Fetch.getAllTitles();
         int max = movies.size();
+        updateProgress(0, max - 1);
         Document doc = XMLJDomFunctions.readDocumentXML("movies.xml");
         for (int i = 0; i < max; i++) {
             System.out.println("dupa");
-            XMLManipulation.addMovie(Fetch.findMovie(movies.get(i)), doc);
+            Movie temp = Fetch.findMovie(movies.get(i));
+            doc = XMLManipulation.addMovie(temp, doc);
+            System.out.println("dupa kwas");
 //            WHETHER SAVE XML FILE AFTER EVERY RECORD OR AT THE END
+            XMLJDomFunctions.writeDocumentToFile(doc, "movies.xml");
             updateProgress(i, max - 1);
+//            break;
             if (isCancelled()) {
                 return found;
             }

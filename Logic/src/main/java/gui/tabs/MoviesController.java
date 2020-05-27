@@ -33,7 +33,7 @@ public class MoviesController {
     }
 
     private void resetAlert(){
-        alert.setText("");
+//        alert.setText("");
     }
 
     private void loadTitles(){
@@ -50,7 +50,11 @@ public class MoviesController {
         int count = 0;
         resetGrid();
         for (String title : titles) {
-            grid.addRow(count + 1, new Text(count + 1 + ". "), new Text(title), getButton(count));
+
+            Text titleText = new Text(title);
+            titleText.setWrappingWidth(350);
+
+            grid.addRow(count + 1, new Text(count + 1 + ". "), titleText, getButton(count));
             count++;
         }
         grid.setVgap(10);
