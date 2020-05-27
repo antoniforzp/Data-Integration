@@ -49,7 +49,7 @@ public class XMLManipulation {
                     languages.addContent(language);
                 }
                 Element music = new Element("music").addContent(movie.getMusic());
-                Element boxOffice = new Element("boxOffice").addContent(movie.getBoxOffice());
+                Element boxOffice = new Element("boxOffice").addContent(String.valueOf(movie.getBoxOffice()));
                 Attribute currency = new Attribute("currency", "$");
                 boxOffice.setAttribute(currency);
 

@@ -51,4 +51,510 @@
           <music>Leslie Bricusse</music>
           <boxOffice currency="$">$9 million</boxOffice>
      </movie>
+     <movie>
+          <title>Dolittle</title>
+          <cover>//upload.wikimedia.org/wikipedia/en/1/1f/Dolittle_%282020_film_poster%29.png</cover>
+          <year>2020</year>
+          <releaseDate country="USA">Fri Jan 17 00:00:00 GMT 2020</releaseDate>
+          <productionCountries>
+               <country>United States</country>
+          </productionCountries>
+          <director>Stephen Gaghan</director>
+          <cast>
+               <actor>Antonio Banderas</actor>
+               <actor>Michael Sheen</actor>
+               <actor>Emma Thompson</actor>
+               <actor>Rami Malek</actor>
+               <actor>John Cena</actor>
+               <actor>Kumail Nanjiani</actor>
+               <actor>Octavia Spencer</actor>
+               <actor>Tom Holland</actor>
+               <actor>Craig Robinson</actor>
+               <actor>Ralph Fiennes</actor>
+               <actor>Selena Gomez</actor>
+               <actor>Marion Cotillard</actor>
+          </cast>
+          <duration>101</duration>
+          <distribution>Universal Pictures</distribution>
+          <languages>
+               <language>English</language>
+          </languages>
+          <music>Danny Elfman</music>
+          <boxOffice currency="$">$223.3 million</boxOffice>
+     </movie>
+     <movie>
+          <title>Pulp Fiction</title>
+          <cover>//upload.wikimedia.org/wikipedia/en/3/3b/Pulp_Fiction_%281994%29_poster.jpg</cover>
+          <year>1994</year>
+          <releaseDate country="USA">Fri Oct 14 00:00:00 BST 1994</releaseDate>
+          <productionCountries>
+               <country>United States</country>
+          </productionCountries>
+          <director>Quentin Tarantino</director>
+          <cast>
+               <actor>John Travolta</actor>
+               <actor>Uma Thurman</actor>
+               <actor>Harvey Keitel</actor>
+               <actor>Tim Roth</actor>
+               <actor>Amanda Plummer</actor>
+               <actor>Maria de Medeiros</actor>
+               <actor>Ving Rhames</actor>
+               <actor>Eric Stoltz</actor>
+               <actor>Rosanna Arquette</actor>
+               <actor>Christopher Walken</actor>
+               <actor>Bruce Willis</actor>
+          </cast>
+          <duration>154</duration>
+          <distribution>Miramax Films</distribution>
+          <languages>
+               <language>English</language>
+          </languages>
+          <music />
+          <boxOffice currency="$">$213.9 million</boxOffice>
+     </movie>
+     <movie>
+          <title>Blade Runner</title>
+          <cover>//upload.wikimedia.org/wikipedia/en/thumb/9/9f/Blade_Runner_%281982_poster%29.png/220px-Blade_Runner_%281982_poster%29.png</cover>
+          <year>1982</year>
+          <releaseDate country="USA">Fri Jun 25 00:00:00 BST 1982</releaseDate>
+          <productionCountries>
+               <country>United States</country>
+               <country>Hong Kong</country>
+          </productionCountries>
+          <director>Ridley Scott</director>
+          <cast>
+               <actor>Harrison Ford</actor>
+               <actor>Rutger Hauer</actor>
+               <actor>Sean Young</actor>
+               <actor>Edward James Olmos</actor>
+          </cast>
+          <duration>117</duration>
+          <distribution>Warner Bros.</distribution>
+          <languages />
+          <music>Vangelis</music>
+          <boxOffice currency="$">$41.5 million</boxOffice>
+     </movie>
+     <movie>
+          <title>Thelma &amp; Louise</title>
+          <cover>//upload.wikimedia.org/wikipedia/en/thumb/8/8f/Thelma_%26_Louise_poster.png/220px-Thelma_%26_Louise_poster.png</cover>
+          <year>1991</year>
+          <releaseDate country="USA">Fri May 24 00:00:00 BST 1991</releaseDate>
+          <productionCountries>
+               <country>United States</country>
+          </productionCountries>
+          <director>Ridley Scott</director>
+          <cast>
+               <actor>Susan Sarandon</actor>
+               <actor>Geena Davis</actor>
+               <actor>Harvey Keitel</actor>
+          </cast>
+          <duration>129</duration>
+          <distribution>Metro-Goldwyn-Mayer</distribution>
+          <languages>
+               <language>English</language>
+          </languages>
+          <music>Hans Zimmer</music>
+          <boxOffice currency="$">$45.4 million</boxOffice>
+     </movie>
+     <movie>
+          <title>Prometheus</title>
+          <cover>//upload.wikimedia.org/wikipedia/en/thumb/a/a3/Prometheusposterfixed.jpg/220px-Prometheusposterfixed.jpg</cover>
+          <year>2012</year>
+          <releaseDate country="USA">Fri Jun 08 00:00:00 BST 2012</releaseDate>
+          <productionCountries>
+               <country>United Kingdom</country>
+               <country>United States</country>
+          </productionCountries>
+          <director>Ridley Scott</director>
+          <cast>
+               <actor>Noomi Rapace</actor>
+               <actor>Michael Fassbender</actor>
+               <actor>Guy Pearce</actor>
+               <actor>Idris Elba</actor>
+               <actor>Charlize Theron</actor>
+          </cast>
+          <duration>124</duration>
+          <distribution>20th Century Fox</distribution>
+          <languages>
+               <language>English</language>
+          </languages>
+          <music>Marc Streitenfeld</music>
+          <boxOffice currency="$">$403.4 million</boxOffice>
+     </movie>
+     <movie>
+          <title>Back to the Future</title>
+          <cover>//upload.wikimedia.org/wikipedia/en/thumb/d/d2/Back_to_the_Future.jpg/220px-Back_to_the_Future.jpg</cover>
+          <year>1985</year>
+          <releaseDate country="USA">Wed Jul 03 00:00:00 BST 1985</releaseDate>
+          <productionCountries>
+               <country>United States</country>
+          </productionCountries>
+          <director>Robert Zemeckis</director>
+          <cast>
+               <actor>Christopher Lloyd</actor>
+               <actor>Lea Thompson</actor>
+               <actor>Crispin Glover</actor>
+          </cast>
+          <duration>116</duration>
+          <distribution>Universal Pictures</distribution>
+          <languages>
+               <language>English</language>
+          </languages>
+          <music>Alan Silvestri</music>
+          <boxOffice currency="$">$389.1 million</boxOffice>
+     </movie>
+     <movie>
+          <title>Good Will Hunting</title>
+          <cover>//upload.wikimedia.org/wikipedia/en/thumb/5/52/Good_Will_Hunting.png/220px-Good_Will_Hunting.png</cover>
+          <year>1997</year>
+          <releaseDate country="USA">Fri Dec 05 00:00:00 GMT 1997</releaseDate>
+          <productionCountries>
+               <country>United States</country>
+          </productionCountries>
+          <director>Gus Van Sant</director>
+          <cast>
+               <actor>Robin Williams</actor>
+               <actor>Matt Damon</actor>
+               <actor>Ben Affleck</actor>
+               <actor>Minnie Driver</actor>
+          </cast>
+          <duration>126</duration>
+          <distribution>Miramax Films</distribution>
+          <languages>
+               <language>English</language>
+          </languages>
+          <music>Danny Elfman</music>
+          <boxOffice currency="$">$225.9 million</boxOffice>
+     </movie>
+     <movie>
+          <title>Dr. Dolittle</title>
+          <cover>//upload.wikimedia.org/wikipedia/en/thumb/5/5f/Dr_dolittle_movie_1998.jpg/220px-Dr_dolittle_movie_1998.jpg</cover>
+          <year>1998</year>
+          <releaseDate country="USA">Fri Jun 26 00:00:00 BST 1998</releaseDate>
+          <productionCountries>
+               <country>United States</country>
+          </productionCountries>
+          <director>Betty Thomas</director>
+          <cast>
+               <actor>Eddie Murphy</actor>
+               <actor>Ossie Davis</actor>
+               <actor>Oliver Platt</actor>
+          </cast>
+          <duration>85</duration>
+          <distribution>20th Century Fox</distribution>
+          <languages>
+               <language>English</language>
+          </languages>
+          <music>Richard Gibbs</music>
+          <boxOffice currency="$">$294.4 million</boxOffice>
+     </movie>
+     <movie>
+          <title>The Talented Mr. Ripley</title>
+          <cover>//upload.wikimedia.org/wikipedia/en/thumb/2/22/Talented_mr_ripley.jpg/220px-Talented_mr_ripley.jpg</cover>
+          <year>1999</year>
+          <releaseDate country="USA">Sat Dec 25 00:00:00 GMT 1999</releaseDate>
+          <productionCountries>
+               <country>United States</country>
+          </productionCountries>
+          <director>Anthony Minghella</director>
+          <cast>
+               <actor>Matt Damon</actor>
+               <actor>Gwyneth Paltrow</actor>
+               <actor>Jude Law</actor>
+               <actor>Cate Blanchett</actor>
+               <actor>Philip Seymour Hoffman</actor>
+               <actor>Jack Davenport</actor>
+               <actor>James Rebhorn</actor>
+               <actor>Sergio Rubini</actor>
+               <actor>Philip Baker Hall</actor>
+          </cast>
+          <duration>139</duration>
+          <distribution>Paramount Pictures</distribution>
+          <languages>
+               <language>English</language>
+          </languages>
+          <music>Gabriel Yared</music>
+          <boxOffice currency="$">$128.8 million</boxOffice>
+     </movie>
+     <movie>
+          <title>The Accidental Tourist</title>
+          <cover>//upload.wikimedia.org/wikipedia/en/thumb/8/8c/The_accidental_tourist.jpg/220px-The_accidental_tourist.jpg</cover>
+          <year>1988</year>
+          <releaseDate country="USA">Fri Dec 23 00:00:00 GMT 1988</releaseDate>
+          <productionCountries>
+               <country>United States</country>
+          </productionCountries>
+          <director>Lawrence Kasdan</director>
+          <cast>
+               <actor>William Hurt</actor>
+               <actor>Kathleen Turner</actor>
+               <actor>Geena Davis</actor>
+               <actor>Bill Pullman</actor>
+          </cast>
+          <duration>121</duration>
+          <distribution>Warner Bros.</distribution>
+          <languages>
+               <language>English</language>
+          </languages>
+          <music>John Williams</music>
+          <boxOffice currency="$">$32.6 million (United States)</boxOffice>
+     </movie>
+     <movie>
+          <title>Match Point</title>
+          <cover>//upload.wikimedia.org/wikipedia/en/8/82/Match_Point_poster.png</cover>
+          <year>2005</year>
+          <releaseDate country="USA">Fri Jan 20 00:00:00 GMT 2006</releaseDate>
+          <productionCountries>
+               <country>United Kingdom</country>
+               <country>United States</country>
+               <country>Luxembourg</country>
+          </productionCountries>
+          <director>Woody Allen</director>
+          <cast>
+               <actor>Brian Cox</actor>
+               <actor>Matthew Goode</actor>
+               <actor>Scarlett Johansson</actor>
+               <actor>Emily Mortimer</actor>
+               <actor>Jonathan Rhys Meyers</actor>
+               <actor>Penelope Wilton</actor>
+          </cast>
+          <duration>124</duration>
+          <distribution>DreamWorks Pictures</distribution>
+          <languages>
+               <language>English</language>
+          </languages>
+          <music />
+          <boxOffice currency="$">$85.3 million</boxOffice>
+     </movie>
+     <movie>
+          <title>Vicky Cristina Barcelona</title>
+          <cover>//upload.wikimedia.org/wikipedia/en/0/05/Vicky_Cristina_Barcelona_film_poster.png</cover>
+          <year>2008</year>
+          <releaseDate country="USA">Sat May 17 00:00:00 BST 2008</releaseDate>
+          <productionCountries>
+               <country>Spain</country>
+               <country>United States</country>
+          </productionCountries>
+          <director>Woody Allen</director>
+          <cast>
+               <actor>Javier Bardem</actor>
+               <actor>Patricia Clarkson</actor>
+               <actor>Kevin Dunn</actor>
+               <actor>Rebecca Hall</actor>
+               <actor>Scarlett Johansson</actor>
+               <actor>Chris Messina</actor>
+          </cast>
+          <duration>97</duration>
+          <distribution>Mediapro (Spain)</distribution>
+          <languages>
+               <language>English</language>
+               <language>Spanish</language>
+          </languages>
+          <music />
+          <boxOffice currency="$">$96.4 million</boxOffice>
+     </movie>
+     <movie>
+          <title>Larry Crowne</title>
+          <cover>//upload.wikimedia.org/wikipedia/en/d/df/Larry_Crowne_Poster.jpg</cover>
+          <year>2011</year>
+          <releaseDate country="USA">Fri Jul 01 00:00:00 BST 2011</releaseDate>
+          <productionCountries>
+               <country>United States</country>
+          </productionCountries>
+          <director>Tom Hanks</director>
+          <cast>
+               <actor>Tom Hanks</actor>
+               <actor>Julia Roberts</actor>
+               <actor>Bryan Cranston</actor>
+               <actor>Cedric the Entertainer</actor>
+               <actor>Wilmer Valderrama</actor>
+               <actor>Pam Grier</actor>
+          </cast>
+          <duration>99</duration>
+          <distribution>Universal Pictures</distribution>
+          <languages>
+               <language>English</language>
+          </languages>
+          <music>James Newton Howard</music>
+          <boxOffice currency="$">$72 million</boxOffice>
+     </movie>
+     <movie>
+          <title>Annie Hall</title>
+          <cover>//upload.wikimedia.org/wikipedia/en/thumb/e/e6/Anniehallposter.jpg/220px-Anniehallposter.jpg</cover>
+          <year>1977</year>
+          <releaseDate country="USA">Wed Apr 20 00:00:00 BST 1977</releaseDate>
+          <productionCountries>
+               <country>United States</country>
+          </productionCountries>
+          <director>Woody Allen</director>
+          <cast>
+               <actor>Woody Allen</actor>
+               <actor>Diane Keaton</actor>
+               <actor>Tony Roberts</actor>
+               <actor>Carol Kane</actor>
+               <actor>Paul Simon</actor>
+               <actor>Janet Margolin</actor>
+               <actor>Shelley Duvall</actor>
+               <actor>Christopher Walken</actor>
+               <actor>Colleen Dewhurst</actor>
+          </cast>
+          <duration>93</duration>
+          <distribution>United Artists</distribution>
+          <languages>
+               <language>English</language>
+          </languages>
+          <music />
+          <boxOffice currency="$">$38.3 million</boxOffice>
+     </movie>
+     <movie>
+          <title>The Village</title>
+          <cover>//upload.wikimedia.org/wikipedia/en/thumb/a/a0/The_Village_movie.jpg/220px-The_Village_movie.jpg</cover>
+          <year>2004</year>
+          <releaseDate country="USA">Fri Jul 30 00:00:00 BST 2004</releaseDate>
+          <productionCountries>
+               <country>United States</country>
+          </productionCountries>
+          <director>Produced by</director>
+          <cast>
+               <actor>Joaquin Phoenix</actor>
+               <actor>Adrien Brody</actor>
+               <actor>Bryce Dallas Howard</actor>
+               <actor>William Hurt</actor>
+               <actor>Sigourney Weaver</actor>
+               <actor>Brendan Gleeson</actor>
+          </cast>
+          <duration>108</duration>
+          <distribution>Buena Vista Pictures</distribution>
+          <languages>
+               <language>English</language>
+          </languages>
+          <music>James Newton Howard</music>
+          <boxOffice currency="$">$256.7 million</boxOffice>
+     </movie>
+     <movie>
+          <title>Quills</title>
+          <cover>//upload.wikimedia.org/wikipedia/en/thumb/c/cb/Quills_poster.JPG/220px-Quills_poster.JPG</cover>
+          <year>2000</year>
+          <releaseDate country="USA">Wed Nov 22 00:00:00 GMT 2000</releaseDate>
+          <productionCountries>
+               <country>United States</country>
+               <country>United Kingdom</country>
+               <country>Germany</country>
+          </productionCountries>
+          <director>Philip Kaufman</director>
+          <cast>
+               <actor>Geoffrey Rush</actor>
+               <actor>Kate Winslet</actor>
+               <actor>Joaquin Phoenix</actor>
+               <actor>Michael Caine</actor>
+          </cast>
+          <duration>124</duration>
+          <distribution>Fox Searchlight Pictures</distribution>
+          <languages>
+               <language>English</language>
+               <language>Latin</language>
+          </languages>
+          <music>Stephen Warbeck</music>
+          <boxOffice currency="$">$18 million</boxOffice>
+     </movie>
+     <movie>
+          <title>Walk the Line</title>
+          <cover>//upload.wikimedia.org/wikipedia/en/thumb/5/5a/Walk_the_line_poster.jpg/220px-Walk_the_line_poster.jpg</cover>
+          <year>2000</year>
+          <releaseDate country="USA">Fri Nov 18 00:00:00 GMT 2005</releaseDate>
+          <productionCountries>
+               <country>United States</country>
+          </productionCountries>
+          <director>James Mangold</director>
+          <cast>
+               <actor>Joaquin Phoenix</actor>
+               <actor>Reese Witherspoon</actor>
+               <actor>Ginnifer Goodwin</actor>
+               <actor>Robert Patrick</actor>
+          </cast>
+          <duration>136</duration>
+          <distribution>20th Century Fox</distribution>
+          <languages>
+               <language>English</language>
+          </languages>
+          <music>T Bone Burnett</music>
+          <boxOffice currency="$">$187 million</boxOffice>
+     </movie>
+     <movie>
+          <title>Pretty Woman</title>
+          <cover>//upload.wikimedia.org/wikipedia/en/b/b6/Pretty_woman_movie.jpg</cover>
+          <year>1990</year>
+          <releaseDate country="USA">Fri Mar 23 00:00:00 GMT 1990</releaseDate>
+          <productionCountries>
+               <country>United States</country>
+          </productionCountries>
+          <director>Garry Marshall</director>
+          <cast>
+               <actor>Richard Gere</actor>
+               <actor>Julia Roberts</actor>
+          </cast>
+          <duration>119</duration>
+          <distribution>Buena Vista Pictures</distribution>
+          <languages>
+               <language>English</language>
+          </languages>
+          <music>James Newton Howard</music>
+          <boxOffice currency="$">$463.4 million</boxOffice>
+     </movie>
+     <movie>
+          <title>Avengers: Endgame</title>
+          <cover>//upload.wikimedia.org/wikipedia/en/0/0d/Avengers_Endgame_poster.jpg</cover>
+          <year>2019</year>
+          <releaseDate country="USA">Fri Apr 26 00:00:00 BST 2019</releaseDate>
+          <productionCountries>
+               <country>United States</country>
+          </productionCountries>
+          <director>Anthony Russo</director>
+          <cast>
+               <actor>Chris Evans</actor>
+               <actor>Mark Ruffalo</actor>
+               <actor>Chris Hemsworth</actor>
+               <actor>Scarlett Johansson</actor>
+               <actor>Jeremy Renner</actor>
+               <actor>Don Cheadle</actor>
+               <actor>Paul Rudd</actor>
+               <actor>Brie Larson</actor>
+               <actor>Karen Gillan</actor>
+               <actor>Danai Gurira</actor>
+               <actor>Benedict Wong</actor>
+               <actor>Jon Favreau</actor>
+               <actor>Bradley Cooper</actor>
+               <actor>Gwyneth Paltrow</actor>
+               <actor>Josh Brolin</actor>
+          </cast>
+          <duration>181</duration>
+          <distribution>Walt Disney Studios</distribution>
+          <languages>
+               <language>English</language>
+          </languages>
+          <music>Alan Silvestri</music>
+          <boxOffice currency="$">$2.798 billion</boxOffice>
+     </movie>
+     <movie>
+          <title>A Quiet Place</title>
+          <cover>//upload.wikimedia.org/wikipedia/en/a/a0/A_Quiet_Place_film_poster.png</cover>
+          <year>2018</year>
+          <releaseDate country="USA">Fri Apr 06 00:00:00 BST 2018</releaseDate>
+          <productionCountries>
+               <country>United States</country>
+          </productionCountries>
+          <director>John Krasinski</director>
+          <cast>
+               <actor>Emily Blunt</actor>
+               <actor>John Krasinski</actor>
+          </cast>
+          <duration>90</duration>
+          <distribution>Paramount Pictures</distribution>
+          <languages>
+               <language>American Sign Language</language>
+               <language>English</language>
+          </languages>
+          <music>Marco Beltrami</music>
+          <boxOffice currency="$">$340.9 million</boxOffice>
+     </movie>
 </movies>

@@ -34,33 +34,51 @@ public class Fetch {
 
     public static Movie findMovie(String search) {
         List<String> results = new ArrayList<String>();
-
-        HttpRequestFunctions.httpRequestSearch("en.wikipedia.org/w/index.php?cirrusUserTesting=glent_m0&search=", search, "+film&title=Special%3ASearch&go=Go&ns0=1", "currentMovieSearch.html");
-
-        String regexHeader = "search-result-heading.*$";
-        String regexLink = "href=\"[a-zA-Z0-9_/()]+\"";
+        List<String> keyWords = new ArrayList<String>();
+        keyWords.add("film");
+        keyWords.add("movie");
         String link = "";
-        Pattern patternHeader = Pattern.compile(regexHeader);
-        Pattern patternLink = Pattern.compile(regexLink);
 
-        try {
-            FileReader reader = new FileReader("currentMovieSearch.html");
-            BufferedReader bufferedReader = new BufferedReader(reader);
-            String line;
-            while ((line = bufferedReader.readLine()) != null) {
-                Matcher matcherHeader = patternHeader.matcher(line);
-                if (matcherHeader.find()) {
-                    line = matcherHeader.group();
+        for (String s: keyWords) {
+            HttpRequestFunctions.httpRequestSearch("en.wikipedia.org/w/index.php?cirrusUserTesting=glent_m0&search=", search, "+" + s + "&title=Special%3ASearch&go=Go&ns0=1", "currentMovieSearch.html");
+
+            String regexHeader = "search-result-heading.*$";
+            String regexLink = "href=\"[a-zA-Z0-9_/()%.':]+\"";
+
+            Pattern patternHeader = Pattern.compile(regexHeader);
+            Pattern patternLink = Pattern.compile(regexLink);
+            boolean searchFound = false;
+
+            try {
+                FileReader reader = new FileReader("currentMovieSearch.html");
+                BufferedReader bufferedReader = new BufferedReader(reader);
+                String line;
+                while ((line = bufferedReader.readLine()) != null) {
+                    Matcher matcherHeader = patternHeader.matcher(line);
+                    if (matcherHeader.find()) {
+                        line = matcherHeader.group();
+                        searchFound = true;
+                        break;
+                    }
+                }
+                if (searchFound) {
+                    Matcher matcherLink = patternLink.matcher(line);
+                    if (matcherLink.find()) {
+                        link = matcherLink.group().substring(6, matcherLink.group().length() - 1).replace("%26", "&").replace("%27", "'");
+                    }
+                }
+                if (!link.isEmpty()) {
                     break;
                 }
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-            Matcher matcherLink = patternLink.matcher(line);
-            if (matcherLink.find())
-                link = matcherLink.group().substring(6, matcherLink.group().length() - 1);;
-
-        } catch (IOException e) {
-            e.printStackTrace();
         }
+            if (link.isEmpty()) {
+                link = "/wiki/" + search.replace(" ", "_");
+            }
+
+
         System.out.println(link);
         HttpRequestFunctions.httpRequest1("en.wikipedia.org", link, "currentMovie.html");
 
@@ -94,20 +112,6 @@ public class Fetch {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-//        System.out.println(findTitle());
-//        System.out.println(findCover());
-//        System.out.println(findProductionYear());
-//        System.out.println(findReleaseUsa());
-//        System.out.println(findCountry());
-//        System.out.println(findDirector());
-//        System.out.println(findCast());
-//        System.out.println(findRuntime());
-//        System.out.println(findDistribution());
-//        System.out.println(findLanguage());
-//        System.out.println(findMusic());
-//        System.out.println(findBoxOffice());
-//        System.out.println("");
 
         Movie temp = new Movie(findTitle(), findCover(), Integer.parseInt(findProductionYear()),
                 findReleaseUsa(), findCountry(), findDirector(),
@@ -431,7 +435,7 @@ public class Fetch {
         return null;
     }
 
-    public static String findBoxOffice() {
+    public static int findBoxOffice() {
         String regexSelector = "Box office.*$";
         String regex = ">[0-9\\$A-Za-z\\s.()]+<";
         Pattern patternSelector = Pattern.compile(regexSelector);
@@ -449,12 +453,39 @@ public class Fetch {
                 }
                 Matcher matcher = pattern.matcher(line.replace("&#160;", " "));
                 if (matcher.find() && read) {
-                    return matcher.group().substring(1, matcher.group().length() - 1);
+                    String uncut = matcher.group().substring(2, matcher.group().length() - 1);
+
+                    String rNum = "[0-9.]+";
+                    String rMult = "\\b[a-z]+\\b";
+                    Pattern pNum = Pattern.compile(rNum);
+                    Pattern pMult = Pattern.compile(rMult);
+                    Matcher mNum = pNum.matcher(uncut);
+                    Matcher mMult = pMult.matcher(uncut);
+
+                    double temp = 0;
+                    int mult = 0;
+                    if(mNum.find()) {
+                        temp = Double.parseDouble(mNum.group());
+                    }
+                    if(mMult.find()) {
+                        switch (mMult.group()) {
+                            case "million": {
+                                mult = 1000000;
+                            } break;
+                            case "billion": {
+                                mult = 1000000000;
+                            } break;
+                            default: {
+                                mult = 0;
+                            }
+                        }
+                    }
+                    return (int)(temp * mult);
                 }
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return null;
+        return 0;
     }
 }
