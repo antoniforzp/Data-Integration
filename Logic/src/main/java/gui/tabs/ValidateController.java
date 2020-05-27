@@ -22,24 +22,6 @@ public class ValidateController {
         xsdFeedback.setEditable(false);
     }
 
-    private void setIcons() {
-        dtdFileIcon.setImage(new Image(getClass().getResourceAsStream("img/dtd.png")));
-        dtdFileIcon.setFitHeight(80);
-        dtdFileIcon.setFitWidth(80);
-
-        xsdFileIcon.setImage(new Image(getClass().getResourceAsStream("img/xsd.png")));
-        xsdFileIcon.setFitHeight(80);
-        xsdFileIcon.setFitWidth(80);
-
-        dtdFeedbackIcon.setImage(new Image(getClass().getResourceAsStream("img/question.png")));
-        dtdFeedbackIcon.setFitHeight(40);
-        dtdFeedbackIcon.setFitWidth(40);
-
-        xsdFeedbackIcon.setImage(new Image(getClass().getResourceAsStream("img/question.png")));
-        xsdFeedbackIcon.setFitHeight(40);
-        xsdFeedbackIcon.setFitWidth(40);
-    }
-
     private void setWrong(ImageView feedbackIcon) {
         feedbackIcon.setImage(new Image(getClass().getResourceAsStream("img/cross.png")));
     }

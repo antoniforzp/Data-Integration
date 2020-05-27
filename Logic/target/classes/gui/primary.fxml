@@ -31,7 +31,7 @@
                 <MenuButton mnemonicParsing="false" prefHeight="30.0" prefWidth="95.0" text="XML" GridPane.rowIndex="2" fx:id="xmlDropdown">
                     <items>
                         <MenuItem mnemonicParsing="false" onAction="#goGenerate" text="Generate" />
-                        <MenuItem mnemonicParsing="false" text="Edit nodes" />
+                        <MenuItem mnemonicParsing="false" onAction="#goEdit" text="Edit nodes" />
                         <MenuItem mnemonicParsing="false" onAction="#goValidate" text="Validate" />
                     </items>
                 </MenuButton>
@@ -45,6 +45,7 @@
                 </MenuButton>
                 <Button fx:id="searchButton" mnemonicParsing="false" onAction="#goXpath" prefHeight="30.0" prefWidth="95.0" text="Search" GridPane.rowIndex="4" />
                 <Button fx:id="exitButton" mnemonicParsing="false" onAction="#exit" prefHeight="30.0" prefWidth="80.0" text="Exit" GridPane.rowIndex="7" />
+            <Button mnemonicParsing="false" onAction="#goMovies" prefHeight="30.0" prefWidth="95.0" text="List of movies" GridPane.rowIndex="1" />
          </children>
          <effect>
             <DropShadow />
@@ -54,12 +55,16 @@
     <center>
         <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
             <children>
+<!--                movie list-->
+                <Pane fx:id="moviesView" prefHeight="600.0" prefWidth="625.0" visible="false">
+                    <fx:include source="tabs/moviesTab.fxml" />
+                </Pane>
 <!--                xml operations-->
                 <Pane fx:id="generateView" prefHeight="600.0" prefWidth="625.0" visible="false">
                     <fx:include source="tabs/generateTab.fxml" />
                 </Pane>
-                <Pane fx:id="moviesView" prefHeight="600.0" prefWidth="625.0" visible="false">
-                    <fx:include source="tabs/moviesTab.fxml" />
+                <Pane fx:id="editView" prefHeight="600.0" prefWidth="625.0" visible="false">
+                    <fx:include source="tabs/editView.fxml" />
                 </Pane>
                 <Pane fx:id="validateView" prefHeight="600.0" prefWidth="625.0" visible="false">
                     <fx:include source="tabs/validateTab.fxml" />
@@ -76,6 +81,10 @@
                 </Pane>
                 <Pane fx:id="toHtmlView" prefHeight="600.0" prefWidth="625.0" visible="false">
                     <fx:include source="tabs/toHtmlView.fxml" />
+                </Pane>
+<!--                xpath tab-->
+                <Pane prefHeight="600.0" prefWidth="625.0" visible="false" fx:id="xPathView">
+                    <fx:include source="tabs/searchView.fxml" />
                 </Pane>
             </children>
         </AnchorPane>

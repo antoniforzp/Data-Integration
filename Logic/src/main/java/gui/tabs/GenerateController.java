@@ -4,48 +4,91 @@ import gui.PrimaryController;
 import javafx.fxml.FXML;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import logic.Fetch;
 import logic.LoadingTask;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class GenerateController {
 
-    public TextArea textArea;
+    public TextArea listOfMovies;
+    public TextArea generatedXml;
+    public TextArea feedback;
+
+    public TextField textField;
+
     public ProgressBar progressBar;
+
+    public ImageView feedbackIcon;
 
     @FXML
     void initialize() {
+        setListOfMovies();
 
+        feedback.setEditable(false);
+
+        String filename = "movies.xml";
+        textField.setText(filename);
     }
 
     private void readFile() {
+        feedback.setText("");
+
         StringBuilder strB = new StringBuilder();
-        File file = new File("movies.xml");
+        File file = new File(textField.getText());
         try {
             BufferedReader br = new BufferedReader(new FileReader(file));
+            setCorrect();
+
             String line;
             while ((line = br.readLine()) != null) {
                 strB.append(line).append("\n");
             }
         } catch (IOException e) {
-            PrimaryController.displayAlert(e.getMessage());
+            setWrong();
+            feedback.setText(e.getMessage());
             e.printStackTrace();
         }
-        textArea.setText(strB.toString());
+        generatedXml.setText(strB.toString());
     }
+
+    private void setListOfMovies(){
+        List<String> movies = Fetch.getAllTitles();
+        StringBuilder strB = new StringBuilder();
+
+        if (movies != null) {
+            for(String movie : movies){
+                strB.append(movie).append("\n");
+            }
+        }
+        listOfMovies.setText(strB.toString());
+    }
+
 
     @FXML
     void generate() {
 
-        LoadingTask task = new LoadingTask();
-        new Thread(task).start();
-        progressBar.progressProperty().bind(task.progressProperty());
-        textArea.textProperty().bind(task.valueProperty());
+//        LoadingTask task = new LoadingTask();
+//        new Thread(task).start();
+//        progressBar.progressProperty().bind(task.progressProperty());
+//        textArea.textProperty().bind(task.valueProperty());
 
         //generate logic function
 
 //        progressBar.setProgress(//value);
-//        readFile();
+        readFile();
+    }
 
+    private void setWrong() {
+        feedbackIcon.setImage(new Image(getClass().getResourceAsStream("img/cross.png")));
+    }
+
+    private void setCorrect() {
+        feedbackIcon.setImage(new Image(getClass().getResourceAsStream("img/tick.png")));
     }
 }

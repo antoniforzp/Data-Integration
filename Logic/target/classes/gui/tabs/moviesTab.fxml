@@ -15,7 +15,7 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="625.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.tabs.MoviesController">
    <children>
-      <ScrollPane layoutX="34.0" layoutY="243.0" prefHeight="341.0" prefWidth="558.0">
+      <ScrollPane layoutX="40.0" layoutY="239.0" prefHeight="341.0" prefWidth="558.0">
          <content>
             <GridPane fx:id="grid" prefHeight="22.0" prefWidth="556.0">
               <columnConstraints>
@@ -33,7 +33,7 @@
             </GridPane>
          </content>
       </ScrollPane>
-      <Text layoutX="34.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="list.txt content" />
+      <Text layoutX="40.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="list.txt content" />
       <Text layoutX="158.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add movie from Wikipedia.com">
          <font>
             <Font size="24.0" />
@@ -54,5 +54,7 @@
             <Image url="@img/question.png" />
          </image>
       </ImageView>
+      <Text layoutX="547.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="delete" />
+      <Text layoutX="256.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Operate on movie list" />
    </children>
 </AnchorPane>

@@ -14,9 +14,12 @@ import java.util.ArrayList;
 public class PrimaryController {
 
     //tabs
-    public ArrayList<Pane> views = new ArrayList<>();
-    public Pane generateView;
+    private final ArrayList<Pane> views = new ArrayList<>();
+
     public Pane moviesView;
+
+    public Pane generateView;
+    public Pane editView;
     public Pane validateView;
 
     public Pane toXmlView;
@@ -33,8 +36,10 @@ public class PrimaryController {
 
     @FXML
     void initialize() {
-        views.add(generateView);
         views.add(moviesView);
+
+        views.add(generateView);
+        views.add(editView);
         views.add(validateView);
 
         views.add(toXmlView);
@@ -42,7 +47,7 @@ public class PrimaryController {
         views.add(toTxtView);
         views.add(toHtmlView);
 
-//        views.add(xPathView);
+        views.add(xPathView);
 
         hideAllTabs();
 
@@ -60,10 +65,25 @@ public class PrimaryController {
         alert.show();
     }
 
+
+    @FXML
+    void goMovies() {
+        hideAllTabs();
+        moviesView.setVisible(true);
+    }
+
+    //xml operations
+
     @FXML
     void goGenerate() {
         hideAllTabs();
         generateView.setVisible(true);
+    }
+
+    @FXML
+    void goEdit() {
+        hideAllTabs();
+        editView.setVisible(true);
     }
 
     @FXML

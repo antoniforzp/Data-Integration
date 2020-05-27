@@ -54,5 +54,7 @@
             <Image url="@img/question.png" />
          </image>
       </ImageView>
+      <Text layoutX="547.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="delete" />
+      <Text layoutX="256.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Operate on movie list" />
    </children>
 </AnchorPane>
