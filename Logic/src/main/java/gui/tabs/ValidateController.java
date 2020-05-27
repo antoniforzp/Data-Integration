@@ -27,8 +27,8 @@ public class ValidateController {
         xsdFeedback.setEditable(false);
 
         xmlPath.setText("movies.xml");
-        dtdPath.setText("dtd jakieś");
-        xsdPath.setText("xsd jakieś");
+        dtdPath.setText("validateDTD.dtd");
+        xsdPath.setText("validateXSD.xsd");
     }
 
     private void setWrong(ImageView feedbackIcon) {
@@ -52,7 +52,7 @@ public class ValidateController {
                     setWrong(dtdFeedbackIcon);
                     break;
                 case 0: {
-                    dtdFeedback.setText("Something went wrong");
+                    dtdFeedback.setText("Something went wrong. Check exception message");
                     setWrong(dtdFeedbackIcon);
                     break;
                 }
@@ -68,15 +68,15 @@ public class ValidateController {
         try {
             switch (ValidateLogic.validateXSD(xmlPath.getText(), xsdPath.getText())) {
                 case 1:
-                    dtdFeedback.setText("Validation performed correctly");
+                    xsdFeedback.setText("Validation performed correctly");
                     setCorrect(xsdFeedbackIcon);
                     break;
                 case -1:
-                    dtdFeedback.setText("Validation failed");
+                    xsdFeedback.setText("Validation failed");
                     setWrong(xsdFeedbackIcon);
                     break;
                 case 0: {
-                    dtdFeedback.setText("Something went wrong");
+                    xsdFeedback.setText("Something went wrong");
                     setWrong(xsdFeedbackIcon);
                     break;
                 }

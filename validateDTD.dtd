@@ -1,0 +1,35 @@
+<!ELEMENT movies (movie+)>
+
+        <!ELEMENT movie (title, cover, year, releaseDate, productionCountries, director, cast, duration, distribution, languages, music, boxOffice)>
+
+        <!ELEMENT title (#PCDATA)>
+
+        <!ELEMENT cover (#PCDATA)>
+
+        <!ELEMENT year (#PCDATA)>
+
+        <!ELEMENT releaseDate (#PCDATA)>
+        <!ATTLIST releaseDate country CDATA #REQUIRED>
+
+        <!ELEMENT productionCountries (country+)>
+        <!ELEMENT country (#PCDATA)>
+
+        <!ELEMENT director (#PCDATA)>
+
+        <!ELEMENT cast (actor+)>
+        <!ELEMENT actor (#PCDATA)>
+
+        <!ELEMENT duration (#PCDATA)>
+
+        <!ELEMENT distribution (#PCDATA)>
+
+        <!ELEMENT languages (language*)>
+        <!ELEMENT language (#PCDATA)>
+
+        <!ELEMENT music (#PCDATA)>
+
+        <!ELEMENT boxOffice (#PCDATA)>
+        <!ATTLIST boxOffice currency CDATA #REQUIRED>
+
+        <!ATTLIST movies xmlns:xsi CDATA #IMPLIED>
+        <!ATTLIST movies xsi:noNamespaceSchemaLocation CDATA #IMPLIED>

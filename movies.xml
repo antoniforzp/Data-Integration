@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<movies>
+<!DOCTYPE movies SYSTEM "validateDTD.dtd">
+<movies xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="validateXSD.xsd">
      <movie>
           <title>Dr. Dolittle</title>
           <cover>//upload.wikimedia.org/wikipedia/en/thumb/5/5f/Dr_dolittle_movie_1998.jpg/220px-Dr_dolittle_movie_1998.jpg</cover>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="movies">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="movie" type="movieType" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="movieType">
+        <xs:sequence>
+            <xs:element name="title" type="xs:string"/>
+            <xs:element name="cover" type="xs:string"/>
+            <xs:element name="year" type="xs:integer"/>
+            <xs:element name="releaseDate" type="releaseDateType"/>
+            <xs:element name="productionCountries" type="productionCountriesType"/>
+            <xs:element name="director" type="xs:string"/>
+            <xs:element name="cast" type="castType"/>
+            <xs:element name="duration" type="xs:integer"/>
+            <xs:element name="distribution" type="xs:string"/>
+            <xs:element name="languages" type="languagesType"/>
+            <xs:element name="music" type="xs:string"/>
+            <xs:element name="boxOffice" type="boxOfficeType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="releaseDateType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="country" type="xs:string"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="productionCountriesType">
+        <xs:sequence>
+            <xs:element name="country" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="castType">
+        <xs:sequence>
+            <xs:element name="actor" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="languagesType">
+        <xs:sequence>
+            <xs:element name="language" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="boxOfficeType">
+        <xs:simpleContent>
+            <xs:extension base="xs:integer">
+                <xs:attribute name="currency" type="xs:string"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+</xs:schema>
+
