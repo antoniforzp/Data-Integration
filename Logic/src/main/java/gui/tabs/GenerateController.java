@@ -7,6 +7,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import model.Fetch;
+import model.LoadingTask;
 
 import java.io.*;
 import java.util.List;

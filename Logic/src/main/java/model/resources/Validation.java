@@ -6,7 +6,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class Validation {
-    public static String validateDocumentDTD(String xmlFile, String DTDFile) {
+    public static int validateDocumentDTD(String xmlFile, String DTDFile) {
         try {
             Document doc = XMLJDomFunctions.readDocumentXML(xmlFile);
             File f = new File(DTDFile);
@@ -20,20 +20,20 @@ public class Validation {
                 //Use the validation function
                 Document docDTD = JDOMFunctions_Validation.validateDTD(xmlFile);
                 if (docDTD == null) {
-                    System.out.println("logic.resources.Validation using " + DTDFile + " failed");
-                    return "Validation using " + DTDFile + " failed";
+                    System.out.println("Validation using " + DTDFile + " failed");
+                    return -1;
                 } else {
                     System.out.println("The XML file is correct using " + DTDFile);
-                    return "The XML file is correct using " + DTDFile;
+                    return 1;
                 }
             }
         } catch(IOException e) {
             e.printStackTrace();
         }
-        return "No such XML or DTD file";
+        return 0;
     }
 
-    public static String validateDocumentXSD(String xmlFile, String XSDFile) {
+    public static int validateDocumentXSD(String xmlFile, String XSDFile) {
         Document doc = XMLJDomFunctions.readDocumentXML(xmlFile);
         File f = new File(XSDFile);
         if (doc != null && f.exists()) {//XSD and XML exist?
@@ -49,13 +49,13 @@ public class Validation {
             Document docXSD = JDOMFunctions_Validation.validateXSD(xmlFile);
             if (docXSD == null) {
                 System.out.println("logic.resources.Validation using " + XSDFile + " failed");
-                return "logic.resources.Validation using " + XSDFile + " failed";
+                return -1;
             }
             else {
                 System.out.println("The XML file is correct using " + XSDFile);
-                return "The XML file is correct using " + XSDFile;
+                return 1;
             }
         }
-        return "No such XML or XSD file";
+        return 0;
     }
 }
