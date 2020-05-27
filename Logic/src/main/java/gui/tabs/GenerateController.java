@@ -1,5 +1,7 @@
 package gui.tabs;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextArea;
@@ -75,6 +77,10 @@ public class GenerateController {
         new Thread(task).start();
         progressBar.progressProperty().bind(task.progressProperty());
         generatedXml.textProperty().bind(task.valueProperty());
+        task.setOnSucceeded(event -> {
+            feedback.setText("XML generated correctly!");
+            setCorrect();
+        });
 
         //generate logic function
 
