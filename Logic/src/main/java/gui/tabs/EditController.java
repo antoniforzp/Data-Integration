@@ -7,10 +7,15 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
+import model.data.Movie;
+import model.logic.XMLManipulationLogic;
+import model.resources.XMLJDomFunctions;
 import model.resources.XPathFunctions;
 import net.sf.saxon.s9api.SaxonApiException;
 import net.sf.saxon.s9api.XdmValue;
+import org.jdom2.Document;
 
+import java.text.SimpleDateFormat;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -22,6 +27,27 @@ public class EditController {
     public TextField xmlFilePath;
 
     public ImageView feedbackIcon;
+
+    @FXML
+    TextField titleTF;
+    @FXML
+    TextField yearTF;
+    @FXML
+    TextField releaseDateTF;
+    @FXML
+    TextField countryTF;
+    @FXML
+    TextField directorTF;
+    @FXML
+    TextField castTF;
+    @FXML
+    TextField durationTF;
+    @FXML
+    TextField languageTF;
+    @FXML
+    TextField musicTF;
+    @FXML
+    TextField boxOfficeTF;
 
     @FXML
     void initialize() {
@@ -64,7 +90,7 @@ public class EditController {
                 b.setPrefWidth(215);
                 b.setWrapText(true);
 
-                b.setOnAction((e)->{
+                b.setOnAction((e) -> {
                     Button currButton = (Button) e.getSource();
                     loadMovieInfo(currButton.getId());
                 });
@@ -75,8 +101,22 @@ public class EditController {
         VBoxMovies.getChildren().addAll(buttons);
     }
 
-    private void loadMovieInfo(String title){
-
+    private void loadMovieInfo(String title) {
+        Document doc = XMLJDomFunctions.readDocumentXML("movies.xml");
+        Movie movie = XMLManipulationLogic.getMovieByTitle(title, doc);
+        titleTF.setText(movie.getTitle());
+        yearTF.setText(String.valueOf(movie.getYear()));
+        releaseDateTF.setText(new SimpleDateFormat("yyyy-MM-dd").format(movie.getReleaseDate()));
+        countryTF.setText(movie.getCountry().toString());
+        countryTF.setText(countryTF.getText(1, countryTF.getText().length() - 1));
+        directorTF.setText(movie.getDirector());
+        castTF.setText(movie.getCast().toString());
+        castTF.setText(castTF.getText(1, castTF.getText().length() - 1));
+        durationTF.setText(String.valueOf(movie.getDuration()));
+        languageTF.setText(movie.getLanguage().toString());
+        languageTF.setText(languageTF.getText(1, languageTF.getText().length() - 1));
+        musicTF.setText(movie.getMusic());
+        boxOfficeTF.setText(String.valueOf(movie.getBoxOffice()));
     }
 
     private void setWrong() {

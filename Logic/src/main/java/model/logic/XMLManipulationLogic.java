@@ -88,6 +88,7 @@ public class XMLManipulationLogic {
             String xp = "//movie[title=\"" + oldTitle + "\"]";
             XdmValue res = XPathFunctions.executeXpath(xp, "movies.xml");
             if (res.size() == 1) {
+
                 Document newDoc = XMLJDomFunctions.readStringToDocument(res.toString());
                 root = newDoc.getRootElement();
 
