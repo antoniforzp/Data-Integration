@@ -2,6 +2,7 @@ package gui.tabs;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
@@ -15,7 +16,9 @@ import net.sf.saxon.s9api.SaxonApiException;
 import net.sf.saxon.s9api.XdmValue;
 import org.jdom2.Document;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -48,6 +51,10 @@ public class EditController {
     TextField musicTF;
     @FXML
     TextField boxOfficeTF;
+    @FXML
+    TextField coverTF;
+    @FXML
+    TextField distributionTF;
 
     @FXML
     void initialize() {
@@ -117,6 +124,22 @@ public class EditController {
         languageTF.setText(languageTF.getText(1, languageTF.getText().length() - 1));
         musicTF.setText(movie.getMusic());
         boxOfficeTF.setText(String.valueOf(movie.getBoxOffice()));
+    }
+
+    public void saveMovieInfo(String title) {
+        Movie movie = null;
+//        try {
+//            movie = new Movie(titleTF.getText(), coverTF.getText(), Integer.parseInt(yearTF.getText()),
+//                    new SimpleDateFormat("yyyy-MM-dd").parse(releaseDateTF.getText()), countryTF.getChildren(), directorTF.getText(),
+//                    castTF.getText(), durationTF.getText(), distributionTF.getText(),
+//                    languageTF.getText(), musicTF.getText(), boxOfficeTF.getText());
+//        } catch (ParseException e) {
+//            e.printStackTrace();
+//        }
+
+        Document doc = XMLJDomFunctions.readDocumentXML("movies.xml");
+        doc = XMLManipulationLogic.editMovie(title, movie, doc);
+        XMLJDomFunctions.writeDocumentToFile(doc, "movies.xml");
     }
 
     private void setWrong() {

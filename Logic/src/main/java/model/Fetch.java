@@ -2,6 +2,7 @@ package model;
 
 import model.data.Movie;
 import model.resources.HttpRequestFunctions;
+import org.apache.commons.lang3.StringEscapeUtils;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -64,7 +65,8 @@ public class Fetch {
                 if (searchFound) {
                     Matcher matcherLink = patternLink.matcher(line);
                     if (matcherLink.find()) {
-                        link = matcherLink.group().substring(6, matcherLink.group().length() - 1).replace("%26", "&").replace("%27", "'");
+                        link = matcherLink.group().substring(6, matcherLink.group().length() - 1);
+                        link = StringEscapeUtils.unescapeHtml4(link);
                     }
                 }
                 if (!link.isEmpty()) {
@@ -127,7 +129,8 @@ public class Fetch {
         try {
             FileReader reader = new FileReader("currentMovieInfobox.html");
             BufferedReader bufferedReader = new BufferedReader(reader);
-            String line = bufferedReader.readLine().replace("&amp;", "&");
+            String line = bufferedReader.readLine();
+            line = StringEscapeUtils.unescapeHtml4(line);
             Matcher matcher = pattern.matcher(line);
             if (matcher.find()) {
                 return matcher.group().substring(1, matcher.group().length() - 1);
@@ -147,7 +150,8 @@ public class Fetch {
             String line = bufferedReader.readLine();
             Matcher matcher = pattern.matcher(line);
             if (matcher.find()) {
-                return matcher.group().substring(5);
+                line = matcher.group().substring(5);
+                return "https:" + line;
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -451,7 +455,8 @@ public class Fetch {
                     line = matcherSelector.group();
                     read = true;
                 }
-                Matcher matcher = pattern.matcher(line.replace("&#160;", " "));
+                line = StringEscapeUtils.unescapeHtml4(line);
+                Matcher matcher = pattern.matcher(line);
                 if (matcher.find() && read) {
                     String uncut = matcher.group().substring(2, matcher.group().length() - 1);
 

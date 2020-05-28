@@ -94,71 +94,35 @@ public class XMLManipulationLogic {
 
                 XMLOutputter outp = new XMLOutputter();
                 outp.setFormat(Format.getCompactFormat());
-                StringWriter sw = new StringWriter();
 
-                outp.output(root.getChild("title").getContent(), sw);
-                String title = sw.toString();
-
-                sw = new StringWriter();
-                outp.output(root.getChild("cover").getContent(), sw);
-                String cover = sw.toString();
-
-                sw = new StringWriter();
-                outp.output(root.getChild("year").getContent(), sw);
-                int year = Integer.parseInt(sw.toString());
-
-                sw = new StringWriter();
-                outp.output(root.getChild("releaseDate").getContent(), sw);
-                Date releaseDate = new SimpleDateFormat("E MMM dd HH:mm:ss z yyyy").parse(sw.toString());
-
+                String title = outp.outputString(root.getChild("title").getContent());;
+                String cover = outp.outputString(root.getChild("cover").getContent());
+                int year = Integer.parseInt(outp.outputString(root.getChild("year").getContent()));
+                Date releaseDate = new SimpleDateFormat("E MMM dd HH:mm:ss z yyyy").parse(outp.outputString(root.getChild("releaseDate").getContent()));
                 List<Element> elements = root.getChild("productionCountries").getChildren();
                 List<String> countries = new ArrayList<>();
                 for(Element e: elements) {
-                    sw = new StringWriter();
-                    outp.output(e.getContent(), sw);
-                    countries.add(sw.toString());
+                    countries.add(outp.outputString(e.getContent()));
                 }
-
-                sw = new StringWriter();
-                outp.output(root.getChild("director").getContent(), sw);
-                String director = sw.toString();
-
+                String director = outp.outputString(root.getChild("director").getContent());
                 elements = root.getChild("cast").getChildren();
                 List<String> actors = new ArrayList<>();
                 for(Element e: elements) {
-                    sw = new StringWriter();
-                    outp.output(e.getContent(), sw);
-                    actors.add(sw.toString());
+                    actors.add(outp.outputString(e.getContent()));
                 }
-
-                sw = new StringWriter();
-                outp.output(root.getChild("duration").getContent(), sw);
-                int duration = Integer.parseInt(sw.toString());
-
-                sw = new StringWriter();
-                outp.output(root.getChild("distribution").getContent(), sw);
-                String distribution = sw.toString();
-
+                int duration = Integer.parseInt(outp.outputString(root.getChild("duration").getContent()));
+                String distribution = outp.outputString(root.getChild("distribution").getContent());
                 elements = root.getChild("languages").getChildren();
                 List<String> languages = new ArrayList<>();
                 for(Element e: elements) {
-                    sw = new StringWriter();
-                    outp.output(e.getContent(), sw);
-                    languages.add(sw.toString());
+                    languages.add(outp.outputString(e.getContent()));
                 }
-
-                sw = new StringWriter();
-                outp.output(root.getChild("music").getContent(), sw);
-                String music = sw.toString();
-
-                sw = new StringWriter();
-                outp.output(root.getChild("boxOffice").getContent(), sw);
-                int boxOffice = Integer.parseInt(sw.toString());
-
+                String music = outp.outputString(root.getChild("music").getContent());
+                int boxOffice = Integer.parseInt(outp.outputString(root.getChild("boxOffice").getContent()));
                 Movie movie = new Movie(title, cover, year, releaseDate, countries, director, actors, duration, distribution, languages, music, boxOffice);
                 return movie;
             }
-        } catch (SaxonApiException | IOException | ParseException e) {
+        } catch (SaxonApiException | ParseException e) {
             e.printStackTrace();
         }
         return null;
