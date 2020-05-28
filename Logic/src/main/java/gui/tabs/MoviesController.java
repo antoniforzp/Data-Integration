@@ -3,6 +3,7 @@ package gui.tabs;
 import gui.PrimaryController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -18,7 +19,7 @@ public class MoviesController {
 
     public GridPane grid;
     public TextField textField;
-    public Text alert;
+    public Label alert;
 
     private List<String> titles;
 
@@ -32,11 +33,11 @@ public class MoviesController {
         updateGrid();
     }
 
-    private void resetAlert(){
-//        alert.setText("");
+    private void resetAlert() {
+        alert.setText("");
     }
 
-    private void loadTitles(){
+    private void loadTitles() {
         titles = Fetch.getAllTitles();
     }
 
@@ -54,22 +55,22 @@ public class MoviesController {
             Text titleText = new Text(title);
             titleText.setWrappingWidth(350);
 
-            grid.addRow(count + 1, new Text(count + 1 + ". "), titleText, getButton(count));
+            grid.addRow(count + 1, new Text(count + 1 + ". "), titleText, setUpButton(count));
             count++;
         }
-        grid.setVgap(10);
     }
 
-    private Button getButton(int id) {
+    private Button setUpButton(int id) {
         Button b = new Button();
 
-        b.setPrefHeight(25);
-        b.setPrefWidth(25);
+        b.setPrefHeight(15);
+        b.setPrefWidth(15);
         b.setId(String.valueOf(id));
 
+        b.setStyle("-fx-border-style: none; -fx-background-color: none;");
         b.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("img/trash.png"))));
 
-        b.setOnAction((e)->{
+        b.setOnAction((e) -> {
             Button current = (Button) e.getSource();
             deleteTitle(Integer.parseInt(current.getId()));
         });
@@ -77,7 +78,7 @@ public class MoviesController {
         return b;
     }
 
-    private void deleteTitle(int index){
+    private void deleteTitle(int index) {
 
         try {
             ListOperator.deleteTitle(index);
@@ -90,7 +91,7 @@ public class MoviesController {
     }
 
     @FXML
-    public void addTitle(){
+    public void addTitle() {
         resetAlert();
 
         try {
@@ -99,7 +100,6 @@ public class MoviesController {
             PrimaryController.displayAlert(e.getMessage());
             e.printStackTrace();
         }
-
         updateGrid();
     }
 

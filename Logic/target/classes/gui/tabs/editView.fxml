@@ -31,7 +31,7 @@
             <Image url="@../img/xml.png" />
          </image>
       </ImageView>
-      <Button layoutX="247.0" layoutY="77.0" mnemonicParsing="false" onAction="#getMovies" prefHeight="25.0" prefWidth="26.0" />
+      <Button fx:id="download" layoutX="247.0" layoutY="77.0" mnemonicParsing="false" onAction="#getMovies" prefHeight="25.0" prefWidth="26.0" />
       <ImageView fx:id="feedbackIcon" fitHeight="40.0" fitWidth="40.0" layoutX="42.0" layoutY="506.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@img/question.png" />

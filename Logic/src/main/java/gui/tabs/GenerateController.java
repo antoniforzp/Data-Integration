@@ -1,15 +1,13 @@
 package gui.tabs;
 
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import model.Fetch;
-import model.LoadingTask;
 import model.logic.GenerateLogic;
 
 import java.util.List;
@@ -18,7 +16,7 @@ public class GenerateController {
 
     public TextArea listOfMovies;
     public TextArea generatedXml;
-    public TextArea feedback;
+    public Label alert;
 
     public TextField textField;
 
@@ -28,9 +26,7 @@ public class GenerateController {
 
     @FXML
     void initialize() {
-        setListOfMovies();
-
-        feedback.setEditable(false);
+        alert.setText("");
 
         String filename = "movies.xml";
         textField.setText(filename);
@@ -50,6 +46,9 @@ public class GenerateController {
 
     @FXML
     void generate() {
+        setListOfMovies();
+
+        alert.setText("");
         setIdle();
 
         if (GenerateLogic.generate(textField.getText())) {
@@ -57,12 +56,12 @@ public class GenerateController {
             generatedXml.textProperty().bind(GenerateLogic.getTask().valueProperty());
 
             GenerateLogic.getTask().setOnSucceeded(event -> {
-                feedback.setText("XML generated correctly!");
+                alert.setText("XML generated correctly!");
                 setCorrect();
             });
         } else {
             setWrong();
-            feedback.setText("Wrong file, check the extension!");
+            alert.setText("Wrong file, check the extension!");
         }
     }
 
@@ -70,7 +69,7 @@ public class GenerateController {
     void cancel() {
         if (GenerateLogic.cancel()) {
             setWrong();
-            feedback.setText("operation cancelled!");
+            alert.setText("operation cancelled!");
         }
     }
 

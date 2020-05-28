@@ -1,23 +1,22 @@
 package model.data;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
 public class Movie {
 
-    private String title;
-    private String cover;
-    private int year;
-    private Date releaseDate;
-    private List<String> country;
-    private String director;
-    private List<String> cast;
-    private int duration;
-    private String distribution;
-    private List<String> language;
-    private String music;
-    private int boxOffice;
+    private final String title;
+    private final String cover;
+    private final int year;
+    private final Date releaseDate;
+    private final List<String> country;
+    private final String director;
+    private final List<String> cast;
+    private final int duration;
+    private final String distribution;
+    private final List<String> language;
+    private final String music;
+    private final int boxOffice;
 
     public Movie(String title, String cover, int year, Date releaseDate, List<String> country, String director, List<String> cast, int duration, String distribution, List<String> language, String music, int boxOffice) {
         this.title = title;
@@ -38,95 +37,64 @@ public class Movie {
         return title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
     public String getCover() {
         return cover;
-    }
-
-    public void setCover(String cover) {
-        this.cover = cover;
     }
 
     public int getYear() {
         return year;
     }
 
-    public void setYear(int year) {
-        this.year = year;
-    }
-
     public Date getReleaseDate() {
         return releaseDate;
-    }
-
-    public void setReleaseDate(Date releaseDate) {
-        this.releaseDate = releaseDate;
     }
 
     public List<String> getCountry() {
         return country;
     }
 
-    public void setCountry(List<String> country) {
-        this.country = country;
-    }
-
     public String getDirector() {
         return director;
-    }
-
-    public void setDirector(String director) {
-        this.director = director;
     }
 
     public List<String> getCast() {
         return cast;
     }
 
-    public void setCast(List<String> cast) {
-        this.cast = cast;
-    }
-
     public int getDuration() {
         return duration;
-    }
-
-    public void setDuration(int duration) {
-        this.duration = duration;
     }
 
     public String getDistribution() {
         return distribution;
     }
 
-    public void setDistribution(String distribution) {
-        this.distribution = distribution;
-    }
-
     public List<String> getLanguage() {
         return language;
-    }
-
-    public void setLanguage(List<String> language) {
-        this.language = language;
     }
 
     public String getMusic() {
         return music;
     }
 
-    public void setMusic(String music) {
-        this.music = music;
-    }
-
     public int getBoxOffice() {
         return boxOffice;
     }
 
-    public void setBoxOffice(int boxOffice) {
-        this.boxOffice = boxOffice;
+    @Override
+    public String toString() {
+
+        return title + "\n" +
+                "cover:\t\t" + cover + "\n" +
+                "year:\t\t\t" + year + "\n" +
+                "releaseDate:\t" + releaseDate + "\n" +
+                "country:\t\t" + country + "\n" +
+                "director:\t\t" + director + "\n" +
+                "cast:\t\t\t" + cast + "\n" +
+                "duration:\t\t" + duration + "\n" +
+                "distribution:\t" + distribution + "\n" +
+                "language:\t\t" + language + "\n" +
+                "music:\t\t" + music + "\n" +
+                "boxOffice:\t" + boxOffice + "\n\n";
     }
 }
