@@ -19,6 +19,8 @@ import net.sf.saxon.s9api.SaxonApiException;
 import net.sf.saxon.s9api.XdmValue;
 import org.jdom2.Document;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -39,6 +41,8 @@ public class EditController {
     List<Node> textEditors = new ArrayList<>();
 
     int lastEdit = 0;
+
+    String oldTitle = null;
 
     @FXML
     void initialize() {
@@ -122,6 +126,7 @@ public class EditController {
         TextField title = new TextField();
         title.setText(movie.getTitle());
         textEditors.add(title);
+        oldTitle = movie.getTitle();
 
         //1 - Cover link
         TextField coverLink = new TextField();
@@ -135,7 +140,7 @@ public class EditController {
 
         //3 - Release date
         TextField releaseDate = new TextField();
-        releaseDate.setText(String.valueOf(movie.getReleaseDate()));
+        releaseDate.setText(new SimpleDateFormat("yyyy-MM-dd").format(movie.getReleaseDate()));
         textEditors.add(releaseDate);
 
         //4 - Countries
@@ -273,20 +278,23 @@ public class EditController {
         return language;
     }
 
-    public void saveMovieInfo(String title) {
+    @FXML
+    public void saveMovieInfo() {
         Movie movie = null;
-//        try {
-//            movie = new Movie(titleTF.getText(), coverTF.getText(), Integer.parseInt(yearTF.getText()),
-//                    new SimpleDateFormat("yyyy-MM-dd").parse(releaseDateTF.getText()), countryTF.getChildren(), directorTF.getText(),
-//                    castTF.getText(), durationTF.getText(), distributionTF.getText(),
-//                    languageTF.getText(), musicTF.getText(), boxOfficeTF.getText());
-//        } catch (ParseException e) {
-//            e.printStackTrace();
-//        }
+        try {
+            movie = new Movie(((TextField)textEditors.get(0)).getText(), ((TextField)textEditors.get(1)).getText(), Integer.parseInt(((TextField)textEditors.get(2)).getText()),
+                    new SimpleDateFormat("yyyy-MM-dd").parse(((TextField)textEditors.get(3)).getText()), ((ComboBox)textEditors.get(4)).getItems(), ((TextField)textEditors.get(5)).getText(),
+                    ((ComboBox)textEditors.get(6)).getItems(), Integer.parseInt(((TextField)textEditors.get(7)).getText()), ((TextField)textEditors.get(8)).getText(),
+                    ((ComboBox)textEditors.get(9)).getItems(), ((TextField)textEditors.get(10)).getText(), Integer.parseInt(((TextField)textEditors.get(11)).getText()));
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
 
         Document doc = XMLJDomFunctions.readDocumentXML("movies.xml");
-        doc = XMLManipulationLogic.editMovie(title, movie, doc);
+        doc = XMLManipulationLogic.editMovie(oldTitle, movie, doc);
         XMLJDomFunctions.writeDocumentToFile(doc, "movies.xml");
+
+        setListOfMovies();
     }
 
     private void setWrong() {
