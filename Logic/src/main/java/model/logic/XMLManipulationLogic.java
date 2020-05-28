@@ -6,6 +6,7 @@ import model.resources.XPathFunctions;
 import net.sf.saxon.s9api.SaxonApiException;
 import net.sf.saxon.s9api.XdmItem;
 import net.sf.saxon.s9api.XdmValue;
+import org.apache.commons.lang3.StringEscapeUtils;
 import org.jdom2.Attribute;
 import org.jdom2.Document;
 import org.jdom2.Element;
@@ -88,7 +89,7 @@ public class XMLManipulationLogic {
                 outp.setFormat(Format.getCompactFormat());
 
                 String title = outp.outputString(root.getChild("title").getContent());
-                ;
+                title = StringEscapeUtils.unescapeHtml4(title);
                 String cover = outp.outputString(root.getChild("cover").getContent());
                 int year = Integer.parseInt(outp.outputString(root.getChild("year").getContent()));
                 Date releaseDate = new SimpleDateFormat("E MMM dd HH:mm:ss z yyyy").parse(outp.outputString(root.getChild("releaseDate").getContent()));
