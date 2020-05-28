@@ -1,9 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE movies SYSTEM "validateDTD.dtd">
 <movies xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="validateXSD.xsd">
      <movie>
+          <title>Toy Story</title>
+          <cover>https://upload.wikimedia.org/wikipedia/en/thumb/1/13/Toy_Story.jpg/220px-Toy_Story.jpg</cover>
+          <year>1995</year>
+          <releaseDate country="USA">Wed Nov 22 00:00:00 GMT 1995</releaseDate>
+          <productionCountries>
+               <country>United States</country>
+          </productionCountries>
+          <director>John Lasseter</director>
+          <cast>
+               <actor>Tom Hanks</actor>
+               <actor>Tim Allen</actor>
+               <actor>Don Rickles</actor>
+               <actor>Jim Varney</actor>
+               <actor>Wallace Shawn</actor>
+               <actor>John Ratzenberger</actor>
+               <actor>Annie Potts</actor>
+               <actor>John Morris</actor>
+               <actor>Erik von Detten</actor>
+          </cast>
+          <duration>81</duration>
+          <distribution>Buena Vista Pictures Distribution</distribution>
+          <languages>
+               <language>English</language>
+          </languages>
+          <music>Randy Newman</music>
+          <boxOffice currency="$">0</boxOffice>
+     </movie>
+     <movie>
           <title>Dr. Dolittle</title>
-          <cover>//upload.wikimedia.org/wikipedia/en/thumb/5/5f/Dr_dolittle_movie_1998.jpg/220px-Dr_dolittle_movie_1998.jpg</cover>
+          <cover>https://upload.wikimedia.org/wikipedia/en/thumb/5/5f/Dr_dolittle_movie_1998.jpg/220px-Dr_dolittle_movie_1998.jpg</cover>
           <year>1998</year>
           <releaseDate country="USA">Fri Jun 26 00:00:00 BST 1998</releaseDate>
           <productionCountries>
@@ -25,7 +52,7 @@
      </movie>
      <movie>
           <title>Pulp Fiction</title>
-          <cover>//upload.wikimedia.org/wikipedia/en/3/3b/Pulp_Fiction_%281994%29_poster.jpg</cover>
+          <cover>https://upload.wikimedia.org/wikipedia/en/3/3b/Pulp_Fiction_%281994%29_poster.jpg</cover>
           <year>1994</year>
           <releaseDate country="USA">Fri Oct 14 00:00:00 BST 1994</releaseDate>
           <productionCountries>
@@ -54,30 +81,8 @@
           <boxOffice currency="$">213900000</boxOffice>
      </movie>
      <movie>
-          <title>Thelma &amp; Louise</title>
-          <cover>//upload.wikimedia.org/wikipedia/en/thumb/8/8f/Thelma_%26_Louise_poster.png/220px-Thelma_%26_Louise_poster.png</cover>
-          <year>1991</year>
-          <releaseDate country="USA">Fri May 24 00:00:00 BST 1991</releaseDate>
-          <productionCountries>
-               <country>United States</country>
-          </productionCountries>
-          <director>Ridley Scott</director>
-          <cast>
-               <actor>Susan Sarandon</actor>
-               <actor>Geena Davis</actor>
-               <actor>Harvey Keitel</actor>
-          </cast>
-          <duration>129</duration>
-          <distribution>Metro-Goldwyn-Mayer</distribution>
-          <languages>
-               <language>English</language>
-          </languages>
-          <music>Hans Zimmer</music>
-          <boxOffice currency="$">45400000</boxOffice>
-     </movie>
-     <movie>
           <title>Blade Runner</title>
-          <cover>//upload.wikimedia.org/wikipedia/en/thumb/9/9f/Blade_Runner_%281982_poster%29.png/220px-Blade_Runner_%281982_poster%29.png</cover>
+          <cover>https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/Blade_Runner_%281982_poster%29.png/220px-Blade_Runner_%281982_poster%29.png</cover>
           <year>1982</year>
           <releaseDate country="USA">Fri Jun 25 00:00:00 BST 1982</releaseDate>
           <productionCountries>
@@ -99,7 +104,7 @@
      </movie>
      <movie>
           <title>Prometheus</title>
-          <cover>//upload.wikimedia.org/wikipedia/en/thumb/a/a3/Prometheusposterfixed.jpg/220px-Prometheusposterfixed.jpg</cover>
+          <cover>https://upload.wikimedia.org/wikipedia/en/thumb/a/a3/Prometheusposterfixed.jpg/220px-Prometheusposterfixed.jpg</cover>
           <year>2012</year>
           <releaseDate country="USA">Fri Jun 08 00:00:00 BST 2012</releaseDate>
           <productionCountries>
@@ -124,7 +129,7 @@
      </movie>
      <movie>
           <title>Back to the Future</title>
-          <cover>//upload.wikimedia.org/wikipedia/en/thumb/d/d2/Back_to_the_Future.jpg/220px-Back_to_the_Future.jpg</cover>
+          <cover>https://upload.wikimedia.org/wikipedia/en/thumb/d/d2/Back_to_the_Future.jpg/220px-Back_to_the_Future.jpg</cover>
           <year>1985</year>
           <releaseDate country="USA">Wed Jul 03 00:00:00 BST 1985</releaseDate>
           <productionCountries>
@@ -146,7 +151,7 @@
      </movie>
      <movie>
           <title>Good Will Hunting</title>
-          <cover>//upload.wikimedia.org/wikipedia/en/thumb/5/52/Good_Will_Hunting.png/220px-Good_Will_Hunting.png</cover>
+          <cover>https://upload.wikimedia.org/wikipedia/en/thumb/5/52/Good_Will_Hunting.png/220px-Good_Will_Hunting.png</cover>
           <year>1997</year>
           <releaseDate country="USA">Fri Dec 05 00:00:00 GMT 1997</releaseDate>
           <productionCountries>
@@ -169,7 +174,7 @@
      </movie>
      <movie>
           <title>The Talented Mr. Ripley</title>
-          <cover>//upload.wikimedia.org/wikipedia/en/thumb/2/22/Talented_mr_ripley.jpg/220px-Talented_mr_ripley.jpg</cover>
+          <cover>https://upload.wikimedia.org/wikipedia/en/thumb/2/22/Talented_mr_ripley.jpg/220px-Talented_mr_ripley.jpg</cover>
           <year>1999</year>
           <releaseDate country="USA">Sat Dec 25 00:00:00 GMT 1999</releaseDate>
           <productionCountries>
@@ -193,11 +198,11 @@
                <language>English</language>
           </languages>
           <music>Gabriel Yared</music>
-          <boxOffice currency="$">128800000</boxOffice>
+          <boxOffice currency="$">0</boxOffice>
      </movie>
      <movie>
           <title>The Accidental Tourist</title>
-          <cover>//upload.wikimedia.org/wikipedia/en/thumb/8/8c/The_accidental_tourist.jpg/220px-The_accidental_tourist.jpg</cover>
+          <cover>https://upload.wikimedia.org/wikipedia/en/thumb/8/8c/The_accidental_tourist.jpg/220px-The_accidental_tourist.jpg</cover>
           <year>1988</year>
           <releaseDate country="USA">Fri Dec 23 00:00:00 GMT 1988</releaseDate>
           <productionCountries>
@@ -216,11 +221,11 @@
                <language>English</language>
           </languages>
           <music>John Williams</music>
-          <boxOffice currency="$">32600000</boxOffice>
+          <boxOffice currency="$">0</boxOffice>
      </movie>
      <movie>
           <title>Match Point</title>
-          <cover>//upload.wikimedia.org/wikipedia/en/8/82/Match_Point_poster.png</cover>
+          <cover>https://upload.wikimedia.org/wikipedia/en/8/82/Match_Point_poster.png</cover>
           <year>2005</year>
           <releaseDate country="USA">Fri Jan 20 00:00:00 GMT 2006</releaseDate>
           <productionCountries>
@@ -247,7 +252,7 @@
      </movie>
      <movie>
           <title>Vicky Cristina Barcelona</title>
-          <cover>//upload.wikimedia.org/wikipedia/en/0/05/Vicky_Cristina_Barcelona_film_poster.png</cover>
+          <cover>https://upload.wikimedia.org/wikipedia/en/0/05/Vicky_Cristina_Barcelona_film_poster.png</cover>
           <year>2008</year>
           <releaseDate country="USA">Sat May 17 00:00:00 BST 2008</releaseDate>
           <productionCountries>
@@ -274,7 +279,7 @@
      </movie>
      <movie>
           <title>Larry Crowne</title>
-          <cover>//upload.wikimedia.org/wikipedia/en/d/df/Larry_Crowne_Poster.jpg</cover>
+          <cover>https://upload.wikimedia.org/wikipedia/en/d/df/Larry_Crowne_Poster.jpg</cover>
           <year>2011</year>
           <releaseDate country="USA">Fri Jul 01 00:00:00 BST 2011</releaseDate>
           <productionCountries>
@@ -299,7 +304,7 @@
      </movie>
      <movie>
           <title>Annie Hall</title>
-          <cover>//upload.wikimedia.org/wikipedia/en/thumb/e/e6/Anniehallposter.jpg/220px-Anniehallposter.jpg</cover>
+          <cover>https://upload.wikimedia.org/wikipedia/en/thumb/e/e6/Anniehallposter.jpg/220px-Anniehallposter.jpg</cover>
           <year>1977</year>
           <releaseDate country="USA">Wed Apr 20 00:00:00 BST 1977</releaseDate>
           <productionCountries>
@@ -327,7 +332,7 @@
      </movie>
      <movie>
           <title>The Village</title>
-          <cover>//upload.wikimedia.org/wikipedia/en/thumb/a/a0/The_Village_movie.jpg/220px-The_Village_movie.jpg</cover>
+          <cover>https://upload.wikimedia.org/wikipedia/en/thumb/a/a0/The_Village_movie.jpg/220px-The_Village_movie.jpg</cover>
           <year>2004</year>
           <releaseDate country="USA">Fri Jul 30 00:00:00 BST 2004</releaseDate>
           <productionCountries>
@@ -352,7 +357,7 @@
      </movie>
      <movie>
           <title>Quills</title>
-          <cover>//upload.wikimedia.org/wikipedia/en/thumb/c/cb/Quills_poster.JPG/220px-Quills_poster.JPG</cover>
+          <cover>https://upload.wikimedia.org/wikipedia/en/thumb/c/cb/Quills_poster.JPG/220px-Quills_poster.JPG</cover>
           <year>2000</year>
           <releaseDate country="USA">Wed Nov 22 00:00:00 GMT 2000</releaseDate>
           <productionCountries>
@@ -378,7 +383,7 @@
      </movie>
      <movie>
           <title>Walk the Line</title>
-          <cover>//upload.wikimedia.org/wikipedia/en/thumb/5/5a/Walk_the_line_poster.jpg/220px-Walk_the_line_poster.jpg</cover>
+          <cover>https://upload.wikimedia.org/wikipedia/en/thumb/5/5a/Walk_the_line_poster.jpg/220px-Walk_the_line_poster.jpg</cover>
           <year>2000</year>
           <releaseDate country="USA">Fri Nov 18 00:00:00 GMT 2005</releaseDate>
           <productionCountries>
@@ -401,7 +406,7 @@
      </movie>
      <movie>
           <title>Pretty Woman</title>
-          <cover>//upload.wikimedia.org/wikipedia/en/b/b6/Pretty_woman_movie.jpg</cover>
+          <cover>https://upload.wikimedia.org/wikipedia/en/b/b6/Pretty_woman_movie.jpg</cover>
           <year>1990</year>
           <releaseDate country="USA">Fri Mar 23 00:00:00 GMT 1990</releaseDate>
           <productionCountries>
@@ -422,7 +427,7 @@
      </movie>
      <movie>
           <title>Avengers: Endgame</title>
-          <cover>//upload.wikimedia.org/wikipedia/en/0/0d/Avengers_Endgame_poster.jpg</cover>
+          <cover>https://upload.wikimedia.org/wikipedia/en/0/0d/Avengers_Endgame_poster.jpg</cover>
           <year>2019</year>
           <releaseDate country="USA">Fri Apr 26 00:00:00 BST 2019</releaseDate>
           <productionCountries>
@@ -452,11 +457,11 @@
                <language>English</language>
           </languages>
           <music>Alan Silvestri</music>
-          <boxOffice currency="$">2147483647</boxOffice>
+          <boxOffice currency="$">0</boxOffice>
      </movie>
      <movie>
           <title>A Quiet Place</title>
-          <cover>//upload.wikimedia.org/wikipedia/en/a/a0/A_Quiet_Place_film_poster.png</cover>
+          <cover>https://upload.wikimedia.org/wikipedia/en/a/a0/A_Quiet_Place_film_poster.png</cover>
           <year>2018</year>
           <releaseDate country="USA">Fri Apr 06 00:00:00 BST 2018</releaseDate>
           <productionCountries>
@@ -475,81 +480,5 @@
           </languages>
           <music>Marco Beltrami</music>
           <boxOffice currency="$">340900000</boxOffice>
-     </movie>
-     <movie>
-          <title>Toy Story</title>
-          <cover>//upload.wikimedia.org/wikipedia/en/thumb/1/13/Toy_Story.jpg/220px-Toy_Story.jpg</cover>
-          <year>1995</year>
-          <releaseDate country="USA">Wed Nov 22 00:00:00 GMT 1995</releaseDate>
-          <productionCountries>
-               <country>United States</country>
-          </productionCountries>
-          <director>John Lasseter</director>
-          <cast>
-               <actor>Tom Hanks</actor>
-               <actor>Tim Allen</actor>
-               <actor>Don Rickles</actor>
-               <actor>Jim Varney</actor>
-               <actor>Wallace Shawn</actor>
-               <actor>John Ratzenberger</actor>
-               <actor>Annie Potts</actor>
-               <actor>John Morris</actor>
-               <actor>Erik von Detten</actor>
-          </cast>
-          <duration>81</duration>
-          <distribution>Buena Vista Pictures Distribution</distribution>
-          <languages>
-               <language>English</language>
-          </languages>
-          <music>Randy Newman</music>
-          <boxOffice currency="$">373600000</boxOffice>
-     </movie>
-     <movie>
-          <title>Ocean's Eleven</title>
-          <cover>//upload.wikimedia.org/wikipedia/en/6/68/Ocean%27s_Eleven_2001_Poster.jpg</cover>
-          <year>2001</year>
-          <releaseDate country="USA">Fri Dec 07 00:00:00 GMT 2001</releaseDate>
-          <productionCountries>
-               <country>United States</country>
-          </productionCountries>
-          <director>Steven Soderbergh</director>
-          <cast>
-               <actor>George Clooney</actor>
-               <actor>Matt Damon</actor>
-               <actor>Brad Pitt</actor>
-               <actor>Julia Roberts</actor>
-          </cast>
-          <duration>117</duration>
-          <distribution>Warner Bros. Pictures</distribution>
-          <languages>
-               <language>English</language>
-          </languages>
-          <music>David Holmes</music>
-          <boxOffice currency="$">450700000</boxOffice>
-     </movie>
-     <movie>
-          <title>Schindler's List</title>
-          <cover>//upload.wikimedia.org/wikipedia/en/3/38/Schindler%27s_List_movie.jpg</cover>
-          <year>1993</year>
-          <releaseDate country="USA">Wed Dec 15 00:00:00 GMT 1993</releaseDate>
-          <productionCountries>
-               <country>United States</country>
-          </productionCountries>
-          <director>Steven Spielberg</director>
-          <cast>
-               <actor>Liam Neeson</actor>
-               <actor>Ben Kingsley</actor>
-               <actor>Ralph Fiennes</actor>
-               <actor>Caroline Goodall</actor>
-               <actor>Jonathan Sagall</actor>
-               <actor>Embeth Davidtz</actor>
-          </cast>
-          <duration>195</duration>
-          <distribution>Universal Pictures</distribution>
-          <languages>
-               <language>English</language>
-          </languages>
-          <music>John Williams</music>
-          <boxOffice currency="$">322300000</boxOffice>
      </movie>
 </movies>

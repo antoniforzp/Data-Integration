@@ -6,6 +6,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import model.logic.XMLManipulationLogic;
+import model.logic.XPathLogic;
+import model.logic.XSLTLogic;
 import model.resources.XMLJDomFunctions;
 import org.jdom2.Document;
 
@@ -21,6 +23,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
+        XSLTLogic.toXml("movies.xml", "transf2.xsl", "directors.xml");
         scene = new Scene(loadFXML("primary"));
         stage.setScene(scene);
         stage.show();

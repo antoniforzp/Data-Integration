@@ -32,6 +32,7 @@ public class EditController {
 
     public ImageView feedbackIcon;
 
+
     public VBox vBox;
 
     List<Text> texts = new ArrayList<>();
@@ -270,6 +271,22 @@ public class EditController {
         });
 
         return language;
+    }
+
+    public void saveMovieInfo(String title) {
+        Movie movie = null;
+//        try {
+//            movie = new Movie(titleTF.getText(), coverTF.getText(), Integer.parseInt(yearTF.getText()),
+//                    new SimpleDateFormat("yyyy-MM-dd").parse(releaseDateTF.getText()), countryTF.getChildren(), directorTF.getText(),
+//                    castTF.getText(), durationTF.getText(), distributionTF.getText(),
+//                    languageTF.getText(), musicTF.getText(), boxOfficeTF.getText());
+//        } catch (ParseException e) {
+//            e.printStackTrace();
+//        }
+
+        Document doc = XMLJDomFunctions.readDocumentXML("movies.xml");
+        doc = XMLManipulationLogic.editMovie(title, movie, doc);
+        XMLJDomFunctions.writeDocumentToFile(doc, "movies.xml");
     }
 
     private void setWrong() {
