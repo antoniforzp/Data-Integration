@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <directors>
-     <director name="John Lasseter" />
      <director name="Betty Thomas" />
      <director name="Quentin Tarantino" />
      <director name="Ridley Scott" />
@@ -19,4 +18,5 @@
      <director name="Garry Marshall" />
      <director name="Anthony Russo" />
      <director name="John Krasinski" />
+     <director name="John Lasseter" />
 </directors>

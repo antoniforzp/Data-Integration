@@ -1,33 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE movies SYSTEM "validateDTD.dtd">
 <movies xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="validateXSD.xsd">
-     <movie>
-          <title>Toy Story</title>
-          <cover>https://upload.wikimedia.org/wikipedia/en/thumb/1/13/Toy_Story.jpg/220px-Toy_Story.jpg</cover>
-          <year>1995</year>
-          <releaseDate country="USA">Wed Nov 22 00:00:00 GMT 1995</releaseDate>
-          <productionCountries>
-               <country>United States</country>
-          </productionCountries>
-          <director>John Lasseter</director>
-          <cast>
-               <actor>Tom Hanks</actor>
-               <actor>Tim Allen</actor>
-               <actor>Don Rickles</actor>
-               <actor>Jim Varney</actor>
-               <actor>Wallace Shawn</actor>
-               <actor>John Ratzenberger</actor>
-               <actor>Annie Potts</actor>
-               <actor>John Morris</actor>
-               <actor>Erik von Detten</actor>
-          </cast>
-          <duration>81</duration>
-          <distribution>Buena Vista Pictures Distribution</distribution>
-          <languages>
-               <language>English</language>
-          </languages>
-          <music>Randy Newman</music>
-          <boxOffice currency="$">0</boxOffice>
-     </movie>
      <movie>
           <title>Dr. Dolittle</title>
           <cover>https://upload.wikimedia.org/wikipedia/en/thumb/5/5f/Dr_dolittle_movie_1998.jpg/220px-Dr_dolittle_movie_1998.jpg</cover>
@@ -480,5 +453,33 @@
           </languages>
           <music>Marco Beltrami</music>
           <boxOffice currency="$">340900000</boxOffice>
+     </movie>
+     <movie>
+          <title>Toy Story</title>
+          <cover>https://upload.wikimedia.org/wikipedia/en/thumb/1/13/Toy_Story.jpg/220px-Toy_Story.jpg</cover>
+          <year>1995</year>
+          <releaseDate country="USA">Wed Nov 22 00:00:00 GMT 1995</releaseDate>
+          <productionCountries>
+               <country>United States</country>
+          </productionCountries>
+          <director>John Lasseter</director>
+          <cast>
+               <actor>Tom Hanks</actor>
+               <actor>Tim Allen</actor>
+               <actor>Don Rickles</actor>
+               <actor>Jim Varney</actor>
+               <actor>Wallace Shawn</actor>
+               <actor>John Ratzenberger</actor>
+               <actor>Annie Potts</actor>
+               <actor>John Morris</actor>
+               <actor>Erik von Detten</actor>
+          </cast>
+          <duration>81</duration>
+          <distribution>Buena Vista Pictures Distribution</distribution>
+          <languages>
+               <language>English</language>
+          </languages>
+          <music>Randy Newman</music>
+          <boxOffice currency="$">0</boxOffice>
      </movie>
 </movies>

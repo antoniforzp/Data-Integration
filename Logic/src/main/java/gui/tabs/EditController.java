@@ -266,13 +266,14 @@ public class EditController {
         try {
             movie = new Movie(((TextField)textEditors.get(0)).getText(), ((TextField)textEditors.get(1)).getText(), Integer.parseInt(((TextField)textEditors.get(2)).getText()),
                     new SimpleDateFormat("yyyy-MM-dd").parse(((TextField)textEditors.get(3)).getText()), ((ComboBox)textEditors.get(4)).getItems(), ((TextField)textEditors.get(5)).getText(),
-                    ((ComboBox)textEditors.get(6)).getItems(), Integer.parseInt(((TextField)textEditors.get(7)).getText()), ((TextField)textEditors.get(8)).getText(),
+                    ((ComboBox)textEditors.get(6)).getItems(), Integer.parseInt(((TextField)textEditors.get(8)).getText()), ((TextField)textEditors.get(7)).getText(),
                     ((ComboBox)textEditors.get(9)).getItems(), ((TextField)textEditors.get(10)).getText(), Integer.parseInt(((TextField)textEditors.get(11)).getText()));
         } catch (ParseException e) {
             e.printStackTrace();
         }
 
         Document doc = XMLJDomFunctions.readDocumentXML("movies.xml");
+        System.out.println("dupa");
         doc = XMLManipulationLogic.editMovie(oldTitle, movie, doc);
         XMLJDomFunctions.writeDocumentToFile(doc, "movies.xml");
 
