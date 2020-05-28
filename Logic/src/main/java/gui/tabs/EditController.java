@@ -32,7 +32,7 @@ public class EditController {
 
     public ImageView feedbackIcon;
 
-
+    public Button download;
     public VBox vBox;
 
     List<Text> texts = new ArrayList<>();
@@ -43,6 +43,7 @@ public class EditController {
     @FXML
     void initialize() {
         xmlFilePath.setText("movies.xml");
+        download.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("img/download.png"))));
     }
 
     @FXML

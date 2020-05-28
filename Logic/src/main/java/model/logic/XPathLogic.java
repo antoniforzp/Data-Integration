@@ -19,7 +19,13 @@ import java.util.Date;
 import java.util.List;
 
 public class XPathLogic {
-    public static Movie getMovieByTitle(String title, Document doc) {
+
+    private static List<Movie> found = new ArrayList<>();
+
+    public static List<Movie> getAllMovies(String filename) {
+
+        Document doc = XMLJDomFunctions.readDocumentXML(filename);
+
         Element root;
         if (doc == null) {
             root = new Element("movies");
@@ -27,39 +33,82 @@ public class XPathLogic {
         } else {
             root = doc.getRootElement();
         }
+
+        found = new ArrayList<>();
+
+        try {
+            String xp = "//movie";
+            XdmValue res = XPathFunctions.executeXpath(xp, filename);
+            if (res.size() > 0) {
+                for (XdmItem item : res) {
+                    Document newDoc = XMLJDomFunctions.readStringToDocument(item.toString());
+                    if (newDoc != null) {
+                        root = newDoc.getRootElement();
+                    }
+                    found.add(getMovieFromDocument(root));
+                }
+                return found;
+            }
+        } catch (SaxonApiException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public static List<Movie> getMovieByTitle(String title, String filename) {
+
+        Document doc = XMLJDomFunctions.readDocumentXML(filename);
+
+        Element root;
+        if (doc == null) {
+            root = new Element("movies");
+        } else {
+            root = doc.getRootElement();
+        }
+
+        found = new ArrayList<>();
 
         try {
             String xp = "//movie[title=\"" + title + "\"]";
-            XdmValue res = XPathFunctions.executeXpath(xp, "movies.xml");
+            XdmValue res = XPathFunctions.executeXpath(xp, filename);
             if (res.size() == 1) {
 
                 Document newDoc = XMLJDomFunctions.readStringToDocument(res.toString());
-                root = newDoc.getRootElement();
-                return getMovieFromDocument(root);
+                if (newDoc != null) {
+                    root = newDoc.getRootElement();
+                }
+
+                found.add(getMovieFromDocument(root));
+                return found;
             }
         } catch (SaxonApiException e) {
             e.printStackTrace();
         }
         return null;
     }
-    public static List<Movie> getMoviesByDirector(String director, Document doc) {
+
+    public static List<Movie> getMoviesByDirector(String director, String filename) {
+
+        Document doc = XMLJDomFunctions.readDocumentXML(filename);
+
         Element root;
         if (doc == null) {
             root = new Element("movies");
-            doc = new Document(root);
         } else {
             root = doc.getRootElement();
         }
 
-        List<Movie> found = new ArrayList<>();
+        found = new ArrayList<>();
 
         try {
             String xp = "//movie[director=\"" + director + "\"]";
-            XdmValue res = XPathFunctions.executeXpath(xp, "movies.xml");
+            XdmValue res = XPathFunctions.executeXpath(xp, filename);
             if (res.size() > 0) {
                 for (XdmItem item : res) {
                     Document newDoc = XMLJDomFunctions.readStringToDocument(item.toString());
-                    root = newDoc.getRootElement();
+                    if (newDoc != null) {
+                        root = newDoc.getRootElement();
+                    }
                     found.add(getMovieFromDocument(root));
                 }
                 return found;
@@ -69,24 +118,29 @@ public class XPathLogic {
         }
         return null;
     }
-    public static List<Movie> getMoviesByActor(String actor, Document doc) {
+
+    public static List<Movie> getMoviesByActor(String actor, String filename) {
+
+        Document doc = XMLJDomFunctions.readDocumentXML(filename);
+
         Element root;
         if (doc == null) {
             root = new Element("movies");
-            doc = new Document(root);
         } else {
             root = doc.getRootElement();
         }
 
-        List<Movie> found = new ArrayList<>();
+        found = new ArrayList<>();
 
         try {
             String xp = "//movie[cast/actor=\"" + actor + "\"]";
-            XdmValue res = XPathFunctions.executeXpath(xp, "movies.xml");
+            XdmValue res = XPathFunctions.executeXpath(xp, filename);
             if (res.size() > 0) {
                 for (XdmItem item : res) {
                     Document newDoc = XMLJDomFunctions.readStringToDocument(item.toString());
-                    root = newDoc.getRootElement();
+                    if (newDoc != null) {
+                        root = newDoc.getRootElement();
+                    }
                     found.add(getMovieFromDocument(root));
                 }
                 return found;
@@ -96,24 +150,29 @@ public class XPathLogic {
         }
         return null;
     }
-    public static List<Movie> getMoviesByDuration(int min, int max, Document doc) {
+
+    public static List<Movie> getMoviesByDuration(int min, int max, String filename) {
+
+        Document doc = XMLJDomFunctions.readDocumentXML(filename);
+
         Element root;
         if (doc == null) {
             root = new Element("movies");
-            doc = new Document(root);
         } else {
             root = doc.getRootElement();
         }
 
-        List<Movie> found = new ArrayList<>();
+        found = new ArrayList<>();
 
         try {
             String xp = "//movie[duration>" + min + " and duration<" + max + "]";
-            XdmValue res = XPathFunctions.executeXpath(xp, "movies.xml");
+            XdmValue res = XPathFunctions.executeXpath(xp, filename);
             if (res.size() > 0) {
                 for (XdmItem item : res) {
                     Document newDoc = XMLJDomFunctions.readStringToDocument(item.toString());
-                    root = newDoc.getRootElement();
+                    if (newDoc != null) {
+                        root = newDoc.getRootElement();
+                    }
                     found.add(getMovieFromDocument(root));
                 }
                 return found;
@@ -123,24 +182,29 @@ public class XPathLogic {
         }
         return null;
     }
-    public static List<Movie> getMoviesByCountry(String country, Document doc) {
+
+    public static List<Movie> getMoviesByCountry(String country, String filename) {
+
+        Document doc = XMLJDomFunctions.readDocumentXML(filename);
+
         Element root;
         if (doc == null) {
             root = new Element("movies");
-            doc = new Document(root);
         } else {
             root = doc.getRootElement();
         }
 
-        List<Movie> found = new ArrayList<>();
+        found = new ArrayList<>();
 
         try {
             String xp = "//movie[productionCountries/country=\"" + country + "\"]";
-            XdmValue res = XPathFunctions.executeXpath(xp, "movies.xml");
+            XdmValue res = XPathFunctions.executeXpath(xp, filename);
             if (res.size() > 0) {
                 for (XdmItem item : res) {
                     Document newDoc = XMLJDomFunctions.readStringToDocument(item.toString());
-                    root = newDoc.getRootElement();
+                    if (newDoc != null) {
+                        root = newDoc.getRootElement();
+                    }
                     found.add(getMovieFromDocument(root));
                 }
                 return found;
@@ -150,24 +214,29 @@ public class XPathLogic {
         }
         return null;
     }
-    public static List<Movie> getMoviesByBoxOffice(int min, int max, Document doc) {
+
+    public static List<Movie> getMoviesByBoxOffice(int min, int max, String filename) {
+
+        Document doc = XMLJDomFunctions.readDocumentXML(filename);
+
         Element root;
         if (doc == null) {
             root = new Element("movies");
-            doc = new Document(root);
         } else {
             root = doc.getRootElement();
         }
 
-        List<Movie> found = new ArrayList<>();
+        found = new ArrayList<>();
 
         try {
             String xp = "//movie[boxOffice>" + min + " and boxOffice<" + max + "]";
-            XdmValue res = XPathFunctions.executeXpath(xp, "movies.xml");
+            XdmValue res = XPathFunctions.executeXpath(xp, filename);
             if (res.size() > 0) {
                 for (XdmItem item : res) {
                     Document newDoc = XMLJDomFunctions.readStringToDocument(item.toString());
-                    root = newDoc.getRootElement();
+                    if (newDoc != null) {
+                        root = newDoc.getRootElement();
+                    }
                     found.add(getMovieFromDocument(root));
                 }
                 return found;
@@ -177,24 +246,29 @@ public class XPathLogic {
         }
         return null;
     }
-    public static List<Movie> getMoviesByYear(int min, int max, Document doc) {
+
+    public static List<Movie> getMoviesByYear(int min, int max, String filename) {
+
+        Document doc = XMLJDomFunctions.readDocumentXML(filename);
+
         Element root;
         if (doc == null) {
             root = new Element("movies");
-            doc = new Document(root);
         } else {
             root = doc.getRootElement();
         }
 
-        List<Movie> found = new ArrayList<>();
+        found = new ArrayList<>();
 
         try {
             String xp = "//movie[year>" + min + " and year<" + max + "]";
-            XdmValue res = XPathFunctions.executeXpath(xp, "movies.xml");
+            XdmValue res = XPathFunctions.executeXpath(xp, filename);
             if (res.size() > 0) {
                 for (XdmItem item : res) {
                     Document newDoc = XMLJDomFunctions.readStringToDocument(item.toString());
-                    root = newDoc.getRootElement();
+                    if (newDoc != null) {
+                        root = newDoc.getRootElement();
+                    }
                     found.add(getMovieFromDocument(root));
                 }
                 return found;
@@ -207,41 +281,40 @@ public class XPathLogic {
 
 
     private static Movie getMovieFromDocument(Element root) {
-        XMLOutputter outp = new XMLOutputter();
-        outp.setFormat(Format.getCompactFormat());
+        XMLOutputter outPutter = new XMLOutputter();
+        outPutter.setFormat(Format.getCompactFormat());
         try {
 
-            String title = outp.outputString(root.getChild("title").getContent());
+            String title = outPutter.outputString(root.getChild("title").getContent());
             title = StringEscapeUtils.unescapeHtml4(title);
 
-            String cover = outp.outputString(root.getChild("cover").getContent());
-            int year = Integer.parseInt(outp.outputString(root.getChild("year").getContent()));
-            Date releaseDate = null;
-            releaseDate = new SimpleDateFormat("E MMM dd HH:mm:ss z yyyy").parse(outp.outputString(root.getChild("releaseDate").getContent()));
+            String cover = outPutter.outputString(root.getChild("cover").getContent());
+            int year = Integer.parseInt(outPutter.outputString(root.getChild("year").getContent()));
+            Date releaseDate;
+            releaseDate = new SimpleDateFormat("E MMM dd HH:mm:ss z yyyy").parse(outPutter.outputString(root.getChild("releaseDate").getContent()));
 
             List<Element> elements = root.getChild("productionCountries").getChildren();
             List<String> countries = new ArrayList<>();
             for (Element e : elements) {
-                countries.add(outp.outputString(e.getContent()));
+                countries.add(outPutter.outputString(e.getContent()));
             }
-            String director = outp.outputString(root.getChild("director").getContent());
+            String director = outPutter.outputString(root.getChild("director").getContent());
             elements = root.getChild("cast").getChildren();
             List<String> actors = new ArrayList<>();
             for (Element e : elements) {
-                actors.add(outp.outputString(e.getContent()));
+                actors.add(outPutter.outputString(e.getContent()));
             }
-            int duration = Integer.parseInt(outp.outputString(root.getChild("duration").getContent()));
-            String distribution = outp.outputString(root.getChild("distribution").getContent());
+            int duration = Integer.parseInt(outPutter.outputString(root.getChild("duration").getContent()));
+            String distribution = outPutter.outputString(root.getChild("distribution").getContent());
             elements = root.getChild("languages").getChildren();
             List<String> languages = new ArrayList<>();
             for (Element e : elements) {
-                languages.add(outp.outputString(e.getContent()));
+                languages.add(outPutter.outputString(e.getContent()));
             }
-            String music = outp.outputString(root.getChild("music").getContent());
-            int boxOffice = Integer.parseInt(outp.outputString(root.getChild("boxOffice").getContent()));
+            String music = outPutter.outputString(root.getChild("music").getContent());
+            int boxOffice = Integer.parseInt(outPutter.outputString(root.getChild("boxOffice").getContent()));
 
-            Movie movie = new Movie(title, cover, year, releaseDate, countries, director, actors, duration, distribution, languages, music, boxOffice);
-            return movie;
+            return new Movie(title, cover, year, releaseDate, countries, director, actors, duration, distribution, languages, music, boxOffice);
         } catch (ParseException e) {
             e.printStackTrace();
         }
