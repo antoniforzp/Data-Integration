@@ -1,5 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<movies xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="validateXSD.xsd">
+<movies>
+     <movie>
+          <title>Toy Story</title>
+          <cover>https://upload.wikimedia.org/wikipedia/en/thumb/1/13/Toy_Story.jpg/220px-Toy_Story.jpg</cover>
+          <year>1995</year>
+          <releaseDate country="USA">Wed Nov 22 00:00:00 GMT 1995</releaseDate>
+          <productionCountries>
+               <country>United States</country>
+          </productionCountries>
+          <director>John Lasseter</director>
+          <cast>
+               <actor>Tom Hanks</actor>
+               <actor>Tim Allen</actor>
+               <actor>Don Rickles</actor>
+               <actor>Jim Varney</actor>
+               <actor>Wallace Shawn</actor>
+               <actor>John Ratzenberger</actor>
+               <actor>Annie Potts</actor>
+               <actor>John Morris</actor>
+               <actor>Erik von Detten</actor>
+          </cast>
+          <duration>81</duration>
+          <distribution>Buena Vista Pictures Distribution</distribution>
+          <languages>
+               <language>English</language>
+          </languages>
+          <music>Randy Newman</music>
+          <boxOffice currency="$">373600000</boxOffice>
+     </movie>
      <movie>
           <title>Dr. Dolittle</title>
           <cover>https://upload.wikimedia.org/wikipedia/en/thumb/5/5f/Dr_dolittle_movie_1998.jpg/220px-Dr_dolittle_movie_1998.jpg</cover>
@@ -51,6 +79,28 @@
           </languages>
           <music />
           <boxOffice currency="$">213900000</boxOffice>
+     </movie>
+     <movie>
+          <title>Thelma &amp; Louise</title>
+          <cover>https://upload.wikimedia.org/wikipedia/en/thumb/8/8f/Thelma_%26_Louise_poster.png/220px-Thelma_%26_Louise_poster.png</cover>
+          <year>1991</year>
+          <releaseDate country="USA">Fri May 24 00:00:00 BST 1991</releaseDate>
+          <productionCountries>
+               <country>United States</country>
+          </productionCountries>
+          <director>Ridley Scott</director>
+          <cast>
+               <actor>Susan Sarandon</actor>
+               <actor>Geena Davis</actor>
+               <actor>Harvey Keitel</actor>
+          </cast>
+          <duration>129</duration>
+          <distribution>Metro-Goldwyn-Mayer</distribution>
+          <languages>
+               <language>English</language>
+          </languages>
+          <music>Hans Zimmer</music>
+          <boxOffice currency="$">45400000</boxOffice>
      </movie>
      <movie>
           <title>Blade Runner</title>
@@ -170,7 +220,7 @@
                <language>English</language>
           </languages>
           <music>Gabriel Yared</music>
-          <boxOffice currency="$">0</boxOffice>
+          <boxOffice currency="$">128800000</boxOffice>
      </movie>
      <movie>
           <title>The Accidental Tourist</title>
@@ -193,7 +243,7 @@
                <language>English</language>
           </languages>
           <music>John Williams</music>
-          <boxOffice currency="$">0</boxOffice>
+          <boxOffice currency="$">32600000</boxOffice>
      </movie>
      <movie>
           <title>Match Point</title>
@@ -277,8 +327,8 @@
      <movie>
           <title>Annie Hall</title>
           <cover>https://upload.wikimedia.org/wikipedia/en/thumb/e/e6/Anniehallposter.jpg/220px-Anniehallposter.jpg</cover>
-          <year>1977</year>
-          <releaseDate country="USA">Wed Apr 20 00:00:00 BST 1977</releaseDate>
+          <year>1979</year>
+          <releaseDate country="USA">Mon Jul 02 00:00:00 BST 1979</releaseDate>
           <productionCountries>
                <country>United States</country>
           </productionCountries>
@@ -398,6 +448,29 @@
           <boxOffice currency="$">463400000</boxOffice>
      </movie>
      <movie>
+          <title>Ocean's Eleven</title>
+          <cover>https://upload.wikimedia.org/wikipedia/en/6/68/Ocean%27s_Eleven_2001_Poster.jpg</cover>
+          <year>2001</year>
+          <releaseDate country="USA">Fri Dec 07 00:00:00 GMT 2001</releaseDate>
+          <productionCountries>
+               <country>United States</country>
+          </productionCountries>
+          <director>Steven Soderbergh</director>
+          <cast>
+               <actor>George Clooney</actor>
+               <actor>Matt Damon</actor>
+               <actor>Brad Pitt</actor>
+               <actor>Julia Roberts</actor>
+          </cast>
+          <duration>117</duration>
+          <distribution>Warner Bros. Pictures</distribution>
+          <languages>
+               <language>English</language>
+          </languages>
+          <music>David Holmes</music>
+          <boxOffice currency="$">450700000</boxOffice>
+     </movie>
+     <movie>
           <title>Avengers: Endgame</title>
           <cover>https://upload.wikimedia.org/wikipedia/en/0/0d/Avengers_Endgame_poster.jpg</cover>
           <year>2019</year>
@@ -429,57 +502,7 @@
                <language>English</language>
           </languages>
           <music>Alan Silvestri</music>
-          <boxOffice currency="$">0</boxOffice>
-     </movie>
-     <movie>
-          <title>A Quiet Place</title>
-          <cover>https://upload.wikimedia.org/wikipedia/en/a/a0/A_Quiet_Place_film_poster.png</cover>
-          <year>2018</year>
-          <releaseDate country="USA">Fri Apr 06 00:00:00 BST 2018</releaseDate>
-          <productionCountries>
-               <country>United States</country>
-          </productionCountries>
-          <director>John Krasinski</director>
-          <cast>
-               <actor>Emily Blunt</actor>
-               <actor>John Krasinski</actor>
-          </cast>
-          <duration>90</duration>
-          <distribution>Paramount Pictures</distribution>
-          <languages>
-               <language>American Sign Language</language>
-               <language>English</language>
-          </languages>
-          <music>Marco Beltrami</music>
-          <boxOffice currency="$">340900000</boxOffice>
-     </movie>
-     <movie>
-          <title>Toy Story</title>
-          <cover>https://upload.wikimedia.org/wikipedia/en/thumb/1/13/Toy_Story.jpg/220px-Toy_Story.jpg</cover>
-          <year>1995</year>
-          <releaseDate country="USA">Wed Nov 22 00:00:00 GMT 1995</releaseDate>
-          <productionCountries>
-               <country>United States</country>
-          </productionCountries>
-          <director>John Lasseter</director>
-          <cast>
-               <actor>Tom Hanks</actor>
-               <actor>Tim Allen</actor>
-               <actor>Don Rickles</actor>
-               <actor>Jim Varney</actor>
-               <actor>Wallace Shawn</actor>
-               <actor>John Ratzenberger</actor>
-               <actor>Annie Potts</actor>
-               <actor>John Morris</actor>
-               <actor>Erik von Detten</actor>
-          </cast>
-          <duration>81</duration>
-          <distribution>Buena Vista Pictures Distribution</distribution>
-          <languages>
-               <language>English</language>
-          </languages>
-          <music>Randy Newman</music>
-          <boxOffice currency="$">0</boxOffice>
+          <boxOffice currency="$">2147483647</boxOffice>
      </movie>
      <movie>
           <title>Schindler's List</title>
@@ -507,48 +530,25 @@
           <boxOffice currency="$">322300000</boxOffice>
      </movie>
      <movie>
-          <title>Thelma &amp; Louise</title>
-          <cover>https://upload.wikimedia.org/wikipedia/en/thumb/8/8f/Thelma_%26_Louise_poster.png/220px-Thelma_%26_Louise_poster.png</cover>
-          <year>1991</year>
-          <releaseDate country="USA">Fri May 24 00:00:00 BST 1991</releaseDate>
+          <title>A Quiet Place</title>
+          <cover>https://upload.wikimedia.org/wikipedia/en/a/a0/A_Quiet_Place_film_poster.png</cover>
+          <year>2018</year>
+          <releaseDate country="USA">Fri Apr 06 00:00:00 BST 2018</releaseDate>
           <productionCountries>
                <country>United States</country>
           </productionCountries>
-          <director>Ridley Scott</director>
+          <director>John Krasinski</director>
           <cast>
-               <actor>Susan Sarandon</actor>
-               <actor>Geena Davis</actor>
-               <actor>Harvey Keitel</actor>
+               <actor>Emily Blunt</actor>
+               <actor>John Krasinski</actor>
           </cast>
-          <duration>129</duration>
-          <distribution>Metro-Goldwyn-Mayer</distribution>
+          <duration>90</duration>
+          <distribution>Paramount Pictures</distribution>
           <languages>
+               <language>American Sign Language</language>
                <language>English</language>
           </languages>
-          <music>Hans Zimmer</music>
-          <boxOffice currency="$">45400000</boxOffice>
-     </movie>
-     <movie>
-          <title>Ocean's Eleven</title>
-          <cover>https://upload.wikimedia.org/wikipedia/en/6/68/Ocean%27s_Eleven_2001_Poster.jpg</cover>
-          <year>2001</year>
-          <releaseDate country="USA">Fri Dec 07 00:00:00 GMT 2001</releaseDate>
-          <productionCountries>
-               <country>United States</country>
-          </productionCountries>
-          <director>Steven Soderbergh</director>
-          <cast>
-               <actor>George Clooney</actor>
-               <actor>Matt Damon</actor>
-               <actor>Brad Pitt</actor>
-               <actor>Julia Roberts</actor>
-          </cast>
-          <duration>117</duration>
-          <distribution>Warner Bros. Pictures</distribution>
-          <languages>
-               <language>English</language>
-          </languages>
-          <music>David Holmes</music>
-          <boxOffice currency="$">450700000</boxOffice>
+          <music>Marco Beltrami</music>
+          <boxOffice currency="$">340900000</boxOffice>
      </movie>
 </movies>

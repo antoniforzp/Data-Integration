@@ -457,7 +457,7 @@ public class Fetch {
                     line = matcherSelector.group();
                     read = true;
                 }
-                line = StringEscapeUtils.unescapeHtml4(line);
+                line = line.replace("&#160;", " ");
                 Matcher matcher = pattern.matcher(line);
                 if (matcher.find() && read) {
                     String uncut = matcher.group().substring(2, matcher.group().length() - 1);
