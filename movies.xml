@@ -1,34 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <movies xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="validateXSD.xsd">
      <movie>
-          <title>Toy Story</title>
-          <cover>https://upload.wikimedia.org/wikipedia/en/thumb/1/13/Toy_Story.jpg/220px-Toy_Story.jpg</cover>
-          <year>1995</year>
-          <releaseDate country="USA">Wed Nov 22 00:00:00 GMT 1995</releaseDate>
-          <productionCountries>
-               <country>United States</country>
-          </productionCountries>
-          <director>John Lasseter</director>
-          <cast>
-               <actor>Tom Hanks</actor>
-               <actor>Tim Allen</actor>
-               <actor>Don Rickles</actor>
-               <actor>Jim Varney</actor>
-               <actor>Wallace Shawn</actor>
-               <actor>John Ratzenberger</actor>
-               <actor>Annie Potts</actor>
-               <actor>John Morris</actor>
-               <actor>Erik von Detten</actor>
-          </cast>
-          <duration>81</duration>
-          <distribution>Buena Vista Pictures Distribution</distribution>
-          <languages>
-               <language>English</language>
-          </languages>
-          <music>Randy Newman</music>
-          <boxOffice currency="$">0</boxOffice>
-     </movie>
-     <movie>
           <title>Dr. Dolittle</title>
           <cover>https://upload.wikimedia.org/wikipedia/en/thumb/5/5f/Dr_dolittle_movie_1998.jpg/220px-Dr_dolittle_movie_1998.jpg</cover>
           <year>1998</year>
@@ -480,5 +452,103 @@
           </languages>
           <music>Marco Beltrami</music>
           <boxOffice currency="$">340900000</boxOffice>
+     </movie>
+     <movie>
+          <title>Toy Story</title>
+          <cover>https://upload.wikimedia.org/wikipedia/en/thumb/1/13/Toy_Story.jpg/220px-Toy_Story.jpg</cover>
+          <year>1995</year>
+          <releaseDate country="USA">Wed Nov 22 00:00:00 GMT 1995</releaseDate>
+          <productionCountries>
+               <country>United States</country>
+          </productionCountries>
+          <director>John Lasseter</director>
+          <cast>
+               <actor>Tom Hanks</actor>
+               <actor>Tim Allen</actor>
+               <actor>Don Rickles</actor>
+               <actor>Jim Varney</actor>
+               <actor>Wallace Shawn</actor>
+               <actor>John Ratzenberger</actor>
+               <actor>Annie Potts</actor>
+               <actor>John Morris</actor>
+               <actor>Erik von Detten</actor>
+          </cast>
+          <duration>81</duration>
+          <distribution>Buena Vista Pictures Distribution</distribution>
+          <languages>
+               <language>English</language>
+          </languages>
+          <music>Randy Newman</music>
+          <boxOffice currency="$">0</boxOffice>
+     </movie>
+     <movie>
+          <title>Schindler's List</title>
+          <cover>https://upload.wikimedia.org/wikipedia/en/3/38/Schindler%27s_List_movie.jpg</cover>
+          <year>1993</year>
+          <releaseDate country="USA">Wed Dec 15 00:00:00 GMT 1993</releaseDate>
+          <productionCountries>
+               <country>United States</country>
+          </productionCountries>
+          <director>Steven Spielberg</director>
+          <cast>
+               <actor>Liam Neeson</actor>
+               <actor>Ben Kingsley</actor>
+               <actor>Ralph Fiennes</actor>
+               <actor>Caroline Goodall</actor>
+               <actor>Jonathan Sagall</actor>
+               <actor>Embeth Davidtz</actor>
+          </cast>
+          <duration>195</duration>
+          <distribution>Universal Pictures</distribution>
+          <languages>
+               <language>English</language>
+          </languages>
+          <music>John Williams</music>
+          <boxOffice currency="$">322300000</boxOffice>
+     </movie>
+     <movie>
+          <title>Thelma &amp; Louise</title>
+          <cover>https://upload.wikimedia.org/wikipedia/en/thumb/8/8f/Thelma_%26_Louise_poster.png/220px-Thelma_%26_Louise_poster.png</cover>
+          <year>1991</year>
+          <releaseDate country="USA">Fri May 24 00:00:00 BST 1991</releaseDate>
+          <productionCountries>
+               <country>United States</country>
+          </productionCountries>
+          <director>Ridley Scott</director>
+          <cast>
+               <actor>Susan Sarandon</actor>
+               <actor>Geena Davis</actor>
+               <actor>Harvey Keitel</actor>
+          </cast>
+          <duration>129</duration>
+          <distribution>Metro-Goldwyn-Mayer</distribution>
+          <languages>
+               <language>English</language>
+          </languages>
+          <music>Hans Zimmer</music>
+          <boxOffice currency="$">45400000</boxOffice>
+     </movie>
+     <movie>
+          <title>Ocean's Eleven</title>
+          <cover>https://upload.wikimedia.org/wikipedia/en/6/68/Ocean%27s_Eleven_2001_Poster.jpg</cover>
+          <year>2001</year>
+          <releaseDate country="USA">Fri Dec 07 00:00:00 GMT 2001</releaseDate>
+          <productionCountries>
+               <country>United States</country>
+          </productionCountries>
+          <director>Steven Soderbergh</director>
+          <cast>
+               <actor>George Clooney</actor>
+               <actor>Matt Damon</actor>
+               <actor>Brad Pitt</actor>
+               <actor>Julia Roberts</actor>
+          </cast>
+          <duration>117</duration>
+          <distribution>Warner Bros. Pictures</distribution>
+          <languages>
+               <language>English</language>
+          </languages>
+          <music>David Holmes</music>
+          <boxOffice currency="$">450700000</boxOffice>
      </movie>
 </movies>

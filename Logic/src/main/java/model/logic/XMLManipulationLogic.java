@@ -6,12 +6,14 @@ import model.resources.XPathFunctions;
 import net.sf.saxon.s9api.SaxonApiException;
 import net.sf.saxon.s9api.XdmItem;
 import net.sf.saxon.s9api.XdmValue;
+import org.apache.commons.lang3.StringEscapeUtils;
 import org.jdom2.Attribute;
 import org.jdom2.Document;
 import org.jdom2.Element;
 import org.jdom2.output.Format;
 import org.jdom2.output.XMLOutputter;
 
+import javax.xml.xpath.XPath;
 import java.io.IOException;
 import java.io.StringWriter;
 import java.text.DateFormat;
@@ -53,24 +55,15 @@ public class XMLManipulationLogic {
         } else {
             root = doc.getRootElement();
         }
-
-        try {
-            String xp = "//movie[title=\"" + oldTitle + "\"]";
-            XdmValue res = XPathFunctions.executeXpath(xp, "movies.xml");
-            System.out.println(res.size());
-            if (res.size() == 1) {
-                Document newDoc = XMLJDomFunctions.readStringToDocument(res.toString());
-                Element oldMovie;
-                if (newDoc != null) {
-                    oldMovie = newDoc.getRootElement();
-                    if (doc.removeContent(oldMovie)) {
-                        root.addContent(getNewMovieNode(movie));
-                    }
-                }
+        Element oldMovie = null;
+        for (Element e : root.getChildren()) {
+            if (e.getChildText("title").compareTo(oldTitle) == 0) {
+                oldMovie = e;
+                break;
             }
-        } catch (SaxonApiException e) {
-            e.printStackTrace();
         }
+        if (root.removeContent(oldMovie))
+            root.addContent(getNewMovieNode(movie));
         return doc;
     }
 
@@ -83,10 +76,10 @@ public class XMLManipulationLogic {
             root = doc.getRootElement();
         }
 
-
         try {
             String xp = "//movie[title=\"" + oldTitle + "\"]";
             XdmValue res = XPathFunctions.executeXpath(xp, "movies.xml");
+            System.out.println(res.size());
             if (res.size() == 1) {
 
                 Document newDoc = XMLJDomFunctions.readStringToDocument(res.toString());
@@ -95,26 +88,27 @@ public class XMLManipulationLogic {
                 XMLOutputter outp = new XMLOutputter();
                 outp.setFormat(Format.getCompactFormat());
 
-                String title = outp.outputString(root.getChild("title").getContent());;
+                String title = outp.outputString(root.getChild("title").getContent());
+                title = StringEscapeUtils.unescapeHtml4(title);
                 String cover = outp.outputString(root.getChild("cover").getContent());
                 int year = Integer.parseInt(outp.outputString(root.getChild("year").getContent()));
                 Date releaseDate = new SimpleDateFormat("E MMM dd HH:mm:ss z yyyy").parse(outp.outputString(root.getChild("releaseDate").getContent()));
                 List<Element> elements = root.getChild("productionCountries").getChildren();
                 List<String> countries = new ArrayList<>();
-                for(Element e: elements) {
+                for (Element e : elements) {
                     countries.add(outp.outputString(e.getContent()));
                 }
                 String director = outp.outputString(root.getChild("director").getContent());
                 elements = root.getChild("cast").getChildren();
                 List<String> actors = new ArrayList<>();
-                for(Element e: elements) {
+                for (Element e : elements) {
                     actors.add(outp.outputString(e.getContent()));
                 }
                 int duration = Integer.parseInt(outp.outputString(root.getChild("duration").getContent()));
                 String distribution = outp.outputString(root.getChild("distribution").getContent());
                 elements = root.getChild("languages").getChildren();
                 List<String> languages = new ArrayList<>();
-                for(Element e: elements) {
+                for (Element e : elements) {
                     languages.add(outp.outputString(e.getContent()));
                 }
                 String music = outp.outputString(root.getChild("music").getContent());

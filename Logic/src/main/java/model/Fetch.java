@@ -80,7 +80,7 @@ public class Fetch {
                 link = "/wiki/" + search.replace(" ", "_");
             }
 
-
+        link = link.replace("%26", "&").replace("%27", "'");
         System.out.println(link);
         HttpRequestFunctions.httpRequest1("en.wikipedia.org", link, "currentMovie.html");
 
@@ -133,7 +133,9 @@ public class Fetch {
             line = StringEscapeUtils.unescapeHtml4(line);
             Matcher matcher = pattern.matcher(line);
             if (matcher.find()) {
-                return matcher.group().substring(1, matcher.group().length() - 1);
+                line = matcher.group().substring(1, matcher.group().length() - 1);
+                line.replace("%26", "&").replace("%27", "'");
+                return line;
             }
         } catch (IOException e) {
             e.printStackTrace();
