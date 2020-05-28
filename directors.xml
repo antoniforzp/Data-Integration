@@ -1,60 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <directors>
-     <director name="John Lasseter">
-          <movie>Toy Story</movie>
-     </director>
-     <director name="Betty Thomas">
-          <movie>Dr. Dolittle</movie>
-     </director>
-     <director name="Quentin Tarantino">
-          <movie>Pulp Fiction</movie>
-     </director>
-     <director name="Ridley Scott">
-          <movie>Blade Runner</movie>
-     </director>
-     <director name="Ridley Scott">
-          <movie>Prometheus</movie>
-     </director>
-     <director name="Robert Zemeckis">
-          <movie>Back to the Future</movie>
-     </director>
-     <director name="Gus Van Sant">
-          <movie>Good Will Hunting</movie>
-     </director>
-     <director name="Anthony Minghella">
-          <movie>The Talented Mr. Ripley</movie>
-     </director>
-     <director name="Lawrence Kasdan">
-          <movie>The Accidental Tourist</movie>
-     </director>
-     <director name="Woody Allen">
-          <movie>Match Point</movie>
-     </director>
-     <director name="Woody Allen">
-          <movie>Vicky Cristina Barcelona</movie>
-     </director>
-     <director name="Tom Hanks">
-          <movie>Larry Crowne</movie>
-     </director>
-     <director name="Woody Allen">
-          <movie>Annie Hall</movie>
-     </director>
-     <director name="Produced by">
-          <movie>The Village</movie>
-     </director>
-     <director name="Philip Kaufman">
-          <movie>Quills</movie>
-     </director>
-     <director name="James Mangold">
-          <movie>Walk the Line</movie>
-     </director>
-     <director name="Garry Marshall">
-          <movie>Pretty Woman</movie>
-     </director>
-     <director name="Anthony Russo">
-          <movie>Avengers: Endgame</movie>
-     </director>
-     <director name="John Krasinski">
-          <movie>A Quiet Place</movie>
-     </director>
+     <director name="John Lasseter" />
+     <director name="Betty Thomas" />
+     <director name="Quentin Tarantino" />
+     <director name="Ridley Scott" />
+     <director name="Ridley Scott" />
+     <director name="Robert Zemeckis" />
+     <director name="Gus Van Sant" />
+     <director name="Anthony Minghella" />
+     <director name="Lawrence Kasdan" />
+     <director name="Woody Allen" />
+     <director name="Woody Allen" />
+     <director name="Tom Hanks" />
+     <director name="Woody Allen" />
+     <director name="Produced by" />
+     <director name="Philip Kaufman" />
+     <director name="James Mangold" />
+     <director name="Garry Marshall" />
+     <director name="Anthony Russo" />
+     <director name="John Krasinski" />
 </directors>

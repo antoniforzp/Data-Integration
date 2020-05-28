@@ -139,13 +139,7 @@ public class EditController {
         textEditors.add(releaseDate);
 
         //4 - Countries
-        if (movie.getCountry().size() <= 1) {
-            TextField country = new TextField();
-            country.setText(movie.getCountry().get(0));
-            textEditors.add(country);
-        } else {
-            textEditors.add(setupComboBoxCountry(movie));
-        }
+        textEditors.add(setupComboBoxCountry(movie));
 
         //5 - Director
         TextField director = new TextField();
@@ -153,13 +147,7 @@ public class EditController {
         textEditors.add(director);
 
         //6 - Cast
-        if (movie.getCast().size() <= 1) {
-            TextField cast = new TextField();
-            cast.setText(movie.getCast().get(0));
-            textEditors.add(cast);
-        } else {
-            textEditors.add(setupComboBoxCast(movie));
-        }
+        textEditors.add(setupComboBoxCast(movie));
 
         //7 - Distribution
         TextField distribution = new TextField();
@@ -172,13 +160,7 @@ public class EditController {
         textEditors.add(duration);
 
         //9 - Language
-        if (movie.getLanguage().size() <= 1) {
-            TextField language = new TextField();
-            language.setText(movie.getLanguage().get(0));
-            textEditors.add(language);
-        } else {
-            textEditors.add(setupComboBoxLanguage(movie));
-        }
+        textEditors.add(setupComboBoxLanguage(movie));
 
         //10 - Music composer
         TextField musicComposer = new TextField();
