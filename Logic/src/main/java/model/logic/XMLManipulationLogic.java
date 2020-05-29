@@ -1,5 +1,6 @@
 package model.logic;
 
+import model.Fetch;
 import model.data.Movie;
 import model.resources.XMLJDomFunctions;
 import model.resources.XPathFunctions;
@@ -25,7 +26,7 @@ import java.util.Iterator;
 import java.util.List;
 
 public class XMLManipulationLogic {
-    public static Document addMovie(Movie movie, Document doc) {
+    public static Document addMovie(String title, Document doc) {
         Element root;
         if (doc == null) {
             root = new Element("movies");
@@ -36,9 +37,10 @@ public class XMLManipulationLogic {
 
 
         try {
-            String xp = "//movie[title=\"" + movie.getTitle() + "\"]";
+            String xp = "//movie[title=\"" + title + "\"]";
             XdmValue res = XPathFunctions.executeXpath(xp, "movies.xml");
             if (res == null || res.size() == 0) {
+                Movie movie = Fetch.findMovie(title);
                 root.addContent(getNewMovieNode(movie));
             }
         } catch (SaxonApiException e) {
