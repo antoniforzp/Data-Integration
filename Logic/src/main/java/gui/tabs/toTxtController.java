@@ -1,5 +1,7 @@
 package gui.tabs;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
@@ -10,6 +12,8 @@ import model.logic.XSLTLogic;
 
 import javax.xml.transform.TransformerException;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 public class toTxtController {
 
@@ -23,24 +27,57 @@ public class toTxtController {
 
     public TextArea output;
 
+    private final Map<toTxtController.optionsEnum, String> map = new HashMap<>();
+
+    enum optionsEnum {
+        toTxt1,
+        toTxt2
+    }
+
+    public toTxtController() {
+        map.put(toTxtController.optionsEnum.toTxt1, "get movies by given country");
+        map.put(toTxtController.optionsEnum.toTxt2, "<???>");
+    }
+
+    private ObservableList<String> getAllOptionsDescriptions() {
+        ObservableList<String> temp = FXCollections.observableArrayList();
+        for (Map.Entry<toTxtController.optionsEnum, String> pair : map.entrySet()) {
+            temp.add(pair.getValue());
+        }
+        return temp;
+    }
+
+    private toTxtController.optionsEnum getKey(String value) {
+        for (Map.Entry<toTxtController.optionsEnum, String> pair : map.entrySet()) {
+            if (pair.getValue().equals(value)) return pair.getKey();
+        }
+        return null;
+    }
+
     @FXML
     void initialize() {
-        String outputDirectory = "files/outputs/";
-        String transformDirectory = "files/transformations/";
-
         xmlInPath.setText("movies.xml");
-        txtOutPath.setText(outputDirectory + "txt_output.txt");
-
-        filesCombo.getItems().add(transformDirectory + "transf_txt.xsl");
-
-        if (filesCombo.getItems().size() >= 1) {
-            xsltPath.setText(filesCombo.getItems().get(0));
-        }
+        filesCombo.getItems().addAll(getAllOptionsDescriptions());
     }
 
     @FXML
     void selectXSLT() {
-        xsltPath.setText(filesCombo.getValue());
+        toTxtController.optionsEnum option = getKey(filesCombo.getValue());
+        String transformDirectory = "files/transf/";
+        String outputDirectory = "files/outputs/";
+
+        if (option != null) {
+            switch (option) {
+                case toTxt1:
+                    xsltPath.setText(transformDirectory + "toTxt_1.xsl");
+                    txtOutPath.setText(outputDirectory + "txt_output_1.txt");
+                    break;
+                case toTxt2:
+                    xsltPath.setText(transformDirectory + "toTxt_2.xsl");
+                    txtOutPath.setText(outputDirectory + "txt_output_2.txt");
+                    break;
+            }
+        }
     }
 
     @FXML
