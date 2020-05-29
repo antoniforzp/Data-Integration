@@ -13,6 +13,7 @@
 \usepackage{hyperref}
 \usepackage{listings}
 
+
 \begin{document}
 	
 \title{Data Integration\\Project report}
@@ -27,7 +28,7 @@ The report is a conclusion of work done to implement the practical assignment. I
 \section{Data source analysis}
 In order to ensure that the movies from the list will be found, we have implemented a system, which uses Wikipedia's internal search engine. In that engine we search for the movie title provided in the text file and add a phrase "film" at the end. Then go to the site pointed to by the first link found by the search engine. If that link proves to not be a movie (i.e. the Movie object cannot be created with data provided by the wrappers) we try the same approach except with the phrase "movie" instead of "film". In case of failure we simply look for the title itself. If all of the above security measures fail, we throw an exception and tell the user that the requested movie could not be found. This system has proved to be quite secure and did not fail with the titles we have tested it with.
 
-\section{Wrappers}
+\section{Wrappers - XML Generate}
 After saving the html content of the movie's site we extract and save to separate file the infobox table which is a standard on Wikipedia and as such, we can use it. Infobox contains all of the information about the movie and our methods for retrieving title, director, etc. operate on the currentMovieInfobox.html file. We have been basing all of our wrappers on the infobox template accessible here: \url{https://en.wikipedia.org/wiki/Template:Infobox_film}
 
 \subsection{findTitle()}
@@ -97,7 +98,7 @@ In order to retrieve the strings we use the following regexes:
 "Language.*$"
 ">[A-Za-z\\s]+<"
 \end{lstlisting}
-We loop through the infobox util the first regex finds match. Then we loop again using the second one and adding the results to the array of strings until the result matches any of the keywords indicating the next section such as "Budget", "Box office", etc.
+We loop through the infobox util the first regex finds match. Then we loop again using the second one and adding the results to the list of strings until the result matches any of the keywords indicating the next section such as "Budget", "Box office", etc.
 
 \subsection{findMusic()}
 In order to retrieve the string we use the following regexes:
@@ -114,5 +115,18 @@ In order to retrieve the string we use the following regexes:
 ">[0-9\\$A-Za-z\\s.()]+<"
 \end{lstlisting}
 We loop through the infobox util the first regex finds match. Then we loop again using the second one until we receive the result. We then cut the \$ and parse the result to int.
+
+\section{XML Edit nodes}
+The user can upload to the list all movie titles representing movie nodes in the provided XML file. After clicking on the desired movie, the Movie object will be created and filled with node's information obtained from XPath and its data will be loaded to the text fields. The user can make changes to those text fields and after clicking the save button, the node representing this movie in the XML file will be removed and the new version with data from the text fields will be added to the root.
+
+\section{XML Validate}
+After providing the path to XML file the user can validate it with provided DTD or XSD file.
+
+\section{Transforms}
+The user can choose from transformations to XML, HTML and TXT. After providing the source XML file, the output file and choosing from the list the XSL transformation file the user can press the transform button. In that case the transformation occurs and the output is shown on the screen. In case of HTML, the browser automatically opens the result file.
+
+
+\section{Search}
+All of the implemented search options are similar and differ only in the XPath command. The command is executed, its results are transformed to string and from that to document. From the document we extract the necessary information and return either the movie or the list of movies.
 
 \end{document}
