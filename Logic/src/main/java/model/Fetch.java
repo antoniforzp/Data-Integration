@@ -13,14 +13,20 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+
 public class Fetch {
+
+    static String listDirectory = "files/list/";
+    static String downloadsDirectory = "files/downloads/";
+
     public static List<String> getAllTitles() {
         List<String> results = new ArrayList<>();
         try {
-            FileReader listReader = new FileReader("list.txt");
+            FileReader listReader = new FileReader(listDirectory + "list.txt");
             BufferedReader listBufferedReader = new BufferedReader(listReader);
             String listMovie;
             while ((listMovie = listBufferedReader.readLine()) != null) {
@@ -34,14 +40,14 @@ public class Fetch {
     }
 
     public static Movie findMovie(String search) {
-        List<String> results = new ArrayList<String>();
-        List<String> keyWords = new ArrayList<String>();
+        List<String> results = new ArrayList<>();
+        List<String> keyWords = new ArrayList<>();
         keyWords.add("film");
         keyWords.add("movie");
         String link = "";
 
-        for (String s: keyWords) {
-            HttpRequestFunctions.httpRequestSearch("en.wikipedia.org/w/index.php?cirrusUserTesting=glent_m0&search=", search, "+" + s + "&title=Special%3ASearch&go=Go&ns0=1", "currentMovieSearch.html");
+        for (String s : keyWords) {
+            HttpRequestFunctions.httpRequestSearch("en.wikipedia.org/w/index.php?cirrusUserTesting=glent_m0&search=", search, "+" + s + "&title=Special%3ASearch&go=Go&ns0=1", downloadsDirectory + "currentMovieSearch.html");
 
             String regexHeader = "search-result-heading.*$";
             String regexLink = "href=\"[a-zA-Z0-9_/()%.':]+\"";
@@ -51,7 +57,7 @@ public class Fetch {
             boolean searchFound = false;
 
             try {
-                FileReader reader = new FileReader("currentMovieSearch.html");
+                FileReader reader = new FileReader(downloadsDirectory + "currentMovieSearch.html");
                 BufferedReader bufferedReader = new BufferedReader(reader);
                 String line;
                 while ((line = bufferedReader.readLine()) != null) {
@@ -76,13 +82,13 @@ public class Fetch {
                 e.printStackTrace();
             }
         }
-            if (link.isEmpty()) {
-                link = "/wiki/" + search.replace(" ", "_");
-            }
+        if (link.isEmpty()) {
+            link = "/wiki/" + search.replace(" ", "_");
+        }
 
         link = link.replace("%26", "&").replace("%27", "'");
         System.out.println(link);
-        HttpRequestFunctions.httpRequest1("en.wikipedia.org", link, "currentMovie.html");
+        HttpRequestFunctions.httpRequest1("en.wikipedia.org", link, downloadsDirectory + "currentMovie.html");
 
         String regexB = "infobox vevent";
         String regexE = "</tbody>";
@@ -90,7 +96,7 @@ public class Fetch {
         Pattern patternE = Pattern.compile(regexE);
 
         try {
-            FileReader reader = new FileReader("currentMovie.html");
+            FileReader reader = new FileReader(downloadsDirectory + "currentMovie.html");
             BufferedReader bufferedReader = new BufferedReader(reader);
             String line;
             boolean read = false;
@@ -106,7 +112,7 @@ public class Fetch {
                     break;
                 }
             }
-            FileWriter writer = new FileWriter("currentMovieInfobox.html");
+            FileWriter writer = new FileWriter(downloadsDirectory + "currentMovieInfobox.html");
             for (String s : results) {
                 writer.write(s + "\n");
             }
@@ -115,19 +121,17 @@ public class Fetch {
             e.printStackTrace();
         }
 
-        Movie temp = new Movie(findTitle(), findCover(), Integer.parseInt(findProductionYear()),
+        return new Movie(findTitle(), findCover(), Integer.parseInt(Objects.requireNonNull(findProductionYear())),
                 findReleaseUsa(), findCountry(), findDirector(),
-                findCast(), Integer.parseInt(findRuntime()), findDistribution(),
+                findCast(), Integer.parseInt(Objects.requireNonNull(findRuntime())), findDistribution(),
                 findLanguage(), findMusic(), findBoxOffice());
-
-        return temp;
     }
 
     public static String findTitle() {
         String regex = ">[a-zA-Z0-9\\s&():.']+<";
         Pattern pattern = Pattern.compile(regex);
         try {
-            FileReader reader = new FileReader("currentMovieInfobox.html");
+            FileReader reader = new FileReader(downloadsDirectory + "currentMovieInfobox.html");
             BufferedReader bufferedReader = new BufferedReader(reader);
             String line = bufferedReader.readLine();
             line = StringEscapeUtils.unescapeHtml4(line);
@@ -147,7 +151,7 @@ public class Fetch {
         String regex = "src=\"\\S*\\b";
         Pattern pattern = Pattern.compile(regex);
         try {
-            FileReader reader = new FileReader("currentMovieInfobox.html");
+            FileReader reader = new FileReader(downloadsDirectory + "currentMovieInfobox.html");
             BufferedReader bufferedReader = new BufferedReader(reader);
             String line = bufferedReader.readLine();
             Matcher matcher = pattern.matcher(line);
@@ -165,7 +169,7 @@ public class Fetch {
         String regex = "\\b\\d{4}\\b";
         Pattern pattern = Pattern.compile(regex);
         try {
-            FileReader reader = new FileReader("currentMovieInfobox.html");
+            FileReader reader = new FileReader(downloadsDirectory + "currentMovieInfobox.html");
             BufferedReader bufferedReader = new BufferedReader(reader);
             String line;
             while ((line = bufferedReader.readLine()) != null) {
@@ -186,7 +190,7 @@ public class Fetch {
         Pattern patternSelector = Pattern.compile(regexSelector);
         Pattern pattern = Pattern.compile(regex);
         try {
-            FileReader reader = new FileReader("currentMovieInfobox.html");
+            FileReader reader = new FileReader(downloadsDirectory + "currentMovieInfobox.html");
             BufferedReader bufferedReader = new BufferedReader(reader);
             String line;
             while ((line = bufferedReader.readLine()) != null) {
@@ -199,7 +203,7 @@ public class Fetch {
             if (matcher.find()) {
                 return new SimpleDateFormat("yyyy-MM-dd").parse(matcher.group());
             } else {
-                reader = new FileReader("currentMovieInfobox.html");
+                reader = new FileReader(downloadsDirectory + "currentMovieInfobox.html");
                 bufferedReader = new BufferedReader(reader);
                 while ((line = bufferedReader.readLine()) != null) {
                     matcher = pattern.matcher(line);
@@ -221,7 +225,7 @@ public class Fetch {
         Pattern patternStarring = Pattern.compile(regexStarring);
         Pattern pattern = Pattern.compile(regex);
         try {
-            FileReader reader = new FileReader("currentMovieInfobox.html");
+            FileReader reader = new FileReader(downloadsDirectory + "currentMovieInfobox.html");
             BufferedReader bufferedReader = new BufferedReader(reader);
             String line;
             boolean read = false;
@@ -260,7 +264,7 @@ public class Fetch {
         Pattern patternSelector = Pattern.compile(regexSelector);
         Pattern pattern = Pattern.compile(regex);
         try {
-            FileReader reader = new FileReader("currentMovieInfobox.html");
+            FileReader reader = new FileReader(downloadsDirectory + "currentMovieInfobox.html");
             BufferedReader bufferedReader = new BufferedReader(reader);
             String line;
             while ((line = bufferedReader.readLine()) != null) {
@@ -287,7 +291,7 @@ public class Fetch {
         Pattern patternStarring = Pattern.compile(regexStarring);
         Pattern pattern = Pattern.compile(regex);
         try {
-            FileReader reader = new FileReader("currentMovieInfobox.html");
+            FileReader reader = new FileReader(downloadsDirectory + "currentMovieInfobox.html");
             BufferedReader bufferedReader = new BufferedReader(reader);
             String line;
             boolean read = false;
@@ -327,7 +331,7 @@ public class Fetch {
         Pattern patternSelector = Pattern.compile(regexSelector);
         Pattern pattern = Pattern.compile(regex);
         try {
-            FileReader reader = new FileReader("currentMovieInfobox.html");
+            FileReader reader = new FileReader(downloadsDirectory + "currentMovieInfobox.html");
             BufferedReader bufferedReader = new BufferedReader(reader);
             String line;
             while ((line = bufferedReader.readLine()) != null) {
@@ -353,7 +357,7 @@ public class Fetch {
         Pattern patternSelector = Pattern.compile(regexSelector);
         Pattern pattern = Pattern.compile(regex);
         try {
-            FileReader reader = new FileReader("currentMovieInfobox.html");
+            FileReader reader = new FileReader(downloadsDirectory + "currentMovieInfobox.html");
             BufferedReader bufferedReader = new BufferedReader(reader);
             String line;
             boolean read = false;
@@ -381,7 +385,7 @@ public class Fetch {
         Pattern patternStarring = Pattern.compile(regexStarring);
         Pattern pattern = Pattern.compile(regex);
         try {
-            FileReader reader = new FileReader("currentMovieInfobox.html");
+            FileReader reader = new FileReader(downloadsDirectory + "currentMovieInfobox.html");
             BufferedReader bufferedReader = new BufferedReader(reader);
             String line;
             boolean read = false;
@@ -420,7 +424,7 @@ public class Fetch {
         Pattern patternSelector = Pattern.compile(regexSelector);
         Pattern pattern = Pattern.compile(regex);
         try {
-            FileReader reader = new FileReader("currentMovieInfobox.html");
+            FileReader reader = new FileReader(downloadsDirectory + "currentMovieInfobox.html");
             BufferedReader bufferedReader = new BufferedReader(reader);
             String line;
             boolean read = false;
@@ -447,7 +451,7 @@ public class Fetch {
         Pattern patternSelector = Pattern.compile(regexSelector);
         Pattern pattern = Pattern.compile(regex);
         try {
-            FileReader reader = new FileReader("currentMovieInfobox.html");
+            FileReader reader = new FileReader(downloadsDirectory + "currentMovieInfobox.html");
             BufferedReader bufferedReader = new BufferedReader(reader);
             String line;
             boolean read = false;
@@ -471,23 +475,25 @@ public class Fetch {
 
                     double temp = 0;
                     int mult = 0;
-                    if(mNum.find()) {
+                    if (mNum.find()) {
                         temp = Double.parseDouble(mNum.group());
                     }
-                    if(mMult.find()) {
+                    if (mMult.find()) {
                         switch (mMult.group()) {
                             case "million": {
                                 mult = 1000000;
-                            } break;
+                            }
+                            break;
                             case "billion": {
                                 mult = 1000000000;
-                            } break;
+                            }
+                            break;
                             default: {
                                 mult = 0;
                             }
                         }
                     }
-                    return (int)(temp * mult);
+                    return (int) (temp * mult);
                 }
             }
         } catch (IOException e) {

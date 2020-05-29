@@ -1,33 +1,33 @@
 package model.resources;
 
 import org.jdom2.Document;
+import org.jdom2.transform.XSLTransformException;
+
+import javax.xml.transform.TransformerException;
 import java.awt.*;
 import java.io.*;
 import java.nio.file.Files;
 
 public class XsltTransformations {
-    public static String createNewXml(String xml, String xslt, String output) {
+    public static String createNewXml(String xml, String xslt, String output) throws XSLTransformException {
         Document doc = XMLJDomFunctions.readDocumentXML(xml);
         if (doc != null) {
             Document x = JDOMFunctions_XSLT.transformDocument(doc, xml, xslt);
             XMLJDomFunctions.writeDocumentToFile(x, output);
 
-
             doc = XMLJDomFunctions.readDocumentXML(output);
-            String t = XMLJDomFunctions.readDocumentToString(doc);
-            return t;
+            return XMLJDomFunctions.readDocumentToString(doc);
         }
         return "No such file";
     }
 
-    public static String createNewHtml(String xml, String xslt, String output){
+    public static String createNewHtml(String xml, String xslt, String output) throws XSLTransformException {
         Document doc = XMLJDomFunctions.readDocumentXML(xml);
         if (doc != null) {
             Document x = JDOMFunctions_XSLT.transformDocument(doc, xml, xslt);
             XMLJDomFunctions.writeDocumentToFile(x, output);
 
-            String url = output;
-            File htmlFile = new File(url);
+            File htmlFile = new File(output);
             try {
                 String content = new String(Files.readAllBytes(htmlFile.toPath()));
                 Desktop.getDesktop().browse(htmlFile.toURI());
@@ -40,7 +40,7 @@ public class XsltTransformations {
         return null;
     }
 
-    public static String createNewTxt(String xml, String xslt, String output){
+    public static String createNewTxt(String xml, String xslt, String output) throws TransformerException, IOException {
         Document doc = XMLJDomFunctions.readDocumentXML(xml);
         if (doc != null) {
             JDOMFunctions_XSLT.transformDocument2(xml, xslt, output);
@@ -51,8 +51,8 @@ public class XsltTransformations {
 
                 StringBuilder builder = new StringBuilder();
                 String line;
-                while((line = bufferedReader.readLine()) != null) {
-                    builder.append(line + "\n");
+                while ((line = bufferedReader.readLine()) != null) {
+                    builder.append(line).append("\n");
                 }
                 return builder.toString();
             } catch (IOException e) {

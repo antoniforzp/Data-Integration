@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -11,35 +12,55 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="625.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.tabs.toTxtController">
    <children>
-      <Text layoutX="211.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Transform to TEXT file" textAlignment="CENTER" wrappingWidth="203.052734375" />
-      <Text layoutX="157.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="XSLT">
+      <Text layoutX="197.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Transform to TXT" textAlignment="CENTER" wrappingWidth="230.052734375">
          <font>
             <Font size="24.0" />
          </font>
       </Text>
-      <TextField layoutX="157.0" layoutY="136.0" prefHeight="25.0" prefWidth="275.0" />
-      <Text layoutX="157.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text=".xslt file path" />
-      <Text layoutX="157.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TXT">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Text>
-      <TextField layoutX="157.0" layoutY="265.0" prefHeight="25.0" prefWidth="275.0" />
-      <Text layoutX="157.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text=".txt output file path" />
-      <Button layoutX="451.0" layoutY="265.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="112.0" text="transform" />
-      <TextArea layoutX="54.0" layoutY="322.0" prefHeight="261.0" prefWidth="518.0" fx:id="xsdFeedback" />
-      <Text layoutX="54.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="output:" />
-      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="518.0" layoutY="336.0" pickOnBounds="true" preserveRatio="true" fx:id="xsdFeedbackIcon">
+      <TextField layoutX="211.0" layoutY="161.0" prefHeight="25.0" prefWidth="203.0" fx:id="xsltPath" />
+      <Text layoutX="211.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text=".xslt file path" />
+      <TextField layoutX="211.0" layoutY="86.0" prefHeight="25.0" prefWidth="203.0" fx:id="xmlInPath" />
+      <Text layoutX="211.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text=".xml input file path" />
+      <TextArea fx:id="output" layoutX="23.0" layoutY="268.0" prefHeight="317.0" prefWidth="580.0" />
+      <Text layoutX="22.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="output:" />
+      <ImageView fx:id="feedbackIcon" fitHeight="40.0" fitWidth="40.0" layoutX="540.0" layoutY="278.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@img/question.png" />
-         </image></ImageView>
-      <ImageView fx:id="dtdFileIcon" fitHeight="80.0" fitWidth="80.0" layoutX="62.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+         </image>
+      </ImageView>
+      <ImageView fx:id="dtdFileIcon" fitHeight="65.0" fitWidth="67.0" layoutX="135.0" layoutY="122.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@img/xslt.png" />
-         </image></ImageView>
-      <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="62.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true" fx:id="xsdFileIcon">
+         </image>
+      </ImageView>
+      <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="135.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true" fx:id="xsdFileIcon">
+         <image>
+            <Image url="@../img/xml.png" />
+         </image>
+      </ImageView>
+      <ComboBox fx:id="filesCombo" layoutX="434.0" layoutY="161.0" onAction="#selectXSLT" prefHeight="25.0" prefWidth="112.0" promptText="choose file" />
+      <TextField fx:id="txtOutPath" layoutX="211.0" layoutY="233.0" prefHeight="25.0" prefWidth="203.0" />
+      <Text layoutX="211.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" text=".txt output file path" />
+      <Button layoutX="434.0" layoutY="233.0" mnemonicParsing="false" onAction="#transform" prefHeight="25.0" prefWidth="112.0" text="transform" />
+      <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="135.0" layoutY="193.0" pickOnBounds="true" preserveRatio="true" fx:id="xsdFileIcon1">
          <image>
             <Image url="@img/txt.png" />
-         </image></ImageView>
+         </image>
+      </ImageView>
+      <ImageView fitHeight="56.0" fitWidth="50.0" layoutX="81.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true" rotate="90.0" fx:id="xsdFileIcon2">
+         <image>
+            <Image url="@img/next.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="56.0" fitWidth="50.0" layoutX="81.0" layoutY="201.0" pickOnBounds="true" preserveRatio="true" rotate="90.0" fx:id="xsdFileIcon21">
+         <image>
+            <Image url="@img/next.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="56.0" fitWidth="50.0" layoutX="81.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true" fx:id="xsdFileIcon211">
+         <image>
+            <Image url="@img/transform.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

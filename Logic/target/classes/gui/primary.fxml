@@ -40,7 +40,6 @@
                         <MenuItem mnemonicParsing="false" onAction="#goToXml" text="to XML" />
                         <MenuItem mnemonicParsing="false" onAction="#goToHtml" text="to HTML" />
                         <MenuItem mnemonicParsing="false" onAction="#goToTxt" text="to TXT" />
-                  <MenuItem mnemonicParsing="false" onAction="#goToPdf" text="to PDF" />
                     </items>
                 </MenuButton>
                 <Button fx:id="searchButton" mnemonicParsing="false" onAction="#goXpath" prefHeight="30.0" prefWidth="95.0" text="Search" GridPane.rowIndex="4" />
