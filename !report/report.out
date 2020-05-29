@@ -1,5 +1,13 @@
-\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
-\BOOKMARK [1][-]{section.2}{Measurement method}{}% 2
-\BOOKMARK [1][-]{section.3}{Results of our measurements}{}% 3
-\BOOKMARK [1][-]{section.4}{Conclusions}{}% 4
-\BOOKMARK [1][-]{section.5}{References}{}% 5
+\BOOKMARK [1][-]{section.1}{Data source analysis}{}% 1
+\BOOKMARK [1][-]{section.2}{Wrappers}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{findTitle\(\)}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{findCover\(\)}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{findProductionYear\(\)}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.4}{findReleaseDate\(\)}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.5}{findCountries\(\)}{section.2}% 7
+\BOOKMARK [2][-]{subsection.2.6}{findDirector\(\)}{section.2}% 8
+\BOOKMARK [2][-]{subsection.2.7}{findCast\(\)}{section.2}% 9
+\BOOKMARK [2][-]{subsection.2.8}{findDistribution\(\)}{section.2}% 10
+\BOOKMARK [2][-]{subsection.2.9}{findLanguage\(\)}{section.2}% 11
+\BOOKMARK [2][-]{subsection.2.10}{findMusic\(\)}{section.2}% 12
+\BOOKMARK [2][-]{subsection.2.11}{findBoxOffice\(\)}{section.2}% 13
