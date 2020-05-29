@@ -1,0 +1,54 @@
+Annie Hall
+box office: 1979
+
+Back to the Future
+box office: 1985
+
+Pretty Woman
+box office: 1990
+
+Schindler's List
+box office: 1993
+
+Toy Story
+box office: 1995
+
+Good Will Hunting
+box office: 1997
+
+Dr. Dolittle
+box office: 1998
+
+The Talented Mr. Ripley
+box office: 1999
+
+Quills
+box office: 2000
+
+Walk the Line
+box office: 2000
+
+Ocean's Eleven
+box office: 2001
+
+The Village
+box office: 2004
+
+Match Point
+box office: 2005
+
+Vicky Cristina Barcelona
+box office: 2008
+
+Larry Crowne
+box office: 2011
+
+Prometheus
+box office: 2012
+
+A Quiet Place
+box office: 2018
+
+Avengers: Endgame
+box office: 2019
+

@@ -4,9 +4,29 @@
 
     <xsl:template match="/">
 
-        <root>
+        <movies>
+            <xsl:for-each select="//movie">
+                <xsl:sort select="count(cast/actor)" order="descending"/>
+                <movie>
+                    <title>
+                        <xsl:value-of select="title"/>
+                    </title>
 
-        </root>
+                    <xsl:element name="actors">
+                        <xsl:attribute name="quantity">
+                            <xsl:value-of select="count(cast/actor)"/>
+                        </xsl:attribute>
+
+                        <xsl:for-each select="cast/actor">
+                            <actor>
+                                <xsl:value-of select="current()"/>
+                            </actor>
+                        </xsl:for-each>
+                    </xsl:element>
+
+                </movie>
+            </xsl:for-each>
+        </movies>
 
     </xsl:template>
 </xsl:stylesheet>

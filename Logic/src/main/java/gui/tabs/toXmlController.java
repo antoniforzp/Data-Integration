@@ -34,8 +34,8 @@ public class toXmlController {
     }
 
     public toXmlController() {
-        map.put(toXmlController.optionsEnum.toXml1, "get films of a given director");
-        map.put(toXmlController.optionsEnum.toXml2, "<???>");
+        map.put(toXmlController.optionsEnum.toXml1, "list of directors and their movies");
+        map.put(toXmlController.optionsEnum.toXml2, "list of movies sorted by amount of actors");
     }
 
     private ObservableList<String> getAllOptionsDescriptions() {
