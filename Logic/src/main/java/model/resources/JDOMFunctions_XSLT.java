@@ -48,5 +48,4 @@ public class JDOMFunctions_XSLT {
                 new StreamResult(new FileOutputStream(sOutFile)));
 
     }
-
 }
