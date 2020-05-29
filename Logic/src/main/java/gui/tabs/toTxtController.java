@@ -25,10 +25,13 @@ public class toTxtController {
 
     @FXML
     void initialize() {
-        xmlInPath.setText("movies.xml");
-        txtOutPath.setText("txt_output.txt");
+        String outputDirectory = "files/outputs/";
+        String transformDirectory = "files/transformations/";
 
-        filesCombo.getItems().add("transf_txt.xsl");
+        xmlInPath.setText("movies.xml");
+        txtOutPath.setText(outputDirectory + "txt_output.txt");
+
+        filesCombo.getItems().add(transformDirectory + "transf_txt.xsl");
 
         if (filesCombo.getItems().size() >= 1) {
             xsltPath.setText(filesCombo.getItems().get(0));

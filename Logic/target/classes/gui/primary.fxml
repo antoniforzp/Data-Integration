@@ -72,9 +72,6 @@
                 <Pane fx:id="toXmlView" prefHeight="600.0" prefWidth="625.0" visible="false">
                     <fx:include source="tabs/toXmlView.fxml" />
                 </Pane>
-                <Pane fx:id="toPdfView" prefHeight="600.0" prefWidth="625.0" visible="false">
-                    <fx:include source="tabs/toPdfView.fxml" />
-                </Pane>
                 <Pane fx:id="toTxtView" prefHeight="600.0" prefWidth="625.0" visible="false">
                     <fx:include source="tabs/toTxtView.fxml" />
                 </Pane>

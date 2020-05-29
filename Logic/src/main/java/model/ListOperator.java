@@ -4,7 +4,7 @@ import java.io.*;
 
 public class ListOperator {
 
-    private static final String fileName = "list.txt";
+    private static final String fileName = "files/list/list.txt";
 
     static public void addTitle(String title) throws IOException {
 

@@ -23,10 +23,14 @@ public class toXmlController {
 
     @FXML
     void initialize() {
-        xmlInPath.setText("movies.xml");
-        xmlOutPath.setText("xml_output.xml");
 
-        filesCombo.getItems().add("transf_xml.xsl");
+        String outputDirectory = "files/outputs/";
+        String transformDirectory = "files/transformations/";
+
+        xmlInPath.setText("movies.xml");
+        xmlOutPath.setText(outputDirectory + "xml_output.xml");
+
+        filesCombo.getItems().add(transformDirectory + "transf_xml_directors.xsl");
 
         if (filesCombo.getItems().size() >= 1) {
             xsltPath.setText(filesCombo.getItems().get(0));

@@ -115,8 +115,7 @@ public class Fetch {
 
             FileWriter writer = new FileWriter(downloadsDirectory + "currentMovieInfobox.html");
             if (results.size() == 0)
-                System.out.println("oj nie byczq -1");
-
+                return null;
             for (String s : results) {
                 writer.write(s + "\n");
             }

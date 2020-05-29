@@ -23,10 +23,13 @@ public class toHtmlController {
 
     @FXML
     void initialize() {
-        xmlInPath.setText("movies.xml");
-        htmlOutPath.setText("html_output.html");
+        String outputDirectory = "files/outputs/";
+        String transformDirectory = "files/transformations/";
 
-        filesCombo.getItems().add("transf_html1.xsl");
+        xmlInPath.setText("movies.xml");
+        htmlOutPath.setText(outputDirectory + "posters.html");
+
+        filesCombo.getItems().add(transformDirectory + "transf_html_posters.xsl");
 
         if (filesCombo.getItems().size() >= 1) {
             xsltPath.setText(filesCombo.getItems().get(0));

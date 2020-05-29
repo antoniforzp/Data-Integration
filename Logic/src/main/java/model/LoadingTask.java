@@ -12,14 +12,17 @@ public class LoadingTask extends Task {
     String found;
     String filename;
 
-    public LoadingTask (String filename) {
+    public LoadingTask(String filename) {
         this.filename = filename;
     }
 
     @Override
     protected Object call() {
         List<String> movies = Fetch.getAllTitles();
-        int max = movies.size();
+        int max = 0;
+        if (movies != null) {
+            max = movies.size();
+        }
         updateProgress(0, max);
         Document doc = XMLJDomFunctions.readDocumentXML(filename);
         for (int i = 0; i < max; i++) {
