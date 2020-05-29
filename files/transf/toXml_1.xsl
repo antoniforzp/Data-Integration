@@ -4,11 +4,29 @@
 
     <xsl:template match="/">
 
-        <root>
+        <directors>
+            <xsl:variable name="root" select="movies"/>
 
-        </root>
+            <xsl:for-each select="distinct-values(//movie/director)">
+
+                <xsl:element name="director">
+                    <xsl:attribute name="name">
+                        <xsl:value-of select="current()"/>
+                    </xsl:attribute>
+
+                    <xsl:for-each select="$root/movie[director = current()]/title">
+                        <movie>
+                            <xsl:value-of select="current()"/>
+                        </movie>
+                    </xsl:for-each>
+                </xsl:element>
+
+            </xsl:for-each>
+
+        </directors>
 
     </xsl:template>
+
 </xsl:stylesheet>
 
 

@@ -35,8 +35,8 @@ public class toHtmlController {
     }
 
     public toHtmlController() {
-        map.put(toHtmlController.optionsEnum.toHtml1, "get movie posters and directors");
-        map.put(toHtmlController.optionsEnum.toHtml2, "get list of movies by box office");
+        map.put(toHtmlController.optionsEnum.toHtml1, "list of movie posters and directors");
+        map.put(toHtmlController.optionsEnum.toHtml2, "list of movies sorted by box office");
     }
 
     private ObservableList<String> getAllOptionsDescriptions() {

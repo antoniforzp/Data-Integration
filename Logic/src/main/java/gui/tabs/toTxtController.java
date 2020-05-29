@@ -35,8 +35,8 @@ public class toTxtController {
     }
 
     public toTxtController() {
-        map.put(toTxtController.optionsEnum.toTxt1, "get movies by given country");
-        map.put(toTxtController.optionsEnum.toTxt2, "<???>");
+        map.put(toTxtController.optionsEnum.toTxt1, "list of movies by given production country");
+        map.put(toTxtController.optionsEnum.toTxt2, "list of movies in english sorted by year production");
     }
 
     private ObservableList<String> getAllOptionsDescriptions() {

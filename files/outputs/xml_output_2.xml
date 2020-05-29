@@ -1,2 +1,196 @@
 <?xml version="1.0" encoding="utf-8"?>
-<root />
+<movies>
+     <movie>
+          <title>Avengers: Endgame</title>
+          <actors quantity="15">
+               <actor>Chris Evans</actor>
+               <actor>Mark Ruffalo</actor>
+               <actor>Chris Hemsworth</actor>
+               <actor>Scarlett Johansson</actor>
+               <actor>Jeremy Renner</actor>
+               <actor>Don Cheadle</actor>
+               <actor>Paul Rudd</actor>
+               <actor>Brie Larson</actor>
+               <actor>Karen Gillan</actor>
+               <actor>Danai Gurira</actor>
+               <actor>Benedict Wong</actor>
+               <actor>Jon Favreau</actor>
+               <actor>Bradley Cooper</actor>
+               <actor>Gwyneth Paltrow</actor>
+               <actor>Josh Brolin</actor>
+          </actors>
+     </movie>
+     <movie>
+          <title>Toy Story</title>
+          <actors quantity="9">
+               <actor>Tom Hanks</actor>
+               <actor>Tim Allen</actor>
+               <actor>Don Rickles</actor>
+               <actor>Jim Varney</actor>
+               <actor>Wallace Shawn</actor>
+               <actor>John Ratzenberger</actor>
+               <actor>Annie Potts</actor>
+               <actor>John Morris</actor>
+               <actor>Erik von Detten</actor>
+          </actors>
+     </movie>
+     <movie>
+          <title>The Talented Mr. Ripley</title>
+          <actors quantity="9">
+               <actor>Matt Damon</actor>
+               <actor>Gwyneth Paltrow</actor>
+               <actor>Jude Law</actor>
+               <actor>Cate Blanchett</actor>
+               <actor>Philip Seymour Hoffman</actor>
+               <actor>Jack Davenport</actor>
+               <actor>James Rebhorn</actor>
+               <actor>Sergio Rubini</actor>
+               <actor>Philip Baker Hall</actor>
+          </actors>
+     </movie>
+     <movie>
+          <title>Annie Hall</title>
+          <actors quantity="9">
+               <actor>Woody Allen</actor>
+               <actor>Diane Keaton</actor>
+               <actor>Tony Roberts</actor>
+               <actor>Carol Kane</actor>
+               <actor>Paul Simon</actor>
+               <actor>Janet Margolin</actor>
+               <actor>Shelley Duvall</actor>
+               <actor>Christopher Walken</actor>
+               <actor>Colleen Dewhurst</actor>
+          </actors>
+     </movie>
+     <movie>
+          <title>Match Point</title>
+          <actors quantity="6">
+               <actor>Brian Cox</actor>
+               <actor>Matthew Goode</actor>
+               <actor>Scarlett Johansson</actor>
+               <actor>Emily Mortimer</actor>
+               <actor>Jonathan Rhys Meyers</actor>
+               <actor>Penelope Wilton</actor>
+          </actors>
+     </movie>
+     <movie>
+          <title>Vicky Cristina Barcelona</title>
+          <actors quantity="6">
+               <actor>Javier Bardem</actor>
+               <actor>Patricia Clarkson</actor>
+               <actor>Kevin Dunn</actor>
+               <actor>Rebecca Hall</actor>
+               <actor>Scarlett Johansson</actor>
+               <actor>Chris Messina</actor>
+          </actors>
+     </movie>
+     <movie>
+          <title>Larry Crowne</title>
+          <actors quantity="6">
+               <actor>Tom Hanks</actor>
+               <actor>Julia Roberts</actor>
+               <actor>Bryan Cranston</actor>
+               <actor>Cedric the Entertainer</actor>
+               <actor>Wilmer Valderrama</actor>
+               <actor>Pam Grier</actor>
+          </actors>
+     </movie>
+     <movie>
+          <title>The Village</title>
+          <actors quantity="6">
+               <actor>Joaquin Phoenix</actor>
+               <actor>Adrien Brody</actor>
+               <actor>Bryce Dallas Howard</actor>
+               <actor>William Hurt</actor>
+               <actor>Sigourney Weaver</actor>
+               <actor>Brendan Gleeson</actor>
+          </actors>
+     </movie>
+     <movie>
+          <title>Schindler's List</title>
+          <actors quantity="6">
+               <actor>Liam Neeson</actor>
+               <actor>Ben Kingsley</actor>
+               <actor>Ralph Fiennes</actor>
+               <actor>Caroline Goodall</actor>
+               <actor>Jonathan Sagall</actor>
+               <actor>Embeth Davidtz</actor>
+          </actors>
+     </movie>
+     <movie>
+          <title>Prometheus</title>
+          <actors quantity="5">
+               <actor>Noomi Rapace</actor>
+               <actor>Michael Fassbender</actor>
+               <actor>Guy Pearce</actor>
+               <actor>Idris Elba</actor>
+               <actor>Charlize Theron</actor>
+          </actors>
+     </movie>
+     <movie>
+          <title>Good Will Hunting</title>
+          <actors quantity="4">
+               <actor>Robin Williams</actor>
+               <actor>Matt Damon</actor>
+               <actor>Ben Affleck</actor>
+               <actor>Minnie Driver</actor>
+          </actors>
+     </movie>
+     <movie>
+          <title>Quills</title>
+          <actors quantity="4">
+               <actor>Geoffrey Rush</actor>
+               <actor>Kate Winslet</actor>
+               <actor>Joaquin Phoenix</actor>
+               <actor>Michael Caine</actor>
+          </actors>
+     </movie>
+     <movie>
+          <title>Walk the Line</title>
+          <actors quantity="4">
+               <actor>Joaquin Phoenix</actor>
+               <actor>Reese Witherspoon</actor>
+               <actor>Ginnifer Goodwin</actor>
+               <actor>Robert Patrick</actor>
+          </actors>
+     </movie>
+     <movie>
+          <title>Ocean's Eleven</title>
+          <actors quantity="4">
+               <actor>George Clooney</actor>
+               <actor>Matt Damon</actor>
+               <actor>Brad Pitt</actor>
+               <actor>Julia Roberts</actor>
+          </actors>
+     </movie>
+     <movie>
+          <title>Dr. Dolittle</title>
+          <actors quantity="3">
+               <actor>Eddie Murphy</actor>
+               <actor>Ossie Davis</actor>
+               <actor>Oliver Platt</actor>
+          </actors>
+     </movie>
+     <movie>
+          <title>Back to the Future</title>
+          <actors quantity="3">
+               <actor>Christopher Lloyd</actor>
+               <actor>Lea Thompson</actor>
+               <actor>Crispin Glover</actor>
+          </actors>
+     </movie>
+     <movie>
+          <title>Pretty Woman</title>
+          <actors quantity="2">
+               <actor>Richard Gere</actor>
+               <actor>Julia Roberts</actor>
+          </actors>
+     </movie>
+     <movie>
+          <title>A Quiet Place</title>
+          <actors quantity="2">
+               <actor>Emily Blunt</actor>
+               <actor>John Krasinski</actor>
+          </actors>
+     </movie>
+</movies>

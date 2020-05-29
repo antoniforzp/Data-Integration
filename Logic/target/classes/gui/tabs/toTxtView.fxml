@@ -21,7 +21,7 @@
       <Text layoutX="211.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text=".xslt file path" />
       <TextField layoutX="211.0" layoutY="86.0" prefHeight="25.0" prefWidth="203.0" fx:id="xmlInPath" />
       <Text layoutX="211.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text=".xml input file path" />
-      <TextArea fx:id="output" layoutX="23.0" layoutY="268.0" prefHeight="317.0" prefWidth="580.0" />
+      <TextArea fx:id="output" editable="false" layoutX="23.0" layoutY="268.0" prefHeight="317.0" prefWidth="580.0" />
       <Text layoutX="22.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="output:" />
       <ImageView fx:id="feedbackIcon" fitHeight="40.0" fitWidth="40.0" layoutX="540.0" layoutY="278.0" pickOnBounds="true" preserveRatio="true">
          <image>
