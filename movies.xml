@@ -1,5 +1,264 @@
 <?xml version="1.0" encoding="utf-8"?>
-<movies>
+<movies xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="validateXSD.xsd">
+     <movie>
+          <title>Jumanji</title>
+          <cover>https://upload.wikimedia.org/wikipedia/en/thumb/b/b6/Jumanji_poster.jpg/220px-Jumanji_poster.jpg</cover>
+          <year>1995</year>
+          <releaseDate country="USA">Fri Dec 15 00:00:00 GMT 1995</releaseDate>
+          <productionCountries>
+               <country>United States</country>
+          </productionCountries>
+          <director>Joe Johnston</director>
+          <cast>
+               <actor>Robin Williams</actor>
+               <actor>Kirsten Dunst</actor>
+               <actor>David Alan Grier</actor>
+               <actor>Bonnie Hunt</actor>
+               <actor>Jonathan Hyde</actor>
+               <actor>Bebe Neuwirth</actor>
+          </cast>
+          <duration>104</duration>
+          <distribution>Sony Pictures Releasing</distribution>
+          <languages>
+               <language>English</language>
+          </languages>
+          <music>James Horner</music>
+          <boxOffice currency="$">262800000</boxOffice>
+     </movie>
+     <movie>
+          <title>Jurassic Park</title>
+          <cover>https://upload.wikimedia.org/wikipedia/en/e/e7/Jurassic_Park_poster.jpg</cover>
+          <year>1993</year>
+          <releaseDate country="USA">Fri Jun 11 00:00:00 BST 1993</releaseDate>
+          <productionCountries>
+               <country>United States</country>
+          </productionCountries>
+          <director>Steven Spielberg</director>
+          <cast>
+               <actor>Sam Neill</actor>
+               <actor>Laura Dern</actor>
+               <actor>Jeff Goldblum</actor>
+               <actor>Richard Attenborough</actor>
+               <actor>Bob Peck</actor>
+               <actor>Martin Ferrero</actor>
+               <actor>BD Wong</actor>
+               <actor>Wayne Knight</actor>
+               <actor>Joseph Mazzello</actor>
+               <actor>Ariana Richards</actor>
+          </cast>
+          <duration>126</duration>
+          <distribution>Universal Pictures</distribution>
+          <languages>
+               <language>English</language>
+          </languages>
+          <music>John Williams</music>
+          <boxOffice currency="$">1032000000</boxOffice>
+     </movie>
+     <movie>
+          <title>Kill Bill: Volume 2</title>
+          <cover>https://upload.wikimedia.org/wikipedia/en/thumb/c/c4/Kill_Bill_Volume_2.png/220px-Kill_Bill_Volume_2.png</cover>
+          <year>2004</year>
+          <releaseDate country="USA">Fri Apr 16 00:00:00 BST 2004</releaseDate>
+          <productionCountries>
+               <country>United States</country>
+               <country>China</country>
+          </productionCountries>
+          <director>Quentin Tarantino</director>
+          <cast>
+               <actor>Uma Thurman</actor>
+               <actor>David Carradine</actor>
+               <actor>Michael Madsen</actor>
+               <actor>Daryl Hannah</actor>
+               <actor>Gordon Liu</actor>
+               <actor>Michael Parks</actor>
+          </cast>
+          <duration>136</duration>
+          <distribution>Miramax Films</distribution>
+          <languages>
+               <language>English</language>
+          </languages>
+          <music>RZA</music>
+          <boxOffice currency="$">152200000</boxOffice>
+     </movie>
+     <movie>
+          <title>Django Unchained</title>
+          <cover>https://upload.wikimedia.org/wikipedia/en/8/8b/Django_Unchained_Poster.jpg</cover>
+          <year>2012</year>
+          <releaseDate country="USA">Tue Dec 25 00:00:00 GMT 2012</releaseDate>
+          <productionCountries>
+               <country>United States</country>
+          </productionCountries>
+          <director>Quentin Tarantino</director>
+          <cast>
+               <actor>Jamie Foxx</actor>
+               <actor>Christoph Waltz</actor>
+               <actor>Leonardo DiCaprio</actor>
+               <actor>Kerry Washington</actor>
+               <actor>Walton Goggins</actor>
+               <actor>Dennis Christopher</actor>
+               <actor>James Remar</actor>
+               <actor>Michael Parks</actor>
+               <actor>Don Johnson</actor>
+          </cast>
+          <duration>165</duration>
+          <distribution>The Weinstein Company</distribution>
+          <languages>
+               <language>English</language>
+          </languages>
+          <music />
+          <boxOffice currency="$">425400000</boxOffice>
+     </movie>
+     <movie>
+          <title>The Wolf of Wall Street</title>
+          <cover>https://upload.wikimedia.org/wikipedia/en/thumb/d/d8/The_Wolf_of_Wall_Street_%282013%29.png/220px-The_Wolf_of_Wall_Street_%282013%29.png</cover>
+          <year>2013</year>
+          <releaseDate country="USA">Wed Dec 25 00:00:00 GMT 2013</releaseDate>
+          <productionCountries>
+               <country>United States</country>
+          </productionCountries>
+          <director>Martin Scorsese</director>
+          <cast>
+               <actor>Leonardo DiCaprio</actor>
+               <actor>Jonah Hill</actor>
+               <actor>Margot Robbie</actor>
+               <actor>Matthew McConaughey</actor>
+               <actor>Kyle Chandler</actor>
+               <actor>Rob Reiner</actor>
+               <actor>Jon Favreau</actor>
+               <actor>Jean Dujardin</actor>
+          </cast>
+          <duration>180</duration>
+          <distribution>Paramount Pictures</distribution>
+          <languages>
+               <language>English</language>
+          </languages>
+          <music />
+          <boxOffice currency="$">392000000</boxOffice>
+     </movie>
+     <movie>
+          <title>Zootopia</title>
+          <cover>https://upload.wikimedia.org/wikipedia/en/9/96/Zootopia_%28movie_poster%29.jpg</cover>
+          <year>2016</year>
+          <releaseDate country="USA">Fri Mar 04 00:00:00 GMT 2016</releaseDate>
+          <productionCountries>
+               <country>United States</country>
+          </productionCountries>
+          <director />
+          <cast>
+               <actor>Ginnifer Goodwin</actor>
+               <actor>Jason Bateman</actor>
+               <actor>Idris Elba</actor>
+               <actor>Jenny Slate</actor>
+               <actor>Nate Torrence</actor>
+               <actor>Bonnie Hunt</actor>
+               <actor>Don Lake</actor>
+               <actor>Tommy Chong</actor>
+               <actor>Octavia Spencer</actor>
+               <actor>Alan Tudyk</actor>
+               <actor>Shakira</actor>
+          </cast>
+          <duration>108</duration>
+          <distribution>Walt Disney Studios</distribution>
+          <languages>
+               <language>English</language>
+          </languages>
+          <music>Michael Giacchino</music>
+          <boxOffice currency="$">0</boxOffice>
+     </movie>
+     <movie>
+          <title>The Incredibles</title>
+          <cover>https://upload.wikimedia.org/wikipedia/en/thumb/e/ec/The_Incredibles.jpg/220px-The_Incredibles.jpg</cover>
+          <year>2004</year>
+          <releaseDate country="USA">Fri Nov 05 00:00:00 GMT 2004</releaseDate>
+          <productionCountries>
+               <country>United States</country>
+          </productionCountries>
+          <director>Brad Bird</director>
+          <cast>
+               <actor>Holly Hunter</actor>
+               <actor>Sarah Vowell</actor>
+               <actor>Spencer Fox</actor>
+               <actor>Jason Lee</actor>
+          </cast>
+          <duration>115</duration>
+          <distribution>Buena Vista Pictures Distribution</distribution>
+          <languages>
+               <language>English</language>
+          </languages>
+          <music>Michael Giacchino</music>
+          <boxOffice currency="$">633000000</boxOffice>
+     </movie>
+     <movie>
+          <title>La La Land</title>
+          <cover>https://upload.wikimedia.org/wikipedia/en/a/ab/La_La_Land_%28film%29.png</cover>
+          <year>2016</year>
+          <releaseDate country="USA">Fri Dec 09 00:00:00 GMT 2016</releaseDate>
+          <productionCountries>
+               <country>United States</country>
+          </productionCountries>
+          <director>Damien Chazelle</director>
+          <cast>
+               <actor>Ryan Gosling</actor>
+               <actor>Emma Stone</actor>
+               <actor>John Legend</actor>
+               <actor>Rosemarie DeWitt</actor>
+          </cast>
+          <duration>128</duration>
+          <distribution>Lionsgate</distribution>
+          <languages>
+               <language>English</language>
+          </languages>
+          <music>Justin Hurwitz</music>
+          <boxOffice currency="$">446100000</boxOffice>
+     </movie>
+     <movie>
+          <title>The Shining</title>
+          <cover>https://upload.wikimedia.org/wikipedia/en/thumb/1/1d/The_Shining_%281980%29_U.K._release_poster_-_The_tide_of_terror_that_swept_America_IS_HERE.jpg/220px-The_Shining_%281980%29_U.K._release_poster_-_The_tide_of_terror_that_swept_America_IS_HERE.jpg</cover>
+          <year>1980</year>
+          <releaseDate country="USA">Fri May 23 00:00:00 BST 1980</releaseDate>
+          <productionCountries>
+               <country>United States</country>
+               <country>United Kingdom</country>
+          </productionCountries>
+          <director>Stanley Kubrick</director>
+          <cast>
+               <actor>Jack Nicholson</actor>
+               <actor>Shelley Duvall</actor>
+               <actor>Scatman Crothers</actor>
+               <actor>Danny Lloyd</actor>
+          </cast>
+          <duration>146</duration>
+          <distribution>Warner Bros.</distribution>
+          <languages>
+               <language>English</language>
+          </languages>
+          <music>Wendy Carlos</music>
+          <boxOffice currency="$">46200000</boxOffice>
+     </movie>
+     <movie>
+          <title>Iron Man 2</title>
+          <cover>https://upload.wikimedia.org/wikipedia/en/e/ed/Iron_Man_2_poster.jpg</cover>
+          <year>2010</year>
+          <releaseDate country="USA">Fri May 07 00:00:00 BST 2010</releaseDate>
+          <productionCountries>
+               <country>United States</country>
+          </productionCountries>
+          <director>Jon Favreau</director>
+          <cast>
+               <actor>Gwyneth Paltrow</actor>
+               <actor>Don Cheadle</actor>
+               <actor>Scarlett Johansson</actor>
+               <actor>Sam Rockwell</actor>
+               <actor>Mickey Rourke</actor>
+          </cast>
+          <duration>124</duration>
+          <distribution>Paramount Pictures</distribution>
+          <languages>
+               <language>English</language>
+          </languages>
+          <music>John Debney</music>
+          <boxOffice currency="$">623900000</boxOffice>
+     </movie>
      <movie>
           <title>Toy Story</title>
           <cover>https://upload.wikimedia.org/wikipedia/en/thumb/1/13/Toy_Story.jpg/220px-Toy_Story.jpg</cover>

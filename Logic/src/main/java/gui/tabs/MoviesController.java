@@ -101,6 +101,7 @@ public class MoviesController {
             e.printStackTrace();
         }
         updateGrid();
+        textField.setText("");
     }
 
 }

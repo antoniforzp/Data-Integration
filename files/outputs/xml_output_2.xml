@@ -21,6 +21,51 @@
           </actors>
      </movie>
      <movie>
+          <title>Zootopia</title>
+          <actors quantity="11">
+               <actor>Ginnifer Goodwin</actor>
+               <actor>Jason Bateman</actor>
+               <actor>Idris Elba</actor>
+               <actor>Jenny Slate</actor>
+               <actor>Nate Torrence</actor>
+               <actor>Bonnie Hunt</actor>
+               <actor>Don Lake</actor>
+               <actor>Tommy Chong</actor>
+               <actor>Octavia Spencer</actor>
+               <actor>Alan Tudyk</actor>
+               <actor>Shakira</actor>
+          </actors>
+     </movie>
+     <movie>
+          <title>Jurassic Park</title>
+          <actors quantity="10">
+               <actor>Sam Neill</actor>
+               <actor>Laura Dern</actor>
+               <actor>Jeff Goldblum</actor>
+               <actor>Richard Attenborough</actor>
+               <actor>Bob Peck</actor>
+               <actor>Martin Ferrero</actor>
+               <actor>BD Wong</actor>
+               <actor>Wayne Knight</actor>
+               <actor>Joseph Mazzello</actor>
+               <actor>Ariana Richards</actor>
+          </actors>
+     </movie>
+     <movie>
+          <title>Django Unchained</title>
+          <actors quantity="9">
+               <actor>Jamie Foxx</actor>
+               <actor>Christoph Waltz</actor>
+               <actor>Leonardo DiCaprio</actor>
+               <actor>Kerry Washington</actor>
+               <actor>Walton Goggins</actor>
+               <actor>Dennis Christopher</actor>
+               <actor>James Remar</actor>
+               <actor>Michael Parks</actor>
+               <actor>Don Johnson</actor>
+          </actors>
+     </movie>
+     <movie>
           <title>Toy Story</title>
           <actors quantity="9">
                <actor>Tom Hanks</actor>
@@ -60,6 +105,41 @@
                <actor>Shelley Duvall</actor>
                <actor>Christopher Walken</actor>
                <actor>Colleen Dewhurst</actor>
+          </actors>
+     </movie>
+     <movie>
+          <title>The Wolf of Wall Street</title>
+          <actors quantity="8">
+               <actor>Leonardo DiCaprio</actor>
+               <actor>Jonah Hill</actor>
+               <actor>Margot Robbie</actor>
+               <actor>Matthew McConaughey</actor>
+               <actor>Kyle Chandler</actor>
+               <actor>Rob Reiner</actor>
+               <actor>Jon Favreau</actor>
+               <actor>Jean Dujardin</actor>
+          </actors>
+     </movie>
+     <movie>
+          <title>Jumanji</title>
+          <actors quantity="6">
+               <actor>Robin Williams</actor>
+               <actor>Kirsten Dunst</actor>
+               <actor>David Alan Grier</actor>
+               <actor>Bonnie Hunt</actor>
+               <actor>Jonathan Hyde</actor>
+               <actor>Bebe Neuwirth</actor>
+          </actors>
+     </movie>
+     <movie>
+          <title>Kill Bill: Volume 2</title>
+          <actors quantity="6">
+               <actor>Uma Thurman</actor>
+               <actor>David Carradine</actor>
+               <actor>Michael Madsen</actor>
+               <actor>Daryl Hannah</actor>
+               <actor>Gordon Liu</actor>
+               <actor>Michael Parks</actor>
           </actors>
      </movie>
      <movie>
@@ -118,6 +198,16 @@
           </actors>
      </movie>
      <movie>
+          <title>Iron Man 2</title>
+          <actors quantity="5">
+               <actor>Gwyneth Paltrow</actor>
+               <actor>Don Cheadle</actor>
+               <actor>Scarlett Johansson</actor>
+               <actor>Sam Rockwell</actor>
+               <actor>Mickey Rourke</actor>
+          </actors>
+     </movie>
+     <movie>
           <title>Prometheus</title>
           <actors quantity="5">
                <actor>Noomi Rapace</actor>
@@ -125,6 +215,33 @@
                <actor>Guy Pearce</actor>
                <actor>Idris Elba</actor>
                <actor>Charlize Theron</actor>
+          </actors>
+     </movie>
+     <movie>
+          <title>The Incredibles</title>
+          <actors quantity="4">
+               <actor>Holly Hunter</actor>
+               <actor>Sarah Vowell</actor>
+               <actor>Spencer Fox</actor>
+               <actor>Jason Lee</actor>
+          </actors>
+     </movie>
+     <movie>
+          <title>La La Land</title>
+          <actors quantity="4">
+               <actor>Ryan Gosling</actor>
+               <actor>Emma Stone</actor>
+               <actor>John Legend</actor>
+               <actor>Rosemarie DeWitt</actor>
+          </actors>
+     </movie>
+     <movie>
+          <title>The Shining</title>
+          <actors quantity="4">
+               <actor>Jack Nicholson</actor>
+               <actor>Shelley Duvall</actor>
+               <actor>Scatman Crothers</actor>
+               <actor>Danny Lloyd</actor>
           </actors>
      </movie>
      <movie>

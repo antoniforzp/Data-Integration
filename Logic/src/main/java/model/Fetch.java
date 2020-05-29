@@ -124,10 +124,11 @@ public class Fetch {
             e.printStackTrace();
         }
 
-        return new Movie(findTitle(), findCover(), Integer.parseInt(Objects.requireNonNull(findProductionYear())),
+        Movie movie =  new Movie(findTitle(), findCover(), Integer.parseInt(findProductionYear()),
                 findReleaseUsa(), findCountry(), findDirector(),
-                findCast(), Integer.parseInt(Objects.requireNonNull(findRuntime())), findDistribution(),
+                findCast(), Integer.parseInt(findRuntime()), findDistribution(),
                 findLanguage(), findMusic(), findBoxOffice());
+        return movie;
     }
 
     public static String findTitle() {
@@ -342,16 +343,17 @@ public class Fetch {
             FileReader reader = new FileReader(downloadsDirectory + "currentMovieInfobox.html");
             BufferedReader bufferedReader = new BufferedReader(reader);
             String line;
+            boolean read = false;
             while ((line = bufferedReader.readLine()) != null) {
                 Matcher matcherSelector = patternSelector.matcher(line);
-                if (matcherSelector.find()) {
+                if (matcherSelector.find() && !read) {
                     line = matcherSelector.group();
-                    break;
+                    read = true;
                 }
-            }
-            Matcher matcher = pattern.matcher(line);
-            if (matcher.find()) {
-                return matcher.group().substring(1, matcher.group().length() - 1);
+                Matcher matcher = pattern.matcher(line);
+                if(matcher.find() && read) {
+                    return matcher.group().substring(1, matcher.group().length() - 1);
+                }
             }
         } catch (IOException e) {
             e.printStackTrace();

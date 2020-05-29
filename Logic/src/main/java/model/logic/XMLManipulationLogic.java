@@ -26,7 +26,7 @@ import java.util.Iterator;
 import java.util.List;
 
 public class XMLManipulationLogic {
-    public static Document addMovie(String title, Document doc) {
+    public static Document addMovie(Movie movie, Document doc) {
         Element root;
         if (doc == null) {
             root = new Element("movies");
@@ -37,10 +37,9 @@ public class XMLManipulationLogic {
 
 
         try {
-            String xp = "//movie[title=\"" + title + "\"]";
+            String xp = "//movie[title=\"" + movie.getTitle() + "\"]";
             XdmValue res = XPathFunctions.executeXpath(xp, "movies.xml");
             if (res == null || res.size() == 0) {
-                Movie movie = Fetch.findMovie(title);
                 root.addContent(getNewMovieNode(movie));
             }
         } catch (SaxonApiException e) {

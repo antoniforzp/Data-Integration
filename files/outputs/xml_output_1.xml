@@ -1,5 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <directors>
+     <director name="Joe Johnston">
+          <movie>Jumanji</movie>
+     </director>
+     <director name="Steven Spielberg">
+          <movie>Jurassic Park</movie>
+          <movie>Schindler's List</movie>
+     </director>
+     <director name="Quentin Tarantino">
+          <movie>Kill Bill: Volume 2</movie>
+          <movie>Django Unchained</movie>
+     </director>
+     <director name="Martin Scorsese">
+          <movie>The Wolf of Wall Street</movie>
+     </director>
+     <director name="">
+          <movie>Zootopia</movie>
+     </director>
+     <director name="Brad Bird">
+          <movie>The Incredibles</movie>
+     </director>
+     <director name="Damien Chazelle">
+          <movie>La La Land</movie>
+     </director>
+     <director name="Stanley Kubrick">
+          <movie>The Shining</movie>
+     </director>
+     <director name="Jon Favreau">
+          <movie>Iron Man 2</movie>
+     </director>
      <director name="John Lasseter">
           <movie>Toy Story</movie>
      </director>
@@ -43,9 +72,6 @@
      </director>
      <director name="Anthony Russo">
           <movie>Avengers: Endgame</movie>
-     </director>
-     <director name="Steven Spielberg">
-          <movie>Schindler's List</movie>
      </director>
      <director name="John Krasinski">
           <movie>A Quiet Place</movie>
