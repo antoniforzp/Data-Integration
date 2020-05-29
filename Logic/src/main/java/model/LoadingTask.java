@@ -35,6 +35,7 @@ public class LoadingTask extends Task {
             updateProgress(i + 1, max);
 //            break;
             if (isCancelled()) {
+                updateProgress(0, max);
                 return found;
             }
         }
