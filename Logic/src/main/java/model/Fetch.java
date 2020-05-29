@@ -107,6 +107,9 @@ public class Fetch {
                 }
             }
             FileWriter writer = new FileWriter("currentMovieInfobox.html");
+            if(results.size() == 0)
+                System.out.println("oj nie byczq -1");
+
             for (String s : results) {
                 writer.write(s + "\n");
             }

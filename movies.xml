@@ -1,130 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <movies>
      <movie>
-          <title>Toy Story</title>
-          <cover>https://upload.wikimedia.org/wikipedia/en/thumb/1/13/Toy_Story.jpg/220px-Toy_Story.jpg</cover>
-          <year>1995</year>
-          <releaseDate country="USA">Wed Nov 22 00:00:00 GMT 1995</releaseDate>
-          <productionCountries>
-               <country>United States</country>
-          </productionCountries>
-          <director>John Lasseter</director>
-          <cast>
-               <actor>Tom Hanks</actor>
-               <actor>Tim Allen</actor>
-               <actor>Don Rickles</actor>
-               <actor>Jim Varney</actor>
-               <actor>Wallace Shawn</actor>
-               <actor>John Ratzenberger</actor>
-               <actor>Annie Potts</actor>
-               <actor>John Morris</actor>
-               <actor>Erik von Detten</actor>
-          </cast>
-          <duration>81</duration>
-          <distribution>Buena Vista Pictures Distribution</distribution>
-          <languages>
-               <language>English</language>
-          </languages>
-          <music>Randy Newman</music>
-          <boxOffice currency="$">373600000</boxOffice>
-     </movie>
-     <movie>
-          <title>Dr. Dolittle</title>
-          <cover>https://upload.wikimedia.org/wikipedia/en/thumb/5/5f/Dr_dolittle_movie_1998.jpg/220px-Dr_dolittle_movie_1998.jpg</cover>
-          <year>1998</year>
-          <releaseDate country="USA">Fri Jun 26 00:00:00 BST 1998</releaseDate>
-          <productionCountries>
-               <country>United States</country>
-          </productionCountries>
-          <director>Betty Thomas</director>
-          <cast>
-               <actor>Eddie Murphy</actor>
-               <actor>Ossie Davis</actor>
-               <actor>Oliver Platt</actor>
-          </cast>
-          <duration>85</duration>
-          <distribution>20th Century Fox</distribution>
-          <languages>
-               <language>English</language>
-          </languages>
-          <music>Richard Gibbs</music>
-          <boxOffice currency="$">294400000</boxOffice>
-     </movie>
-     <movie>
-          <title>Pulp Fiction</title>
-          <cover>https://upload.wikimedia.org/wikipedia/en/3/3b/Pulp_Fiction_%281994%29_poster.jpg</cover>
-          <year>1994</year>
-          <releaseDate country="USA">Fri Oct 14 00:00:00 BST 1994</releaseDate>
-          <productionCountries>
-               <country>United States</country>
-          </productionCountries>
-          <director>Quentin Tarantino</director>
-          <cast>
-               <actor>John Travolta</actor>
-               <actor>Uma Thurman</actor>
-               <actor>Harvey Keitel</actor>
-               <actor>Tim Roth</actor>
-               <actor>Amanda Plummer</actor>
-               <actor>Maria de Medeiros</actor>
-               <actor>Ving Rhames</actor>
-               <actor>Eric Stoltz</actor>
-               <actor>Rosanna Arquette</actor>
-               <actor>Christopher Walken</actor>
-               <actor>Bruce Willis</actor>
-          </cast>
-          <duration>154</duration>
-          <distribution>Miramax Films</distribution>
-          <languages>
-               <language>English</language>
-          </languages>
-          <music />
-          <boxOffice currency="$">213900000</boxOffice>
-     </movie>
-     <movie>
-          <title>Thelma &amp; Louise</title>
-          <cover>https://upload.wikimedia.org/wikipedia/en/thumb/8/8f/Thelma_%26_Louise_poster.png/220px-Thelma_%26_Louise_poster.png</cover>
-          <year>1991</year>
-          <releaseDate country="USA">Fri May 24 00:00:00 BST 1991</releaseDate>
-          <productionCountries>
-               <country>United States</country>
-          </productionCountries>
-          <director>Ridley Scott</director>
-          <cast>
-               <actor>Susan Sarandon</actor>
-               <actor>Geena Davis</actor>
-               <actor>Harvey Keitel</actor>
-          </cast>
-          <duration>129</duration>
-          <distribution>Metro-Goldwyn-Mayer</distribution>
-          <languages>
-               <language>English</language>
-          </languages>
-          <music>Hans Zimmer</music>
-          <boxOffice currency="$">45400000</boxOffice>
-     </movie>
-     <movie>
-          <title>Blade Runner</title>
-          <cover>https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/Blade_Runner_%281982_poster%29.png/220px-Blade_Runner_%281982_poster%29.png</cover>
-          <year>1982</year>
-          <releaseDate country="USA">Fri Jun 25 00:00:00 BST 1982</releaseDate>
-          <productionCountries>
-               <country>United States</country>
-               <country>Hong Kong</country>
-          </productionCountries>
-          <director>Ridley Scott</director>
-          <cast>
-               <actor>Harrison Ford</actor>
-               <actor>Rutger Hauer</actor>
-               <actor>Sean Young</actor>
-               <actor>Edward James Olmos</actor>
-          </cast>
-          <duration>117</duration>
-          <distribution>Warner Bros.</distribution>
-          <languages />
-          <music>Vangelis</music>
-          <boxOffice currency="$">41500000</boxOffice>
-     </movie>
-     <movie>
           <title>Prometheus</title>
           <cover>https://upload.wikimedia.org/wikipedia/en/thumb/a/a3/Prometheusposterfixed.jpg/220px-Prometheusposterfixed.jpg</cover>
           <year>2012</year>
@@ -221,29 +97,6 @@
           </languages>
           <music>Gabriel Yared</music>
           <boxOffice currency="$">128800000</boxOffice>
-     </movie>
-     <movie>
-          <title>The Accidental Tourist</title>
-          <cover>https://upload.wikimedia.org/wikipedia/en/thumb/8/8c/The_accidental_tourist.jpg/220px-The_accidental_tourist.jpg</cover>
-          <year>1988</year>
-          <releaseDate country="USA">Fri Dec 23 00:00:00 GMT 1988</releaseDate>
-          <productionCountries>
-               <country>United States</country>
-          </productionCountries>
-          <director>Lawrence Kasdan</director>
-          <cast>
-               <actor>William Hurt</actor>
-               <actor>Kathleen Turner</actor>
-               <actor>Geena Davis</actor>
-               <actor>Bill Pullman</actor>
-          </cast>
-          <duration>121</duration>
-          <distribution>Warner Bros.</distribution>
-          <languages>
-               <language>English</language>
-          </languages>
-          <music>John Williams</music>
-          <boxOffice currency="$">32600000</boxOffice>
      </movie>
      <movie>
           <title>Match Point</title>
@@ -528,6 +381,28 @@
           </languages>
           <music>John Williams</music>
           <boxOffice currency="$">322300000</boxOffice>
+     </movie>
+     <movie>
+          <title>A Quiet Place</title>
+          <cover>https://upload.wikimedia.org/wikipedia/en/a/a0/A_Quiet_Place_film_poster.png</cover>
+          <year>2018</year>
+          <releaseDate country="USA">Fri Apr 06 00:00:00 BST 2018</releaseDate>
+          <productionCountries>
+               <country>United States</country>
+          </productionCountries>
+          <director>John Krasinski</director>
+          <cast>
+               <actor>Emily Blunt</actor>
+               <actor>John Krasinski</actor>
+          </cast>
+          <duration>90</duration>
+          <distribution>Paramount Pictures</distribution>
+          <languages>
+               <language>American Sign Language</language>
+               <language>English</language>
+          </languages>
+          <music>Marco Beltrami</music>
+          <boxOffice currency="$">340900000</boxOffice>
      </movie>
      <movie>
           <title>A Quiet Place</title>

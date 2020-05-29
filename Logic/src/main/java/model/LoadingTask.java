@@ -23,8 +23,7 @@ public class LoadingTask extends Task {
         updateProgress(0, max);
         Document doc = XMLJDomFunctions.readDocumentXML(filename);
         for (int i = 0; i < max; i++) {
-            Movie temp = Fetch.findMovie(movies.get(i));
-            doc = XMLManipulationLogic.addMovie(temp, doc);
+            doc = XMLManipulationLogic.addMovie(movies.get(i), doc);
             System.out.println("\n\n");
 //            WHETHER SAVE XML FILE AFTER EVERY RECORD OR AT THE END
             XMLJDomFunctions.writeDocumentToFile(doc, filename);
