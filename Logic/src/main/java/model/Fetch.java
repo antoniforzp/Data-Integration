@@ -243,7 +243,8 @@ public class Fetch {
                     Matcher matcher = pattern.matcher(line);
                     while (matcher.find()) {
                         if (matcher.group().compareTo(">Language<") == 0
-                                || matcher.group().compareTo(">Budget<") == 0) {
+                                || matcher.group().compareTo(">Budget<") == 0
+                                || matcher.group().compareTo(">Box office<") == 0) {
                             end = true;
                             break;
                         }
@@ -310,7 +311,11 @@ public class Fetch {
                     while (matcher.find()) {
                         if (matcher.group().compareTo(">Music by<") == 0
                                 || matcher.group().compareTo(">Running time<") == 0
-                                || matcher.group().compareTo(">Cinematography<") == 0) {
+                                || matcher.group().compareTo(">Cinematography<") == 0
+                                || matcher.group().compareTo(">Edited by<") == 0
+                                || matcher.group().compareTo(">Production company<") == 0
+                                || matcher.group().compareTo(">Distributed by<") == 0
+                                || matcher.group().compareTo(">Narrated by<") == 0) {
                             end = true;
                             break;
                         }
