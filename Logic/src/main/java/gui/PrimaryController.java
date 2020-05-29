@@ -23,7 +23,6 @@ public class PrimaryController {
     public Pane validateView;
 
     public Pane toXmlView;
-    public Pane toPdfView;
     public Pane toTxtView;
     public Pane toHtmlView;
 
@@ -43,7 +42,6 @@ public class PrimaryController {
         views.add(validateView);
 
         views.add(toXmlView);
-        views.add(toPdfView);
         views.add(toTxtView);
         views.add(toHtmlView);
 
@@ -98,12 +96,6 @@ public class PrimaryController {
     void goToHtml() {
         hideAllTabs();
         toHtmlView.setVisible(true);
-    }
-
-    @FXML
-    void goToPdf() {
-        hideAllTabs();
-        toPdfView.setVisible(true);
     }
 
     @FXML

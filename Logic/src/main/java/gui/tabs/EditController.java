@@ -274,7 +274,6 @@ public class EditController {
         }
 
         Document doc = XMLJDomFunctions.readDocumentXML("movies.xml");
-        System.out.println("dupa");
         doc = XMLManipulationLogic.editMovie(oldTitle, movie, doc);
         XMLJDomFunctions.writeDocumentToFile(doc, "movies.xml");
 
