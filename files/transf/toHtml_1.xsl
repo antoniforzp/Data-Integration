@@ -13,7 +13,7 @@
                         <th>Title</th>
                         <th>Director</th>
                     </tr>
-                    <xsl:for-each select="movie">
+                    <xsl:for-each select="//movie">
                         <xsl:sort select="title"/>
                         <tr>
                             <td>

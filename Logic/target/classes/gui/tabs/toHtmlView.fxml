@@ -17,7 +17,7 @@
             <Font size="24.0" />
          </font>
       </Text>
-      <TextField layoutX="211.0" layoutY="161.0" prefHeight="25.0" prefWidth="203.0" fx:id="xsltPath" />
+      <TextField editable="false" layoutX="211.0" layoutY="161.0" prefHeight="25.0" prefWidth="203.0" fx:id="xsltPath" />
       <Text layoutX="211.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text=".xslt file path" />
       <TextField layoutX="211.0" layoutY="86.0" prefHeight="25.0" prefWidth="203.0" fx:id="xmlInPath" />
       <Text layoutX="211.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text=".xml input file path" />
@@ -38,7 +38,7 @@
             <Image url="@../img/xml.png" />
          </image>
       </ImageView>
-      <ComboBox fx:id="filesCombo" layoutX="434.0" layoutY="161.0" onAction="#selectXSLT" prefHeight="25.0" prefWidth="112.0" promptText="choose file" />
+      <ComboBox fx:id="filesCombo" layoutX="434.0" layoutY="161.0" onAction="#selectXSLT" prefHeight="25.0" prefWidth="168.0" promptText="choose option" />
       <TextField fx:id="htmlOutPath" layoutX="211.0" layoutY="233.0" prefHeight="25.0" prefWidth="203.0" />
       <Text layoutX="211.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" text=".html output file path" />
       <Button layoutX="434.0" layoutY="233.0" mnemonicParsing="false" onAction="#transform" prefHeight="25.0" prefWidth="112.0" text="transform" />

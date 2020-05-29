@@ -38,7 +38,7 @@
             <Image url="@../img/xml.png" />
          </image>
       </ImageView>
-      <ComboBox fx:id="filesCombo" layoutX="434.0" layoutY="161.0" onAction="#selectXSLT" prefHeight="25.0" prefWidth="112.0" promptText="choose file" />
+      <ComboBox fx:id="filesCombo" layoutX="434.0" layoutY="161.0" onAction="#selectXSLT" prefHeight="25.0" prefWidth="168.0" promptText="choose option" />
       <TextField fx:id="txtOutPath" layoutX="211.0" layoutY="233.0" prefHeight="25.0" prefWidth="203.0" />
       <Text layoutX="211.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" text=".txt output file path" />
       <Button layoutX="434.0" layoutY="233.0" mnemonicParsing="false" onAction="#transform" prefHeight="25.0" prefWidth="112.0" text="transform" />
