@@ -1,5 +1,5 @@
 \BOOKMARK [1][-]{section.1}{Data source analysis}{}% 1
-\BOOKMARK [1][-]{section.2}{Wrappers}{}% 2
+\BOOKMARK [1][-]{section.2}{Wrappers - XML Generate}{}% 2
 \BOOKMARK [2][-]{subsection.2.1}{findTitle\(\)}{section.2}% 3
 \BOOKMARK [2][-]{subsection.2.2}{findCover\(\)}{section.2}% 4
 \BOOKMARK [2][-]{subsection.2.3}{findProductionYear\(\)}{section.2}% 5
@@ -11,3 +11,7 @@
 \BOOKMARK [2][-]{subsection.2.9}{findLanguage\(\)}{section.2}% 11
 \BOOKMARK [2][-]{subsection.2.10}{findMusic\(\)}{section.2}% 12
 \BOOKMARK [2][-]{subsection.2.11}{findBoxOffice\(\)}{section.2}% 13
+\BOOKMARK [1][-]{section.3}{XML Edit nodes}{}% 14
+\BOOKMARK [1][-]{section.4}{XML Validate}{}% 15
+\BOOKMARK [1][-]{section.5}{Transforms}{}% 16
+\BOOKMARK [1][-]{section.6}{Search}{}% 17

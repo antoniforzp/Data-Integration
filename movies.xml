@@ -1,6 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <movies>
      <movie>
+          <title>Toy Story</title>
+          <cover>https://upload.wikimedia.org/wikipedia/en/thumb/1/13/Toy_Story.jpg/220px-Toy_Story.jpg</cover>
+          <year>1995</year>
+          <releaseDate country="USA">Wed Nov 22 00:00:00 GMT 1995</releaseDate>
+          <productionCountries>
+               <country>United States</country>
+          </productionCountries>
+          <director>John Lasseter</director>
+          <cast>
+               <actor>Tom Hanks</actor>
+               <actor>Tim Allen</actor>
+               <actor>Don Rickles</actor>
+               <actor>Jim Varney</actor>
+               <actor>Wallace Shawn</actor>
+               <actor>John Ratzenberger</actor>
+               <actor>Annie Potts</actor>
+               <actor>John Morris</actor>
+               <actor>Erik von Detten</actor>
+          </cast>
+          <duration>81</duration>
+          <distribution>Buena Vista Pictures Distribution</distribution>
+          <languages>
+               <language>English</language>
+          </languages>
+          <music>Randy Newman</music>
+          <boxOffice currency="$">373600000</boxOffice>
+     </movie>
+     <movie>
+          <title>Dr. Dolittle</title>
+          <cover>https://upload.wikimedia.org/wikipedia/en/thumb/5/5f/Dr_dolittle_movie_1998.jpg/220px-Dr_dolittle_movie_1998.jpg</cover>
+          <year>1998</year>
+          <releaseDate country="USA">Fri Jun 26 00:00:00 BST 1998</releaseDate>
+          <productionCountries>
+               <country>United States</country>
+          </productionCountries>
+          <director>Betty Thomas</director>
+          <cast>
+               <actor>Eddie Murphy</actor>
+               <actor>Ossie Davis</actor>
+               <actor>Oliver Platt</actor>
+          </cast>
+          <duration>85</duration>
+          <distribution>20th Century Fox</distribution>
+          <languages>
+               <language>English</language>
+          </languages>
+          <music>Richard Gibbs</music>
+          <boxOffice currency="$">294400000</boxOffice>
+     </movie>
+     <movie>
           <title>Prometheus</title>
           <cover>https://upload.wikimedia.org/wikipedia/en/thumb/a/a3/Prometheusposterfixed.jpg/220px-Prometheusposterfixed.jpg</cover>
           <year>2012</year>
@@ -381,28 +431,6 @@
           </languages>
           <music>John Williams</music>
           <boxOffice currency="$">322300000</boxOffice>
-     </movie>
-     <movie>
-          <title>A Quiet Place</title>
-          <cover>https://upload.wikimedia.org/wikipedia/en/a/a0/A_Quiet_Place_film_poster.png</cover>
-          <year>2018</year>
-          <releaseDate country="USA">Fri Apr 06 00:00:00 BST 2018</releaseDate>
-          <productionCountries>
-               <country>United States</country>
-          </productionCountries>
-          <director>John Krasinski</director>
-          <cast>
-               <actor>Emily Blunt</actor>
-               <actor>John Krasinski</actor>
-          </cast>
-          <duration>90</duration>
-          <distribution>Paramount Pictures</distribution>
-          <languages>
-               <language>American Sign Language</language>
-               <language>English</language>
-          </languages>
-          <music>Marco Beltrami</music>
-          <boxOffice currency="$">340900000</boxOffice>
      </movie>
      <movie>
           <title>A Quiet Place</title>
