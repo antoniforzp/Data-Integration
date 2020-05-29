@@ -123,10 +123,28 @@ The user can upload to the list all movie titles representing movie nodes in the
 After providing the path to XML file the user can validate it with provided DTD or XSD file.
 
 \section{Transforms}
-The user can choose from transformations to XML, HTML and TXT. After providing the source XML file, the output file and choosing from the list the XSL transformation file the user can press the transform button. In that case the transformation occurs and the output is shown on the screen. In case of HTML, the browser automatically opens the result file.
+The user can choose from transformations to XML, HTML and TXT. After providing the source XML file, the output file and choosing from the list the XSL transformation file the user can press the transform button. In that case the transformation occurs and the output is shown on the screen. In case of HTML, the browser automatically opens the result file. We have implemented following transformations:
+\begin{itemize}
+	\item HTML file with photos of the films
+	\item HTML file with top grossing films
+	\item XML file with listings of movies by directors
+	\item XML file with ranking of movies by the amount of actors
+	\item TXT file with films by countries
+	\item TXT file with english-language movies by year of production
+\end{itemize}
 
 
 \section{Search}
-All of the implemented search options are similar and differ only in the XPath command. The command is executed, its results are transformed to string and from that to document. From the document we extract the necessary information and return either the movie or the list of movies.
+All of the implemented search options are similar and differ only in the XPath command. The command is executed, its results are transformed to string and from that to document. From the document we extract the necessary information and return either the movie or the list of movies. We have implemented following transformations:
+\begin{itemize}
+	\item get all movies
+	\item get movie by title
+	\item get movie by director
+	\item get movie by actor
+	\item get movie by duration
+	\item get movie by country
+	\item get movie by box office
+	\item get movie by year
+\end{itemize}
 
 \end{document}
