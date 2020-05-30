@@ -50,7 +50,7 @@ public class Fetch {
             HttpRequestFunctions.httpRequestSearch("en.wikipedia.org/w/index.php?cirrusUserTesting=glent_m0&search=", search, "+" + s + "&title=Special%3ASearch&go=Go&ns0=1", downloadsDirectory + "currentMovieSearch.html");
 
             String regexHeader = "search-result-heading.*$";
-            String regexLink = "href=\"[a-zA-Z0-9_/()%.':]+\"";
+            String regexLink = "href=\"[a-zA-Z0-9_/()%.\\-':]+\"";
 
             Pattern patternHeader = Pattern.compile(regexHeader);
             Pattern patternLink = Pattern.compile(regexLink);
@@ -196,16 +196,19 @@ public class Fetch {
         try {
             FileReader reader = new FileReader(downloadsDirectory + "currentMovieInfobox.html");
             BufferedReader bufferedReader = new BufferedReader(reader);
-            String line;
+            String line = "";
             while ((line = bufferedReader.readLine()) != null) {
                 Matcher matcherSelector = patternSelector.matcher(line);
                 if (matcherSelector.find()) {
                     break;
                 }
             }
-            Matcher matcher = pattern.matcher(line);
-            if (matcher.find()) {
-                return new SimpleDateFormat("yyyy-MM-dd").parse(matcher.group());
+            Matcher matcher;
+            if(line != null) {
+                matcher = pattern.matcher(line);
+                if (matcher.find()) {
+                    return new SimpleDateFormat("yyyy-MM-dd").parse(matcher.group());
+                }
             } else {
                 reader = new FileReader(downloadsDirectory + "currentMovieInfobox.html");
                 bufferedReader = new BufferedReader(reader);
@@ -215,6 +218,16 @@ public class Fetch {
                         return new SimpleDateFormat("yyyy-MM-dd").parse(matcher.group());
                     }
                 }
+//                String newR = ">[\\d-]+<";
+//                Pattern newP = Pattern.compile(newR);
+//                reader = new FileReader(downloadsDirectory + "currentMovieInfobox.html");
+//                bufferedReader = new BufferedReader(reader);
+//                while ((line = bufferedReader.readLine()) != null) {
+//                    Matcher newM = newP.matcher(line);
+//                    if (newM.find()) {
+//                        return new SimpleDateFormat("yyyy").parse(newM.group());
+//                    }
+//                }
             }
         } catch (IOException | ParseException e) {
             e.printStackTrace();

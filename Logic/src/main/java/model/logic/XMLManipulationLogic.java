@@ -93,7 +93,10 @@ public class XMLManipulationLogic {
                 title = StringEscapeUtils.unescapeHtml4(title);
                 String cover = outp.outputString(root.getChild("cover").getContent());
                 int year = Integer.parseInt(outp.outputString(root.getChild("year").getContent()));
-                Date releaseDate = new SimpleDateFormat("E MMM dd HH:mm:ss z yyyy").parse(outp.outputString(root.getChild("releaseDate").getContent()));
+                String tempDate = outp.outputString(root.getChild("releaseDate").getContent());
+                Date releaseDate = null;
+                if(!tempDate.equals("null"))
+                    releaseDate = new SimpleDateFormat("E MMM dd HH:mm:ss z yyyy").parse(tempDate);
                 List<Element> elements = root.getChild("productionCountries").getChildren();
                 List<String> countries = new ArrayList<>();
                 for (Element e : elements) {

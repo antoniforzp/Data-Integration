@@ -22,6 +22,7 @@ import org.jdom2.Document;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -141,7 +142,11 @@ public class EditController {
 
         //3 - Release date
         TextField releaseDate = new TextField();
-        releaseDate.setText(new SimpleDateFormat("yyyy-MM-dd").format(movie.getReleaseDate()));
+        Date tempDate = movie.getReleaseDate();
+        if(tempDate != null)
+            releaseDate.setText(new SimpleDateFormat("yyyy-MM-dd").format(tempDate));
+        else
+            releaseDate.setText("");
         textEditors.add(releaseDate);
 
         //4 - Countries
