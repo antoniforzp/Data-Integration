@@ -13,8 +13,23 @@ All data is downloaded by HTTP Request mechanism and processed by several functi
 
 Authors: Antoni Forzpańczyk and Jędrzej Szor
 
-Main menu:
+Main view:
 <p align="center">
-  <img src="images/mainView.png" />
+  <img src="images/main.png" />
+</p>
+
+Edition of xml node:
+<p align="center">
+  <img src="images/editNode.png" />
+</p>
+
+Transformation using XSLT:
+<p align="center">
+  <img src="images/transformation.png" />
+</p>
+
+Validation using XSD and DTD:
+<p align="center">
+  <img src="images/validation.png" />
 </p>
 
